@@ -1,0 +1,1193 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63262A87299946760088F4B7 /* Unit2Lesson10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A86299946760088F4B7 /* Unit2Lesson10.swift */; };
+		63262A89299959F80088F4B7 /* Unit2Lesson11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A88299959F80088F4B7 /* Unit2Lesson11.swift */; };
+		63262A8B29995B8C0088F4B7 /* Unit2Lesson12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A8A29995B8C0088F4B7 /* Unit2Lesson12.swift */; };
+		63262A8D29995F890088F4B7 /* Unit2Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A8C29995F890088F4B7 /* Unit2Func.swift */; };
+		63262A90299962140088F4B7 /* Unit3Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A8F299962140088F4B7 /* Unit3Lesson1.swift */; };
+		63262A92299963F10088F4B7 /* Unit3Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A91299963F10088F4B7 /* Unit3Lesson2.swift */; };
+		63262A94299964DC0088F4B7 /* Unit3Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A93299964DC0088F4B7 /* Unit3Lesson3.swift */; };
+		63262A962999664B0088F4B7 /* Unit3Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A952999664B0088F4B7 /* Unit3Lesson4.swift */; };
+		63262A98299967950088F4B7 /* Unit3Lesson5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A97299967950088F4B7 /* Unit3Lesson5.swift */; };
+		63262A9A299968800088F4B7 /* Unit3Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A99299968800088F4B7 /* Unit3Lesson6.swift */; };
+		63262A9C29996A380088F4B7 /* Unit3Lesson7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A9B29996A380088F4B7 /* Unit3Lesson7.swift */; };
+		63262A9E29996BCF0088F4B7 /* Unit3Lesson8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A9D29996BCF0088F4B7 /* Unit3Lesson8.swift */; };
+		63262AA029996C760088F4B7 /* Unit3Lesson9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A9F29996C760088F4B7 /* Unit3Lesson9.swift */; };
+		63262AA229996E960088F4B7 /* Unit3Lesson10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AA129996E960088F4B7 /* Unit3Lesson10.swift */; };
+		63262AA4299978D50088F4B7 /* Unit3Lesson11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AA3299978D50088F4B7 /* Unit3Lesson11.swift */; };
+		63262AA6299979C80088F4B7 /* Unit3Lesson12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AA5299979C80088F4B7 /* Unit3Lesson12.swift */; };
+		63262AA829997CE80088F4B7 /* Unit3Lesson13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AA729997CE80088F4B7 /* Unit3Lesson13.swift */; };
+		63262AAA299980140088F4B7 /* Unit3Lesson14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AA9299980140088F4B7 /* Unit3Lesson14.swift */; };
+		63262AAC299982670088F4B7 /* Unit3Lesson15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AAB299982670088F4B7 /* Unit3Lesson15.swift */; };
+		63262AAE299987060088F4B7 /* Unit3Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AAD299987060088F4B7 /* Unit3Func.swift */; };
+		63262AB1299A2C1C0088F4B7 /* Unit4Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AB0299A2C1C0088F4B7 /* Unit4Lesson1.swift */; };
+		63262AB3299A2DDD0088F4B7 /* Unit4Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AB2299A2DDD0088F4B7 /* Unit4Lesson2.swift */; };
+		63262AB5299A2EFB0088F4B7 /* Unit4Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AB4299A2EFB0088F4B7 /* Unit4Lesson3.swift */; };
+		63262AB7299A72550088F4B7 /* Unit4Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AB6299A72550088F4B7 /* Unit4Lesson4.swift */; };
+		63262AB9299A7EE00088F4B7 /* Unit4Lesson5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AB8299A7EE00088F4B7 /* Unit4Lesson5.swift */; };
+		63262ABB299A82140088F4B7 /* Unit4Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262ABA299A82140088F4B7 /* Unit4Lesson6.swift */; };
+		63262ABD299A848A0088F4B7 /* Unit4Lesson7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262ABC299A848A0088F4B7 /* Unit4Lesson7.swift */; };
+		63262ABF299A8A650088F4B7 /* Unit4Lesson8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262ABE299A8A650088F4B7 /* Unit4Lesson8.swift */; };
+		63262AC1299A8BAF0088F4B7 /* Unit4Lesson9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AC0299A8BAF0088F4B7 /* Unit4Lesson9.swift */; };
+		63262AC3299A8DE50088F4B7 /* Unit4Lesson10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AC2299A8DE50088F4B7 /* Unit4Lesson10.swift */; };
+		63262AC5299A8F330088F4B7 /* Unit4Lesson11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AC4299A8F330088F4B7 /* Unit4Lesson11.swift */; };
+		63262AC7299A90580088F4B7 /* Unit4Lesson12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AC6299A90580088F4B7 /* Unit4Lesson12.swift */; };
+		63262AC9299A93370088F4B7 /* Unit4Lesson13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262AC8299A93370088F4B7 /* Unit4Lesson13.swift */; };
+		63262ACB299A96430088F4B7 /* Unit4Lesson14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262ACA299A96430088F4B7 /* Unit4Lesson14.swift */; };
+		636B2892298984C5000282EA /* Map_MasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B2891298984C5000282EA /* Map_MasterApp.swift */; };
+		636B2896298984C6000282EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636B2895298984C6000282EA /* Assets.xcassets */; };
+		636B2899298984C6000282EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636B2898298984C6000282EA /* Preview Assets.xcassets */; };
+		636B28A8298984C6000282EA /* Map_MasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B28A7298984C6000282EA /* Map_MasterTests.swift */; };
+		636B28B2298984C6000282EA /* Map_MasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B28B1298984C6000282EA /* Map_MasterUITests.swift */; };
+		636B28B4298984C6000282EA /* Map_MasterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B28B3298984C6000282EA /* Map_MasterUITestsLaunchTests.swift */; };
+		636B28C2298984E4000282EA /* RatingGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B28C1298984E4000282EA /* RatingGames.swift */; };
+		63B1833B298988C700818ECB /* GuessingCountryFromFlagStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1833A298988C700818ECB /* GuessingCountryFromFlagStart.swift */; };
+		63B1833D2989A77100818ECB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1833C2989A77100818ECB /* Country.swift */; };
+		63B18342298A9BDE00818ECB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18341298A9BDE00818ECB /* CoreDataStack.swift */; };
+		63B18344298A9E2200818ECB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18343298A9E2200818ECB /* UserData.swift */; };
+		63B18346298A9E7E00818ECB /* InsertDataToCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18345298A9E7E00818ECB /* InsertDataToCoreData.swift */; };
+		63B18348298AA3CA00818ECB /* CountriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18347298AA3CA00818ECB /* CountriesData.swift */; };
+		63B1834C298AC1FD00818ECB /* GuessingCountryFromFlagGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1834B298AC1FD00818ECB /* GuessingCountryFromFlagGame.swift */; };
+		63B1834E298ACFF900818ECB /* allCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1834D298ACFF900818ECB /* allCountries.swift */; };
+		63B18350298C2D4B00818ECB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1834F298C2D4B00818ECB /* ColorExtension.swift */; };
+		63B18352298D4B9E00818ECB /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18351298D4B9E00818ECB /* ArrayExtension.swift */; };
+		63B18359298D562000818ECB /* GuessingFlagFromCountryStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18358298D562000818ECB /* GuessingFlagFromCountryStart.swift */; };
+		63B1835B298D595E00818ECB /* GuessingFlagFromCountryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1835A298D595E00818ECB /* GuessingFlagFromCountryGame.swift */; };
+		63B1835E298D70A300818ECB /* GuessMostPopulatedCountryStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1835D298D70A300818ECB /* GuessMostPopulatedCountryStart.swift */; };
+		63B18360298D7A3A00818ECB /* GuessMostPopulatedCountryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1835F298D7A3A00818ECB /* GuessMostPopulatedCountryGame.swift */; };
+		63B18363298D825B00818ECB /* GuessCapitalOfCoutryStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18362298D825B00818ECB /* GuessCapitalOfCoutryStart.swift */; };
+		63B18365298D8B4500818ECB /* GuessCapitalOfCoutryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18364298D8B4500818ECB /* GuessCapitalOfCoutryGame.swift */; };
+		63B18369298D913200818ECB /* GuessCountryByBorderStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18368298D913200818ECB /* GuessCountryByBorderStart.swift */; };
+		63B18382298FEDD700818ECB /* InteractiveMap in Frameworks */ = {isa = PBXBuildFile; productRef = 63B18381298FEDD700818ECB /* InteractiveMap */; };
+		63B18389299192D500818ECB /* GuessCountryByBorderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B18388299192D500818ECB /* GuessCountryByBorderGame.swift */; };
+		63B1838C299199C700818ECB /* NameCountriesStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1838B299199C700818ECB /* NameCountriesStart.swift */; };
+		63B1838E2991A2C000818ECB /* NameCountriesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1838D2991A2C000818ECB /* NameCountriesGame.swift */; };
+		63B183962991B8E600818ECB /* PDFKitRepresentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B183952991B8E600818ECB /* PDFKitRepresentedView.swift */; };
+		63CB40EE299AD5F50011812D /* Unit4Lesson18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB40E9299AD5F50011812D /* Unit4Lesson18.swift */; };
+		63CB40EF299AD5F50011812D /* Unit4Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB40EA299AD5F50011812D /* Unit4Func.swift */; };
+		63CB40F0299AD5F50011812D /* Unit4Lesson15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB40EB299AD5F50011812D /* Unit4Lesson15.swift */; };
+		63CB40F1299AD5F50011812D /* Unit4Lesson16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB40EC299AD5F50011812D /* Unit4Lesson16.swift */; };
+		63CB40F2299AD5F50011812D /* Unit4Lesson17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB40ED299AD5F50011812D /* Unit4Lesson17.swift */; };
+		63DC74282992B4B4008066B0 /* CountriesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74272992B4B4008066B0 /* CountriesNames.swift */; };
+		63DC742E2993DC01008066B0 /* world-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 63DC742D2993DC01008066B0 /* world-low.svg */; };
+		63DC74302993E4B0008066B0 /* AllCountriesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC742F2993E4B0008066B0 /* AllCountriesNames.swift */; };
+		63DC74332993FB85008066B0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74322993FB85008066B0 /* Home.swift */; };
+		63DC7436299404FC008066B0 /* MainConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC7435299404FC008066B0 /* MainConnector.swift */; };
+		63DC743B29940F94008066B0 /* RatingGameFlagOfCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC743A29940F94008066B0 /* RatingGameFlagOfCountry.swift */; };
+		63DC743D29955BA5008066B0 /* RatingGameFlagFromCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC743C29955BA4008066B0 /* RatingGameFlagFromCountry.swift */; };
+		63DC744329956017008066B0 /* RatingGameCountryOfCapital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC744229956017008066B0 /* RatingGameCountryOfCapital.swift */; };
+		63DC7445299566E4008066B0 /* RatingGameCapitalOfCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC7444299566E4008066B0 /* RatingGameCapitalOfCountry.swift */; };
+		63DC744829957757008066B0 /* RatingGameCountryOfBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC744729957757008066B0 /* RatingGameCountryOfBorder.swift */; };
+		63DC744B299578F9008066B0 /* RatingGameBorderOfCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC744A299578F9008066B0 /* RatingGameBorderOfCountry.swift */; };
+		63DC744E2995814D008066B0 /* RatingGameNameAllCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC744D2995814D008066B0 /* RatingGameNameAllCountries.swift */; };
+		63DC74502995950F008066B0 /* RatingGameFindCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC744F2995950F008066B0 /* RatingGameFindCountries.swift */; };
+		63DC745229969FAF008066B0 /* FindCountryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC745129969FAF008066B0 /* FindCountryGame.swift */; };
+		63DC74542996A9EE008066B0 /* RatingGameUSStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74532996A9EE008066B0 /* RatingGameUSStates.swift */; };
+		63DC745A2996B8A2008066B0 /* usa-low.svg in Resources */ = {isa = PBXBuildFile; fileRef = 63DC74592996B8A2008066B0 /* usa-low.svg */; };
+		63DC745C2996B92E008066B0 /* us_states.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC745B2996B92E008066B0 /* us_states.swift */; };
+		63DC745E2996D454008066B0 /* MainBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC745D2996D454008066B0 /* MainBack.swift */; };
+		63DC74602997DD61008066B0 /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC745F2997DD61008066B0 /* LessonsView.swift */; };
+		63DC74622997DEBD008066B0 /* LessonsBackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74612997DEBD008066B0 /* LessonsBackGround.swift */; };
+		63DC74652997E8B7008066B0 /* Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74642997E8B7008066B0 /* Lesson1.swift */; };
+		63DC74672997EBBB008066B0 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74662997EBBB008066B0 /* SubscriptionView.swift */; };
+		63DC74692997FBEB008066B0 /* Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74682997FBEB008066B0 /* Lesson2.swift */; };
+		63DC746B29980493008066B0 /* Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC746A29980493008066B0 /* Lesson3.swift */; };
+		63DC746D29980C81008066B0 /* Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC746C29980C81008066B0 /* Lesson4.swift */; };
+		63DC746F299813CA008066B0 /* Lesson5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC746E299813CA008066B0 /* Lesson5.swift */; };
+		63DC747129981647008066B0 /* Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747029981647008066B0 /* Lesson6.swift */; };
+		63DC747329981AD0008066B0 /* Lesson7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747229981AD0008066B0 /* Lesson7.swift */; };
+		63DC747529982156008066B0 /* Lesson8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747429982156008066B0 /* Lesson8.swift */; };
+		63DC7477299823AD008066B0 /* Lesson9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC7476299823AD008066B0 /* Lesson9.swift */; };
+		63DC747929982A29008066B0 /* Unit1Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747829982A29008066B0 /* Unit1Func.swift */; };
+		63DC747C299920D4008066B0 /* Unit2Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747B299920D4008066B0 /* Unit2Lesson1.swift */; };
+		63DC747E29992712008066B0 /* Unit2Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747D29992712008066B0 /* Unit2Lesson2.swift */; };
+		63DC74802999288C008066B0 /* Unit2Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747F2999288C008066B0 /* Unit2Lesson3.swift */; };
+		63DC748229992C82008066B0 /* Unit2Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC748129992C82008066B0 /* Unit2Lesson4.swift */; };
+		63DC748429992F5C008066B0 /* Unit2Lesson5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC748329992F5C008066B0 /* Unit2Lesson5.swift */; };
+		63DC74862999347A008066B0 /* Unit2Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74852999347A008066B0 /* Unit2Lesson6.swift */; };
+		63DC748829993ABA008066B0 /* Unit2Lesson7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC748729993ABA008066B0 /* Unit2Lesson7.swift */; };
+		63DC748A29993D41008066B0 /* Unit2Lesson8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC748929993D41008066B0 /* Unit2Lesson8.swift */; };
+		63DC748C29993EAE008066B0 /* Unit2Lesson9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC748B29993EAE008066B0 /* Unit2Lesson9.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		636B28A4298984C6000282EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 636B2886298984C5000282EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 636B288D298984C5000282EA;
+			remoteInfo = "Map Master";
+		};
+		636B28AE298984C6000282EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 636B2886298984C5000282EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 636B288D298984C5000282EA;
+			remoteInfo = "Map Master";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63262A86299946760088F4B7 /* Unit2Lesson10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson10.swift; sourceTree = "<group>"; };
+		63262A88299959F80088F4B7 /* Unit2Lesson11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson11.swift; sourceTree = "<group>"; };
+		63262A8A29995B8C0088F4B7 /* Unit2Lesson12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson12.swift; sourceTree = "<group>"; };
+		63262A8C29995F890088F4B7 /* Unit2Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Func.swift; sourceTree = "<group>"; };
+		63262A8F299962140088F4B7 /* Unit3Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson1.swift; sourceTree = "<group>"; };
+		63262A91299963F10088F4B7 /* Unit3Lesson2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson2.swift; sourceTree = "<group>"; };
+		63262A93299964DC0088F4B7 /* Unit3Lesson3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson3.swift; sourceTree = "<group>"; };
+		63262A952999664B0088F4B7 /* Unit3Lesson4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson4.swift; sourceTree = "<group>"; };
+		63262A97299967950088F4B7 /* Unit3Lesson5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson5.swift; sourceTree = "<group>"; };
+		63262A99299968800088F4B7 /* Unit3Lesson6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson6.swift; sourceTree = "<group>"; };
+		63262A9B29996A380088F4B7 /* Unit3Lesson7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson7.swift; sourceTree = "<group>"; };
+		63262A9D29996BCF0088F4B7 /* Unit3Lesson8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson8.swift; sourceTree = "<group>"; };
+		63262A9F29996C760088F4B7 /* Unit3Lesson9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson9.swift; sourceTree = "<group>"; };
+		63262AA129996E960088F4B7 /* Unit3Lesson10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson10.swift; sourceTree = "<group>"; };
+		63262AA3299978D50088F4B7 /* Unit3Lesson11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson11.swift; sourceTree = "<group>"; };
+		63262AA5299979C80088F4B7 /* Unit3Lesson12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson12.swift; sourceTree = "<group>"; };
+		63262AA729997CE80088F4B7 /* Unit3Lesson13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson13.swift; sourceTree = "<group>"; };
+		63262AA9299980140088F4B7 /* Unit3Lesson14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson14.swift; sourceTree = "<group>"; };
+		63262AAB299982670088F4B7 /* Unit3Lesson15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson15.swift; sourceTree = "<group>"; };
+		63262AAD299987060088F4B7 /* Unit3Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Func.swift; sourceTree = "<group>"; };
+		63262AB0299A2C1C0088F4B7 /* Unit4Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson1.swift; sourceTree = "<group>"; };
+		63262AB2299A2DDD0088F4B7 /* Unit4Lesson2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson2.swift; sourceTree = "<group>"; };
+		63262AB4299A2EFB0088F4B7 /* Unit4Lesson3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson3.swift; sourceTree = "<group>"; };
+		63262AB6299A72550088F4B7 /* Unit4Lesson4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson4.swift; sourceTree = "<group>"; };
+		63262AB8299A7EE00088F4B7 /* Unit4Lesson5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson5.swift; sourceTree = "<group>"; };
+		63262ABA299A82140088F4B7 /* Unit4Lesson6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson6.swift; sourceTree = "<group>"; };
+		63262ABC299A848A0088F4B7 /* Unit4Lesson7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson7.swift; sourceTree = "<group>"; };
+		63262ABE299A8A650088F4B7 /* Unit4Lesson8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson8.swift; sourceTree = "<group>"; };
+		63262AC0299A8BAF0088F4B7 /* Unit4Lesson9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson9.swift; sourceTree = "<group>"; };
+		63262AC2299A8DE50088F4B7 /* Unit4Lesson10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson10.swift; sourceTree = "<group>"; };
+		63262AC4299A8F330088F4B7 /* Unit4Lesson11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson11.swift; sourceTree = "<group>"; };
+		63262AC6299A90580088F4B7 /* Unit4Lesson12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson12.swift; sourceTree = "<group>"; };
+		63262AC8299A93370088F4B7 /* Unit4Lesson13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson13.swift; sourceTree = "<group>"; };
+		63262ACA299A96430088F4B7 /* Unit4Lesson14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit4Lesson14.swift; sourceTree = "<group>"; };
+		636B288E298984C5000282EA /* Map Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		636B2891298984C5000282EA /* Map_MasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_MasterApp.swift; sourceTree = "<group>"; };
+		636B2895298984C6000282EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		636B2898298984C6000282EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		636B28A3298984C6000282EA /* Map MasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Map MasterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		636B28A7298984C6000282EA /* Map_MasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_MasterTests.swift; sourceTree = "<group>"; };
+		636B28AD298984C6000282EA /* Map MasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Map MasterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		636B28B1298984C6000282EA /* Map_MasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_MasterUITests.swift; sourceTree = "<group>"; };
+		636B28B3298984C6000282EA /* Map_MasterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_MasterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		636B28C1298984E4000282EA /* RatingGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGames.swift; sourceTree = "<group>"; };
+		63B1833A298988C700818ECB /* GuessingCountryFromFlagStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingCountryFromFlagStart.swift; sourceTree = "<group>"; };
+		63B1833C2989A77100818ECB /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		63B18341298A9BDE00818ECB /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		63B18343298A9E2200818ECB /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		63B18345298A9E7E00818ECB /* InsertDataToCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertDataToCoreData.swift; sourceTree = "<group>"; };
+		63B18347298AA3CA00818ECB /* CountriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesData.swift; sourceTree = "<group>"; };
+		63B1834B298AC1FD00818ECB /* GuessingCountryFromFlagGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingCountryFromFlagGame.swift; sourceTree = "<group>"; };
+		63B1834D298ACFF900818ECB /* allCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allCountries.swift; sourceTree = "<group>"; };
+		63B1834F298C2D4B00818ECB /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		63B18351298D4B9E00818ECB /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		63B18358298D562000818ECB /* GuessingFlagFromCountryStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingFlagFromCountryStart.swift; sourceTree = "<group>"; };
+		63B1835A298D595E00818ECB /* GuessingFlagFromCountryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingFlagFromCountryGame.swift; sourceTree = "<group>"; };
+		63B1835D298D70A300818ECB /* GuessMostPopulatedCountryStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessMostPopulatedCountryStart.swift; sourceTree = "<group>"; };
+		63B1835F298D7A3A00818ECB /* GuessMostPopulatedCountryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessMostPopulatedCountryGame.swift; sourceTree = "<group>"; };
+		63B18362298D825B00818ECB /* GuessCapitalOfCoutryStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessCapitalOfCoutryStart.swift; sourceTree = "<group>"; };
+		63B18364298D8B4500818ECB /* GuessCapitalOfCoutryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessCapitalOfCoutryGame.swift; sourceTree = "<group>"; };
+		63B18368298D913200818ECB /* GuessCountryByBorderStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessCountryByBorderStart.swift; sourceTree = "<group>"; };
+		63B18388299192D500818ECB /* GuessCountryByBorderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessCountryByBorderGame.swift; sourceTree = "<group>"; };
+		63B1838B299199C700818ECB /* NameCountriesStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCountriesStart.swift; sourceTree = "<group>"; };
+		63B1838D2991A2C000818ECB /* NameCountriesGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCountriesGame.swift; sourceTree = "<group>"; };
+		63B183952991B8E600818ECB /* PDFKitRepresentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitRepresentedView.swift; sourceTree = "<group>"; };
+		63CB40E9299AD5F50011812D /* Unit4Lesson18.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit4Lesson18.swift; sourceTree = "<group>"; };
+		63CB40EA299AD5F50011812D /* Unit4Func.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit4Func.swift; sourceTree = "<group>"; };
+		63CB40EB299AD5F50011812D /* Unit4Lesson15.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit4Lesson15.swift; sourceTree = "<group>"; };
+		63CB40EC299AD5F50011812D /* Unit4Lesson16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit4Lesson16.swift; sourceTree = "<group>"; };
+		63CB40ED299AD5F50011812D /* Unit4Lesson17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit4Lesson17.swift; sourceTree = "<group>"; };
+		63DC74272992B4B4008066B0 /* CountriesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesNames.swift; sourceTree = "<group>"; };
+		63DC742D2993DC01008066B0 /* world-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "world-low.svg"; sourceTree = "<group>"; };
+		63DC742F2993E4B0008066B0 /* AllCountriesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCountriesNames.swift; sourceTree = "<group>"; };
+		63DC74322993FB85008066B0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		63DC7435299404FC008066B0 /* MainConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConnector.swift; sourceTree = "<group>"; };
+		63DC743A29940F94008066B0 /* RatingGameFlagOfCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameFlagOfCountry.swift; sourceTree = "<group>"; };
+		63DC743C29955BA4008066B0 /* RatingGameFlagFromCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameFlagFromCountry.swift; sourceTree = "<group>"; };
+		63DC744229956017008066B0 /* RatingGameCountryOfCapital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameCountryOfCapital.swift; sourceTree = "<group>"; };
+		63DC7444299566E4008066B0 /* RatingGameCapitalOfCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameCapitalOfCountry.swift; sourceTree = "<group>"; };
+		63DC744729957757008066B0 /* RatingGameCountryOfBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameCountryOfBorder.swift; sourceTree = "<group>"; };
+		63DC744A299578F9008066B0 /* RatingGameBorderOfCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameBorderOfCountry.swift; sourceTree = "<group>"; };
+		63DC744D2995814D008066B0 /* RatingGameNameAllCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameNameAllCountries.swift; sourceTree = "<group>"; };
+		63DC744F2995950F008066B0 /* RatingGameFindCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameFindCountries.swift; sourceTree = "<group>"; };
+		63DC745129969FAF008066B0 /* FindCountryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCountryGame.swift; sourceTree = "<group>"; };
+		63DC74532996A9EE008066B0 /* RatingGameUSStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameUSStates.swift; sourceTree = "<group>"; };
+		63DC74592996B8A2008066B0 /* usa-low.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "usa-low.svg"; sourceTree = "<group>"; };
+		63DC745B2996B92E008066B0 /* us_states.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = us_states.swift; sourceTree = "<group>"; };
+		63DC745D2996D454008066B0 /* MainBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBack.swift; sourceTree = "<group>"; };
+		63DC745F2997DD61008066B0 /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
+		63DC74612997DEBD008066B0 /* LessonsBackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsBackGround.swift; sourceTree = "<group>"; };
+		63DC74642997E8B7008066B0 /* Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1.swift; sourceTree = "<group>"; };
+		63DC74662997EBBB008066B0 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
+		63DC74682997FBEB008066B0 /* Lesson2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson2.swift; sourceTree = "<group>"; };
+		63DC746A29980493008066B0 /* Lesson3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson3.swift; sourceTree = "<group>"; };
+		63DC746C29980C81008066B0 /* Lesson4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson4.swift; sourceTree = "<group>"; };
+		63DC746E299813CA008066B0 /* Lesson5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson5.swift; sourceTree = "<group>"; };
+		63DC747029981647008066B0 /* Lesson6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson6.swift; sourceTree = "<group>"; };
+		63DC747229981AD0008066B0 /* Lesson7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson7.swift; sourceTree = "<group>"; };
+		63DC747429982156008066B0 /* Lesson8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson8.swift; sourceTree = "<group>"; };
+		63DC7476299823AD008066B0 /* Lesson9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson9.swift; sourceTree = "<group>"; };
+		63DC747829982A29008066B0 /* Unit1Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit1Func.swift; sourceTree = "<group>"; };
+		63DC747B299920D4008066B0 /* Unit2Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson1.swift; sourceTree = "<group>"; };
+		63DC747D29992712008066B0 /* Unit2Lesson2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson2.swift; sourceTree = "<group>"; };
+		63DC747F2999288C008066B0 /* Unit2Lesson3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson3.swift; sourceTree = "<group>"; };
+		63DC748129992C82008066B0 /* Unit2Lesson4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson4.swift; sourceTree = "<group>"; };
+		63DC748329992F5C008066B0 /* Unit2Lesson5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson5.swift; sourceTree = "<group>"; };
+		63DC74852999347A008066B0 /* Unit2Lesson6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson6.swift; sourceTree = "<group>"; };
+		63DC748729993ABA008066B0 /* Unit2Lesson7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson7.swift; sourceTree = "<group>"; };
+		63DC748929993D41008066B0 /* Unit2Lesson8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson8.swift; sourceTree = "<group>"; };
+		63DC748B29993EAE008066B0 /* Unit2Lesson9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson9.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		636B288B298984C5000282EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B18382298FEDD700818ECB /* InteractiveMap in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636B28A0298984C6000282EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636B28AA298984C6000282EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63262A8E2999604A0088F4B7 /* Unit3 */ = {
+			isa = PBXGroup;
+			children = (
+				63262A8F299962140088F4B7 /* Unit3Lesson1.swift */,
+				63262A91299963F10088F4B7 /* Unit3Lesson2.swift */,
+				63262A93299964DC0088F4B7 /* Unit3Lesson3.swift */,
+				63262A952999664B0088F4B7 /* Unit3Lesson4.swift */,
+				63262A97299967950088F4B7 /* Unit3Lesson5.swift */,
+				63262A99299968800088F4B7 /* Unit3Lesson6.swift */,
+				63262A9B29996A380088F4B7 /* Unit3Lesson7.swift */,
+				63262A9D29996BCF0088F4B7 /* Unit3Lesson8.swift */,
+				63262A9F29996C760088F4B7 /* Unit3Lesson9.swift */,
+				63262AA129996E960088F4B7 /* Unit3Lesson10.swift */,
+				63262AA3299978D50088F4B7 /* Unit3Lesson11.swift */,
+				63262AA5299979C80088F4B7 /* Unit3Lesson12.swift */,
+				63262AA729997CE80088F4B7 /* Unit3Lesson13.swift */,
+				63262AA9299980140088F4B7 /* Unit3Lesson14.swift */,
+				63262AAB299982670088F4B7 /* Unit3Lesson15.swift */,
+				63262AAD299987060088F4B7 /* Unit3Func.swift */,
+			);
+			path = Unit3;
+			sourceTree = "<group>";
+		};
+		63262AAF2999882A0088F4B7 /* Unit4 */ = {
+			isa = PBXGroup;
+			children = (
+				63262AB0299A2C1C0088F4B7 /* Unit4Lesson1.swift */,
+				63262AB2299A2DDD0088F4B7 /* Unit4Lesson2.swift */,
+				63262AB4299A2EFB0088F4B7 /* Unit4Lesson3.swift */,
+				63262AB6299A72550088F4B7 /* Unit4Lesson4.swift */,
+				63262AB8299A7EE00088F4B7 /* Unit4Lesson5.swift */,
+				63262ABA299A82140088F4B7 /* Unit4Lesson6.swift */,
+				63262ABC299A848A0088F4B7 /* Unit4Lesson7.swift */,
+				63262ABE299A8A650088F4B7 /* Unit4Lesson8.swift */,
+				63262AC0299A8BAF0088F4B7 /* Unit4Lesson9.swift */,
+				63262AC2299A8DE50088F4B7 /* Unit4Lesson10.swift */,
+				63262AC4299A8F330088F4B7 /* Unit4Lesson11.swift */,
+				63262AC6299A90580088F4B7 /* Unit4Lesson12.swift */,
+				63262AC8299A93370088F4B7 /* Unit4Lesson13.swift */,
+				63262ACA299A96430088F4B7 /* Unit4Lesson14.swift */,
+				63CB40EA299AD5F50011812D /* Unit4Func.swift */,
+				63CB40EB299AD5F50011812D /* Unit4Lesson15.swift */,
+				63CB40EC299AD5F50011812D /* Unit4Lesson16.swift */,
+				63CB40ED299AD5F50011812D /* Unit4Lesson17.swift */,
+				63CB40E9299AD5F50011812D /* Unit4Lesson18.swift */,
+			);
+			path = Unit4;
+			sourceTree = "<group>";
+		};
+		636B2885298984C5000282EA = {
+			isa = PBXGroup;
+			children = (
+				636B2890298984C5000282EA /* Map Master */,
+				636B28A6298984C6000282EA /* Map MasterTests */,
+				636B28B0298984C6000282EA /* Map MasterUITests */,
+				636B288F298984C5000282EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		636B288F298984C5000282EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				636B288E298984C5000282EA /* Map Master.app */,
+				636B28A3298984C6000282EA /* Map MasterTests.xctest */,
+				636B28AD298984C6000282EA /* Map MasterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		636B2890298984C5000282EA /* Map Master */ = {
+			isa = PBXGroup;
+			children = (
+				63DC7434299404DD008066B0 /* MainViews */,
+				63DC74312993FB78008066B0 /* Structsback */,
+				63B18385298FEED900818ECB /* svgFiles */,
+				63B18367298D910500818ECB /* GamesFiles */,
+				63B18355298D550500818ECB /* Data */,
+				63B18354298D54F500818ECB /* Extensions */,
+				636B2891298984C5000282EA /* Map_MasterApp.swift */,
+				636B2895298984C6000282EA /* Assets.xcassets */,
+				636B2897298984C6000282EA /* Preview Content */,
+			);
+			path = "Map Master";
+			sourceTree = "<group>";
+		};
+		636B2897298984C6000282EA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				636B2898298984C6000282EA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		636B28A6298984C6000282EA /* Map MasterTests */ = {
+			isa = PBXGroup;
+			children = (
+				636B28A7298984C6000282EA /* Map_MasterTests.swift */,
+			);
+			path = "Map MasterTests";
+			sourceTree = "<group>";
+		};
+		636B28B0298984C6000282EA /* Map MasterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				636B28B1298984C6000282EA /* Map_MasterUITests.swift */,
+				636B28B3298984C6000282EA /* Map_MasterUITestsLaunchTests.swift */,
+			);
+			path = "Map MasterUITests";
+			sourceTree = "<group>";
+		};
+		63B18337298985D900818ECB /* GuessCountryFromFlag */ = {
+			isa = PBXGroup;
+			children = (
+				63B1833A298988C700818ECB /* GuessingCountryFromFlagStart.swift */,
+				63B1834B298AC1FD00818ECB /* GuessingCountryFromFlagGame.swift */,
+			);
+			path = GuessCountryFromFlag;
+			sourceTree = "<group>";
+		};
+		63B18353298D543F00818ECB /* GuessFlagFromCountry */ = {
+			isa = PBXGroup;
+			children = (
+				63B18358298D562000818ECB /* GuessingFlagFromCountryStart.swift */,
+				63B1835A298D595E00818ECB /* GuessingFlagFromCountryGame.swift */,
+			);
+			path = GuessFlagFromCountry;
+			sourceTree = "<group>";
+		};
+		63B18354298D54F500818ECB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63B1833C2989A77100818ECB /* Country.swift */,
+				63B18345298A9E7E00818ECB /* InsertDataToCoreData.swift */,
+				63B18341298A9BDE00818ECB /* CoreDataStack.swift */,
+				63B1834F298C2D4B00818ECB /* ColorExtension.swift */,
+				63B18351298D4B9E00818ECB /* ArrayExtension.swift */,
+				63B183952991B8E600818ECB /* PDFKitRepresentedView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		63B18355298D550500818ECB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				63B1834D298ACFF900818ECB /* allCountries.swift */,
+				63B18347298AA3CA00818ECB /* CountriesData.swift */,
+				63B18343298A9E2200818ECB /* UserData.swift */,
+				63DC74272992B4B4008066B0 /* CountriesNames.swift */,
+				63DC742F2993E4B0008066B0 /* AllCountriesNames.swift */,
+				63DC745129969FAF008066B0 /* FindCountryGame.swift */,
+				63DC745B2996B92E008066B0 /* us_states.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		63B1835C298D6E9C00818ECB /* GuessPopulation */ = {
+			isa = PBXGroup;
+			children = (
+				63B1835D298D70A300818ECB /* GuessMostPopulatedCountryStart.swift */,
+				63B1835F298D7A3A00818ECB /* GuessMostPopulatedCountryGame.swift */,
+			);
+			path = GuessPopulation;
+			sourceTree = "<group>";
+		};
+		63B18361298D823D00818ECB /* GuessCapital */ = {
+			isa = PBXGroup;
+			children = (
+				63B18362298D825B00818ECB /* GuessCapitalOfCoutryStart.swift */,
+				63B18364298D8B4500818ECB /* GuessCapitalOfCoutryGame.swift */,
+			);
+			path = GuessCapital;
+			sourceTree = "<group>";
+		};
+		63B18366298D90E500818ECB /* GuessBorder */ = {
+			isa = PBXGroup;
+			children = (
+				63B18368298D913200818ECB /* GuessCountryByBorderStart.swift */,
+				63B18388299192D500818ECB /* GuessCountryByBorderGame.swift */,
+			);
+			path = GuessBorder;
+			sourceTree = "<group>";
+		};
+		63B18367298D910500818ECB /* GamesFiles */ = {
+			isa = PBXGroup;
+			children = (
+				63B1838A2991975600818ECB /* NameCountries */,
+				63B18366298D90E500818ECB /* GuessBorder */,
+				63B18361298D823D00818ECB /* GuessCapital */,
+				63B1835C298D6E9C00818ECB /* GuessPopulation */,
+				63B18353298D543F00818ECB /* GuessFlagFromCountry */,
+				63B18337298985D900818ECB /* GuessCountryFromFlag */,
+			);
+			path = GamesFiles;
+			sourceTree = "<group>";
+		};
+		63B18385298FEED900818ECB /* svgFiles */ = {
+			isa = PBXGroup;
+			children = (
+				63DC742D2993DC01008066B0 /* world-low.svg */,
+				63DC74592996B8A2008066B0 /* usa-low.svg */,
+			);
+			path = svgFiles;
+			sourceTree = "<group>";
+		};
+		63B1838A2991975600818ECB /* NameCountries */ = {
+			isa = PBXGroup;
+			children = (
+				63B1838B299199C700818ECB /* NameCountriesStart.swift */,
+				63B1838D2991A2C000818ECB /* NameCountriesGame.swift */,
+			);
+			path = NameCountries;
+			sourceTree = "<group>";
+		};
+		63DC74312993FB78008066B0 /* Structsback */ = {
+			isa = PBXGroup;
+			children = (
+				63DC74322993FB85008066B0 /* Home.swift */,
+				63DC745D2996D454008066B0 /* MainBack.swift */,
+				63DC74612997DEBD008066B0 /* LessonsBackGround.swift */,
+			);
+			path = Structsback;
+			sourceTree = "<group>";
+		};
+		63DC7434299404DD008066B0 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				63DC74662997EBBB008066B0 /* SubscriptionView.swift */,
+				63DC743929940948008066B0 /* RatingGames */,
+				63DC743729940534008066B0 /* Levels */,
+				63DC7435299404FC008066B0 /* MainConnector.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		63DC743729940534008066B0 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				63DC745F2997DD61008066B0 /* LessonsView.swift */,
+				63DC74632997E7ED008066B0 /* Unit1 */,
+				63DC747A29982AB1008066B0 /* Unit2 */,
+				63262A8E2999604A0088F4B7 /* Unit3 */,
+				63262AAF2999882A0088F4B7 /* Unit4 */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		63DC743929940948008066B0 /* RatingGames */ = {
+			isa = PBXGroup;
+			children = (
+				63DC744C29957F84008066B0 /* MapGames */,
+				63DC744629957507008066B0 /* BordersGames */,
+				63DC743F29955FD0008066B0 /* CapitalsGames */,
+				63DC743E29955FAF008066B0 /* FlagsGames */,
+				636B28C1298984E4000282EA /* RatingGames.swift */,
+			);
+			path = RatingGames;
+			sourceTree = "<group>";
+		};
+		63DC743E29955FAF008066B0 /* FlagsGames */ = {
+			isa = PBXGroup;
+			children = (
+				63DC743A29940F94008066B0 /* RatingGameFlagOfCountry.swift */,
+				63DC743C29955BA4008066B0 /* RatingGameFlagFromCountry.swift */,
+			);
+			path = FlagsGames;
+			sourceTree = "<group>";
+		};
+		63DC743F29955FD0008066B0 /* CapitalsGames */ = {
+			isa = PBXGroup;
+			children = (
+				63DC744229956017008066B0 /* RatingGameCountryOfCapital.swift */,
+				63DC7444299566E4008066B0 /* RatingGameCapitalOfCountry.swift */,
+			);
+			path = CapitalsGames;
+			sourceTree = "<group>";
+		};
+		63DC744629957507008066B0 /* BordersGames */ = {
+			isa = PBXGroup;
+			children = (
+				63DC744729957757008066B0 /* RatingGameCountryOfBorder.swift */,
+				63DC744A299578F9008066B0 /* RatingGameBorderOfCountry.swift */,
+			);
+			path = BordersGames;
+			sourceTree = "<group>";
+		};
+		63DC744C29957F84008066B0 /* MapGames */ = {
+			isa = PBXGroup;
+			children = (
+				63DC744D2995814D008066B0 /* RatingGameNameAllCountries.swift */,
+				63DC744F2995950F008066B0 /* RatingGameFindCountries.swift */,
+				63DC74532996A9EE008066B0 /* RatingGameUSStates.swift */,
+			);
+			path = MapGames;
+			sourceTree = "<group>";
+		};
+		63DC74632997E7ED008066B0 /* Unit1 */ = {
+			isa = PBXGroup;
+			children = (
+				63DC74642997E8B7008066B0 /* Lesson1.swift */,
+				63DC74682997FBEB008066B0 /* Lesson2.swift */,
+				63DC746A29980493008066B0 /* Lesson3.swift */,
+				63DC746C29980C81008066B0 /* Lesson4.swift */,
+				63DC746E299813CA008066B0 /* Lesson5.swift */,
+				63DC747029981647008066B0 /* Lesson6.swift */,
+				63DC747229981AD0008066B0 /* Lesson7.swift */,
+				63DC747429982156008066B0 /* Lesson8.swift */,
+				63DC7476299823AD008066B0 /* Lesson9.swift */,
+				63DC747829982A29008066B0 /* Unit1Func.swift */,
+			);
+			path = Unit1;
+			sourceTree = "<group>";
+		};
+		63DC747A29982AB1008066B0 /* Unit2 */ = {
+			isa = PBXGroup;
+			children = (
+				63DC747B299920D4008066B0 /* Unit2Lesson1.swift */,
+				63DC747D29992712008066B0 /* Unit2Lesson2.swift */,
+				63DC747F2999288C008066B0 /* Unit2Lesson3.swift */,
+				63DC748129992C82008066B0 /* Unit2Lesson4.swift */,
+				63DC748329992F5C008066B0 /* Unit2Lesson5.swift */,
+				63DC74852999347A008066B0 /* Unit2Lesson6.swift */,
+				63DC748729993ABA008066B0 /* Unit2Lesson7.swift */,
+				63DC748929993D41008066B0 /* Unit2Lesson8.swift */,
+				63DC748B29993EAE008066B0 /* Unit2Lesson9.swift */,
+				63262A86299946760088F4B7 /* Unit2Lesson10.swift */,
+				63262A88299959F80088F4B7 /* Unit2Lesson11.swift */,
+				63262A8A29995B8C0088F4B7 /* Unit2Lesson12.swift */,
+				63262A8C29995F890088F4B7 /* Unit2Func.swift */,
+			);
+			path = Unit2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		636B288D298984C5000282EA /* Map Master */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 636B28B7298984C6000282EA /* Build configuration list for PBXNativeTarget "Map Master" */;
+			buildPhases = (
+				636B288A298984C5000282EA /* Sources */,
+				636B288B298984C5000282EA /* Frameworks */,
+				636B288C298984C5000282EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Map Master";
+			packageProductDependencies = (
+				63B18381298FEDD700818ECB /* InteractiveMap */,
+			);
+			productName = "Map Master";
+			productReference = 636B288E298984C5000282EA /* Map Master.app */;
+			productType = "com.apple.product-type.application";
+		};
+		636B28A2298984C6000282EA /* Map MasterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 636B28BA298984C6000282EA /* Build configuration list for PBXNativeTarget "Map MasterTests" */;
+			buildPhases = (
+				636B289F298984C6000282EA /* Sources */,
+				636B28A0298984C6000282EA /* Frameworks */,
+				636B28A1298984C6000282EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				636B28A5298984C6000282EA /* PBXTargetDependency */,
+			);
+			name = "Map MasterTests";
+			productName = "Map MasterTests";
+			productReference = 636B28A3298984C6000282EA /* Map MasterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		636B28AC298984C6000282EA /* Map MasterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 636B28BD298984C6000282EA /* Build configuration list for PBXNativeTarget "Map MasterUITests" */;
+			buildPhases = (
+				636B28A9298984C6000282EA /* Sources */,
+				636B28AA298984C6000282EA /* Frameworks */,
+				636B28AB298984C6000282EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				636B28AF298984C6000282EA /* PBXTargetDependency */,
+			);
+			name = "Map MasterUITests";
+			productName = "Map MasterUITests";
+			productReference = 636B28AD298984C6000282EA /* Map MasterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		636B2886298984C5000282EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					636B288D298984C5000282EA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					636B28A2298984C6000282EA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 636B288D298984C5000282EA;
+					};
+					636B28AC298984C6000282EA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 636B288D298984C5000282EA;
+					};
+				};
+			};
+			buildConfigurationList = 636B2889298984C5000282EA /* Build configuration list for PBXProject "Map Master" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 636B2885298984C5000282EA;
+			packageReferences = (
+				63B18380298FEDD700818ECB /* XCRemoteSwiftPackageReference "InteractiveMap" */,
+			);
+			productRefGroup = 636B288F298984C5000282EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				636B288D298984C5000282EA /* Map Master */,
+				636B28A2298984C6000282EA /* Map MasterTests */,
+				636B28AC298984C6000282EA /* Map MasterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		636B288C298984C5000282EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636B2899298984C6000282EA /* Preview Assets.xcassets in Resources */,
+				63DC745A2996B8A2008066B0 /* usa-low.svg in Resources */,
+				636B2896298984C6000282EA /* Assets.xcassets in Resources */,
+				63DC742E2993DC01008066B0 /* world-low.svg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636B28A1298984C6000282EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636B28AB298984C6000282EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		636B288A298984C5000282EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63262A92299963F10088F4B7 /* Unit3Lesson2.swift in Sources */,
+				63DC748429992F5C008066B0 /* Unit2Lesson5.swift in Sources */,
+				63DC744829957757008066B0 /* RatingGameCountryOfBorder.swift in Sources */,
+				63B1834E298ACFF900818ECB /* allCountries.swift in Sources */,
+				636B28C2298984E4000282EA /* RatingGames.swift in Sources */,
+				63DC747E29992712008066B0 /* Unit2Lesson2.swift in Sources */,
+				63262AC9299A93370088F4B7 /* Unit4Lesson13.swift in Sources */,
+				63DC747C299920D4008066B0 /* Unit2Lesson1.swift in Sources */,
+				63CB40F0299AD5F50011812D /* Unit4Lesson15.swift in Sources */,
+				63262AAE299987060088F4B7 /* Unit3Func.swift in Sources */,
+				63262AB1299A2C1C0088F4B7 /* Unit4Lesson1.swift in Sources */,
+				63DC7436299404FC008066B0 /* MainConnector.swift in Sources */,
+				63262AA6299979C80088F4B7 /* Unit3Lesson12.swift in Sources */,
+				63B1838C299199C700818ECB /* NameCountriesStart.swift in Sources */,
+				63262AC5299A8F330088F4B7 /* Unit4Lesson11.swift in Sources */,
+				63B1834C298AC1FD00818ECB /* GuessingCountryFromFlagGame.swift in Sources */,
+				63DC7477299823AD008066B0 /* Lesson9.swift in Sources */,
+				63262AA4299978D50088F4B7 /* Unit3Lesson11.swift in Sources */,
+				63262A9C29996A380088F4B7 /* Unit3Lesson7.swift in Sources */,
+				63DC74692997FBEB008066B0 /* Lesson2.swift in Sources */,
+				63DC748C29993EAE008066B0 /* Unit2Lesson9.swift in Sources */,
+				63DC746D29980C81008066B0 /* Lesson4.swift in Sources */,
+				63262AC3299A8DE50088F4B7 /* Unit4Lesson10.swift in Sources */,
+				63262A9E29996BCF0088F4B7 /* Unit3Lesson8.swift in Sources */,
+				63262AB9299A7EE00088F4B7 /* Unit4Lesson5.swift in Sources */,
+				63B18389299192D500818ECB /* GuessCountryByBorderGame.swift in Sources */,
+				63262AAA299980140088F4B7 /* Unit3Lesson14.swift in Sources */,
+				63B18352298D4B9E00818ECB /* ArrayExtension.swift in Sources */,
+				63DC74332993FB85008066B0 /* Home.swift in Sources */,
+				63DC747329981AD0008066B0 /* Lesson7.swift in Sources */,
+				63DC748229992C82008066B0 /* Unit2Lesson4.swift in Sources */,
+				63B18360298D7A3A00818ECB /* GuessMostPopulatedCountryGame.swift in Sources */,
+				63CB40EE299AD5F50011812D /* Unit4Lesson18.swift in Sources */,
+				63B1833B298988C700818ECB /* GuessingCountryFromFlagStart.swift in Sources */,
+				63262A8D29995F890088F4B7 /* Unit2Func.swift in Sources */,
+				63B18359298D562000818ECB /* GuessingFlagFromCountryStart.swift in Sources */,
+				63262AA029996C760088F4B7 /* Unit3Lesson9.swift in Sources */,
+				63DC74302993E4B0008066B0 /* AllCountriesNames.swift in Sources */,
+				63B18344298A9E2200818ECB /* UserData.swift in Sources */,
+				63262A8B29995B8C0088F4B7 /* Unit2Lesson12.swift in Sources */,
+				63262A962999664B0088F4B7 /* Unit3Lesson4.swift in Sources */,
+				63B1833D2989A77100818ECB /* Country.swift in Sources */,
+				63262A94299964DC0088F4B7 /* Unit3Lesson3.swift in Sources */,
+				63262A89299959F80088F4B7 /* Unit2Lesson11.swift in Sources */,
+				63DC745229969FAF008066B0 /* FindCountryGame.swift in Sources */,
+				63DC747129981647008066B0 /* Lesson6.swift in Sources */,
+				63DC746F299813CA008066B0 /* Lesson5.swift in Sources */,
+				63DC743B29940F94008066B0 /* RatingGameFlagOfCountry.swift in Sources */,
+				63DC743D29955BA5008066B0 /* RatingGameFlagFromCountry.swift in Sources */,
+				63262ACB299A96430088F4B7 /* Unit4Lesson14.swift in Sources */,
+				63CB40F2299AD5F50011812D /* Unit4Lesson17.swift in Sources */,
+				63DC7445299566E4008066B0 /* RatingGameCapitalOfCountry.swift in Sources */,
+				63B1838E2991A2C000818ECB /* NameCountriesGame.swift in Sources */,
+				63262AC1299A8BAF0088F4B7 /* Unit4Lesson9.swift in Sources */,
+				63262AB5299A2EFB0088F4B7 /* Unit4Lesson3.swift in Sources */,
+				636B2892298984C5000282EA /* Map_MasterApp.swift in Sources */,
+				63262A90299962140088F4B7 /* Unit3Lesson1.swift in Sources */,
+				63262ABB299A82140088F4B7 /* Unit4Lesson6.swift in Sources */,
+				63DC747929982A29008066B0 /* Unit1Func.swift in Sources */,
+				63DC747529982156008066B0 /* Lesson8.swift in Sources */,
+				63262ABD299A848A0088F4B7 /* Unit4Lesson7.swift in Sources */,
+				63CB40EF299AD5F50011812D /* Unit4Func.swift in Sources */,
+				63DC744329956017008066B0 /* RatingGameCountryOfCapital.swift in Sources */,
+				63262AA829997CE80088F4B7 /* Unit3Lesson13.swift in Sources */,
+				63DC74672997EBBB008066B0 /* SubscriptionView.swift in Sources */,
+				63262AC7299A90580088F4B7 /* Unit4Lesson12.swift in Sources */,
+				63DC74862999347A008066B0 /* Unit2Lesson6.swift in Sources */,
+				63DC74602997DD61008066B0 /* LessonsView.swift in Sources */,
+				63DC74802999288C008066B0 /* Unit2Lesson3.swift in Sources */,
+				63262A9A299968800088F4B7 /* Unit3Lesson6.swift in Sources */,
+				63262A87299946760088F4B7 /* Unit2Lesson10.swift in Sources */,
+				63262AA229996E960088F4B7 /* Unit3Lesson10.swift in Sources */,
+				63B18369298D913200818ECB /* GuessCountryByBorderStart.swift in Sources */,
+				63DC748A29993D41008066B0 /* Unit2Lesson8.swift in Sources */,
+				63262AB7299A72550088F4B7 /* Unit4Lesson4.swift in Sources */,
+				63B1835B298D595E00818ECB /* GuessingFlagFromCountryGame.swift in Sources */,
+				63B18346298A9E7E00818ECB /* InsertDataToCoreData.swift in Sources */,
+				63DC744E2995814D008066B0 /* RatingGameNameAllCountries.swift in Sources */,
+				63DC744B299578F9008066B0 /* RatingGameBorderOfCountry.swift in Sources */,
+				63DC74542996A9EE008066B0 /* RatingGameUSStates.swift in Sources */,
+				63B18348298AA3CA00818ECB /* CountriesData.swift in Sources */,
+				63CB40F1299AD5F50011812D /* Unit4Lesson16.swift in Sources */,
+				63262ABF299A8A650088F4B7 /* Unit4Lesson8.swift in Sources */,
+				63B18350298C2D4B00818ECB /* ColorExtension.swift in Sources */,
+				63DC74622997DEBD008066B0 /* LessonsBackGround.swift in Sources */,
+				63B1835E298D70A300818ECB /* GuessMostPopulatedCountryStart.swift in Sources */,
+				63DC748829993ABA008066B0 /* Unit2Lesson7.swift in Sources */,
+				63DC74652997E8B7008066B0 /* Lesson1.swift in Sources */,
+				63DC746B29980493008066B0 /* Lesson3.swift in Sources */,
+				63DC745C2996B92E008066B0 /* us_states.swift in Sources */,
+				63B18365298D8B4500818ECB /* GuessCapitalOfCoutryGame.swift in Sources */,
+				63B183962991B8E600818ECB /* PDFKitRepresentedView.swift in Sources */,
+				63B18363298D825B00818ECB /* GuessCapitalOfCoutryStart.swift in Sources */,
+				63262A98299967950088F4B7 /* Unit3Lesson5.swift in Sources */,
+				63262AAC299982670088F4B7 /* Unit3Lesson15.swift in Sources */,
+				63B18342298A9BDE00818ECB /* CoreDataStack.swift in Sources */,
+				63DC745E2996D454008066B0 /* MainBack.swift in Sources */,
+				63DC74282992B4B4008066B0 /* CountriesNames.swift in Sources */,
+				63DC74502995950F008066B0 /* RatingGameFindCountries.swift in Sources */,
+				63262AB3299A2DDD0088F4B7 /* Unit4Lesson2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636B289F298984C6000282EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636B28A8298984C6000282EA /* Map_MasterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		636B28A9298984C6000282EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636B28B2298984C6000282EA /* Map_MasterUITests.swift in Sources */,
+				636B28B4298984C6000282EA /* Map_MasterUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		636B28A5298984C6000282EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 636B288D298984C5000282EA /* Map Master */;
+			targetProxy = 636B28A4298984C6000282EA /* PBXContainerItemProxy */;
+		};
+		636B28AF298984C6000282EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 636B288D298984C5000282EA /* Map Master */;
+			targetProxy = 636B28AE298984C6000282EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		636B28B5298984C6000282EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		636B28B6298984C6000282EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		636B28B8298984C6000282EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Map Master/Preview Content\"";
+				DEVELOPMENT_TEAM = 55JW98DFNK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st1tchqwerty.Map-Master";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		636B28B9298984C6000282EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Map Master/Preview Content\"";
+				DEVELOPMENT_TEAM = 55JW98DFNK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st1tchqwerty.Map-Master";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		636B28BB298984C6000282EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55JW98DFNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st1tchqwerty.Map-MasterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Map Master.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Map Master";
+			};
+			name = Debug;
+		};
+		636B28BC298984C6000282EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55JW98DFNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st1tchqwerty.Map-MasterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Map Master.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Map Master";
+			};
+			name = Release;
+		};
+		636B28BE298984C6000282EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55JW98DFNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st1tchqwerty.Map-MasterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Map Master";
+			};
+			name = Debug;
+		};
+		636B28BF298984C6000282EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55JW98DFNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st1tchqwerty.Map-MasterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Map Master";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		636B2889298984C5000282EA /* Build configuration list for PBXProject "Map Master" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				636B28B5298984C6000282EA /* Debug */,
+				636B28B6298984C6000282EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		636B28B7298984C6000282EA /* Build configuration list for PBXNativeTarget "Map Master" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				636B28B8298984C6000282EA /* Debug */,
+				636B28B9298984C6000282EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		636B28BA298984C6000282EA /* Build configuration list for PBXNativeTarget "Map MasterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				636B28BB298984C6000282EA /* Debug */,
+				636B28BC298984C6000282EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		636B28BD298984C6000282EA /* Build configuration list for PBXNativeTarget "Map MasterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				636B28BE298984C6000282EA /* Debug */,
+				636B28BF298984C6000282EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63B18380298FEDD700818ECB /* XCRemoteSwiftPackageReference "InteractiveMap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GrandSir/InteractiveMap";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63B18381298FEDD700818ECB /* InteractiveMap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63B18380298FEDD700818ECB /* XCRemoteSwiftPackageReference "InteractiveMap" */;
+			productName = InteractiveMap;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 636B2886298984C5000282EA /* Project object */;
+}
