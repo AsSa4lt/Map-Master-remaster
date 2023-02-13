@@ -12,15 +12,16 @@ struct MainConnector: View {
     var body: some View {
         NavigationView{
             TabView{
+                LessonsView(GlobalUserData: userData()).tabItem{
+                    Image(systemName: "calendar")
+                    Text("Daily").foregroundColor(.white)
+                }
                 
                 RatingGames(GlobalUserData: userData()).tabItem{
                     Image(systemName: "calendar")
                     Text("Daily").foregroundColor(.white)
                 }
-                LessonsView(GlobalUserData: userData()).tabItem{
-                    Image(systemName: "calendar")
-                    Text("Daily").foregroundColor(.white)
-                }
+                
             }.colorScheme(.dark)
                 }.navigationViewStyle(StackNavigationViewStyle()).accentColor(.white)
     }
