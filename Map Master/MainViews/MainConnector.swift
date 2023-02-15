@@ -13,15 +13,23 @@ struct MainConnector: View {
         NavigationView{
             TabView{
                 LessonsView(GlobalUserData: userData()).tabItem{
-                    Image(systemName: "calendar")
-                    Text("Daily").foregroundColor(.white)
+                    Image(systemName: "signature")
+                    Text("Lessons").foregroundColor(.white)
                 }
                 
                 RatingGames(GlobalUserData: userData()).tabItem{
-                    Image(systemName: "calendar")
-                    Text("Daily").foregroundColor(.white)
+                    Image(systemName: "person.bust")
+                    Text("Rating games").foregroundColor(.white)
+                }
+                Practice(GlobalUserData: userData()).tabItem{
+                    Image(systemName: "brain.head.profile")
+                    Text("Skill Builder").foregroundColor(.white)
                 }
                 
+                Settings(GlobalUserData: userData()).tabItem{
+                    Image(systemName: "slider.horizontal.3")
+                    Text("Settings").foregroundColor(.white)
+                }
             }.colorScheme(.dark)
                 }.navigationViewStyle(StackNavigationViewStyle()).accentColor(.white)
     }

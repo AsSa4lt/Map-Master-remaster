@@ -116,7 +116,7 @@ struct RatingGameUSStates: View {
                                 if isTapped == false{
                                     isTapped = true
                                     if clickedPath.name == answer{
-                                        score = score + 500
+                                        score = score + 300
                                         stateOfAnswer = 1
                                         pathsCorrect.append(PathData(name: "\(answer)", id: "\(answer)", path: []))
                                     }else{

@@ -1,13 +1,13 @@
 //
-//  GuessCountryByBorderGame.swift
+//  GuessCountryFromBorderGame.swift
 //  Map Master
 //
-//  Created by Rostyslav on 06.02.2023.
+//  Created by Rostyslav on 15.02.2023.
 //
 
 import SwiftUI
 
-struct GuessCountryByBorderGame: View {
+struct GuessCountryFromBorderGame: View {
     @StateObject var GlobalUserData: userData
     @State private var animateGradient = false
     @State var choice: Int
@@ -23,6 +23,8 @@ struct GuessCountryByBorderGame: View {
     @State var task: [String] = ["","",""]
     var timer = Timer.publish(every: 0.015, on: .main, in: .common).autoconnect()
     var body: some View {
+        ZStack{
+            MainBack()
         VStack{
             
             if before_game > 0{
@@ -33,7 +35,7 @@ struct GuessCountryByBorderGame: View {
             }else{
                 if timeLeft > 0{
                     Text("Score: \(score)").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
-                    Text("Time Left: \(String(format: "%.2f", ceil(timeLeft*100)/100))").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white).padding(.bottom, -10.0)
+                    Text("Time Left: \(String(format: "%.0f", ceil(timeLeft*100)/100)) s.").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
                     
                     VStack{
                         if time_task >= 0.7{
@@ -43,11 +45,7 @@ struct GuessCountryByBorderGame: View {
                         }else if time_task < 0.4{
                             ProgressView(value: time_task).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.red)
                         }
-                        Image("\(task[correct_answer-1])B").resizable()
-                            
-                            .frame(width: UIScreen.main.bounds.width*0.7, height: UIScreen.main.bounds.width*0.7).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.orange, lineWidth: 4))
-                            .shadow(radius: 2).padding(.vertical)
+                        Text("\(task[correct_answer-1])").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
                         Button{
                             answer = 1
                             show_answers = true
@@ -56,18 +54,16 @@ struct GuessCountryByBorderGame: View {
                             }
                         }label: {
                             if show_answers == false{
-                                Color.mint.overlay(
-                                    Text("\(task[0])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
+                                Image("\(task[0])B").resizable().frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                             }else{
                                 if correct_answer == 1{
                                     Color.green.overlay(
-                                        Text("\(task[0])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
+                                        Text("\(task[0])").font(.title3).fontWeight(.heavy).foregroundColor(.white)
+                                    ).frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                                 }else{
                                     Color.red.overlay(
-                                        Text("\(task[0])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
+                                        Text("\(task[0])").font(.title3).fontWeight(.heavy).foregroundColor(.white)
+                                    ).frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                                 }
                             }
                         }
@@ -79,18 +75,16 @@ struct GuessCountryByBorderGame: View {
                             }
                         }label: {
                             if show_answers == false{
-                                Color.mint.overlay(
-                                    Text("\(task[1])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
+                                Image("\(task[1])B").resizable().frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                             }else{
                                 if correct_answer == 2{
                                     Color.green.overlay(
-                                        Text("\(task[1])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
+                                        Text("\(task[1])").font(.title3).fontWeight(.heavy).foregroundColor(.white)
+                                    ).frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                                 }else{
                                     Color.red.overlay(
-                                        Text("\(task[1])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
+                                        Text("\(task[1])").font(.title3).fontWeight(.heavy).foregroundColor(.white)
+                                    ).frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                                 }
                             }
                         }
@@ -102,39 +96,31 @@ struct GuessCountryByBorderGame: View {
                             }
                         }label: {
                             if show_answers == false{
-                                Color.mint.overlay(
-                                    Text("\(task[2])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
+                                Image("\(task[2])B").resizable().frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                             }else{
                                 if correct_answer == 3{
                                     Color.green.overlay(
-                                        Text("\(task[2])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
+                                        Text("\(task[2])").font(.title3).fontWeight(.heavy).foregroundColor(.white)
+                                    ).frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                                 }else{
                                     Color.red.overlay(
-                                        Text("\(task[2])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
+                                        Text("\(task[2])").font(.title3).fontWeight(.heavy).foregroundColor(.white)
+                                    ).frame(width: UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                                 }
                             }
                         }
                         .padding(.bottom)
-                    }.frame(width: UIScreen.main.bounds.width/1.05).background(
-                        LinearGradient(gradient: Gradient(colors: [Color(hex: 0x3b34), Color(hex: 0x56388A)]), startPoint: animateGradient1 ? .topLeading : .bottomLeading, endPoint: animateGradient1 ? .bottomTrailing : .topTrailing)).cornerRadius(15).padding(.bottom, 30.0)
+                    }.padding()
+                        .frame(width: UIScreen.main.bounds.width*0.95)
+                        .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     Spacer()
                 }else{
                     Text("Score").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
                     Text("\(score)").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
                 }
             }
-        }.background(
-            LinearGradient(gradient: Gradient(colors: [Color(hex: 0x26527C), Color(hex: 0x20805E)]), startPoint: animateGradient ? .topLeading : .bottomLeading, endPoint: animateGradient ? .bottomTrailing : .topTrailing).ignoresSafeArea().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height).onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-                    withAnimation(.linear(duration: 5).repeatForever(autoreverses: true)) {
-                        animateGradient.toggle()
-                    }
-                }
-            }
-        ).onAppear{
+        }.onAppear{
             for i in 1...3{
                 DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                     before_game = before_game - 1
@@ -152,12 +138,13 @@ struct GuessCountryByBorderGame: View {
                         createTask()
                     }
                 }else{
-                    if score > GlobalUserData.result_border_country[choice-1]{
-                        GlobalUserData.result_border_country[choice-1] = score
+                    if score > GlobalUserData.result_country_border[choice-1]{
+                        GlobalUserData.result_country_border[choice-1] = score
                     }
                 }
             }
         }
+    }
     }
     func createTask(){
         if answer == correct_answer{
@@ -220,8 +207,8 @@ struct GuessCountryByBorderGame: View {
     }
 }
 
-struct GuessCountryByBorderGame_Previews: PreviewProvider {
+struct GuessCountryFromBorderGame_Previews: PreviewProvider {
     static var previews: some View {
-        GuessCountryByBorderGame(GlobalUserData: userData(), choice: Int())
+        GuessCountryFromBorderGame(GlobalUserData: userData(), choice: Int())
     }
 }

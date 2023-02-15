@@ -67,7 +67,7 @@ struct RatingGameNameAllCountries: View {
                                         for j in 0..<answers[i].count{
                                             if answer == answers[i][j]{
                                                 clickedPath.append(PathData(name: "\(answers[i][0])", id: "\(answers[i][0])", path: []))
-                                                score = score + 500
+                                                score = score + 200
                                                 where_del = i
                                             }
                                         }

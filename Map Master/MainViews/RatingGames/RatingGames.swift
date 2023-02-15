@@ -16,19 +16,22 @@ struct RatingGames: View {
                 ScrollView(showsIndicators: false){
                     Text("Rating games").foregroundColor(Color.white).fontWeight(.heavy).font(.system(size: 47))
                        
-                    
-                    HStack{
-                        Text("Rating: ").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                        Text("\(overall_rating)").font(.title).fontWeight(.heavy).foregroundColor(Color(hue: 1.0, saturation: 0.654, brightness: 0.86))
-                        Spacer()
-                    }.frame(width: UIScreen.main.bounds.width*0.95)
-                    
-                    HStack{
-                        Text("League: ").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                        Text("Bronze").font(.title).fontWeight(.heavy).foregroundColor(Color(hue: 0.175, saturation: 0.74, brightness: 0.809))
-                        Spacer()
-                    }.frame(width: UIScreen.main.bounds.width*0.95)
-                    
+                    NavigationLink(destination: Leagues(GlobalUserData: GlobalUserData)) {
+                        VStack{
+                            HStack{
+                                Text("Rating: ").font(.title).fontWeight(.heavy).foregroundColor(.white)
+                                Text("\(overall_rating)").font(.title).fontWeight(.heavy).foregroundColor(.white)
+                                Image(systemName: "questionmark.app.fill").resizable().frame(width: 20, height: 20).foregroundColor(.white)
+                                Spacer()
+                            }.frame(width: UIScreen.main.bounds.width*0.95)
+                            
+                            HStack{
+                                Text("League: ").font(.title).fontWeight(.heavy).foregroundColor(.white)
+                                LeagueFunc(score: overall_rating)
+                                Spacer()
+                            }.frame(width: UIScreen.main.bounds.width*0.95)
+                        }
+                    }
                     VStack{
                         Text("Map games").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: RatingGameNameAllCountries(GlobalUserData: GlobalUserData)) {
@@ -43,7 +46,7 @@ struct RatingGames: View {
                                     Image("Greece").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
                                 }
                             }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                LinearGradient(colors: [.gray, Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15)
+                                LinearGradient(colors: [Color(hex: 0x3645), Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15).shadow(radius: 3)
                             )
                         }
                         
@@ -59,7 +62,7 @@ struct RatingGames: View {
                                     Image("Greenland").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
                                 }
                             }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                LinearGradient(colors: [.gray, Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15)
+                                LinearGradient(colors: [Color(hex: 0x3645), Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15).shadow(radius: 3)
                             )
                         }
                         
@@ -75,7 +78,7 @@ struct RatingGames: View {
                                     Image("United States").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
                                 }
                             }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                LinearGradient(colors: [.gray, Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15)
+                                LinearGradient(colors: [Color(hex: 0x3645), Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15).shadow(radius: 3)
                             )
                         }
                         
@@ -99,7 +102,7 @@ struct RatingGames: View {
                                     Image("Canada").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
                                 }
                             }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                LinearGradient(colors: [.mint, Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15)
+                                Color.cyan.cornerRadius(15).shadow(radius: 3)
                             )
                         }
                         
@@ -115,7 +118,7 @@ struct RatingGames: View {
                                     Image("Ukraine").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
                                 }
                             }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                LinearGradient(colors: [.mint, Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15)
+                                Color.cyan.cornerRadius(15).shadow(radius: 3)
                             )
                         }
                         
@@ -140,7 +143,7 @@ struct RatingGames: View {
                                     Image("Czechia").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
                                 }
                             }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                LinearGradient(colors: [.indigo, Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15)
+                                Color.indigo.cornerRadius(15).shadow(radius: 3)
                             )
                         }
                         
@@ -156,7 +159,7 @@ struct RatingGames: View {
                                     Image("Mexico").resizable().resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
                                 }
                             }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                LinearGradient(colors: [.indigo, Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15)
+                                Color.indigo.cornerRadius(15).shadow(radius: 3)
                             )
                         }
                         
@@ -178,7 +181,7 @@ struct RatingGames: View {
                                     Image("France").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
                                 }
                             }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                LinearGradient(colors: [.purple, Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15)
+                                Color(hex: 0xb42315).cornerRadius(15).shadow(radius: 3)
                             )
                         }
                         
@@ -194,7 +197,7 @@ struct RatingGames: View {
                                     Image("Denmark").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
                                 }
                             }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                LinearGradient(colors: [.purple, Color(hex: 0x3645)], startPoint: .top, endPoint: .bottom).cornerRadius(15)
+                                Color(hex: 0xb42315).cornerRadius(15).shadow(radius: 3)
                             )
                         }
                         

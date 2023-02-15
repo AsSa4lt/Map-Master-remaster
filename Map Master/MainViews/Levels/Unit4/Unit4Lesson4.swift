@@ -166,7 +166,7 @@ struct Unit4Lesson4: View {
                     .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
             }else{
-                if GlobalUserData.hearts <= 10{
+                if GlobalUserData.hearts <= 0{
                     Text("You ran you of hearts!").font(.title).fontWeight(.heavy)
                         .foregroundColor(Color.white)
                         .padding(.bottom, -10.0)

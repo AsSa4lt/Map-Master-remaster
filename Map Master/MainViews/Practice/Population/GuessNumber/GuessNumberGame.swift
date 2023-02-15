@@ -1,19 +1,20 @@
 //
-//  GuessingFlagFromCountryGame.swift
+//  GuessNumberGame.swift
 //  Map Master
 //
-//  Created by Rostyslav on 03.02.2023.
+//  Created by Rostyslav on 15.02.2023.
 //
 
 import SwiftUI
 
-struct GuessingFlagFromCountryGame: View {
+struct GuessNumberGame: View {
     @StateObject var GlobalUserData: userData
     @State private var animateGradient = false
     @State var choice: Int
     @State var before_game: Int = 3
     @State var score: Int = 0
     @State var answer: Int = 0
+    @State var country: String = ""
     @State var correct_answer: Int = 0
     @State var progress: Double = 1
     @State var show_answers: Bool = false
@@ -23,6 +24,8 @@ struct GuessingFlagFromCountryGame: View {
     @State var task: [String] = ["","",""]
     var timer = Timer.publish(every: 0.015, on: .main, in: .common).autoconnect()
     var body: some View {
+        ZStack{
+            MainBack()
         VStack{
             
             if before_game > 0{
@@ -33,8 +36,7 @@ struct GuessingFlagFromCountryGame: View {
             }else{
                 if timeLeft > 0{
                     Text("Score: \(score)").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
-                    Text("Time Left").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
-                    Text("\(String(format: "%.2f", ceil(timeLeft*100)/100))").fontWeight(.heavy).foregroundColor(.white).font(.system(size: 50)).padding(.bottom, -10.0)
+                    Text("Time Left: \(String(format: "%.0f", ceil(timeLeft*100)/100)) s.").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
                     
                     VStack{
                         if time_task >= 0.7{
@@ -44,7 +46,10 @@ struct GuessingFlagFromCountryGame: View {
                         }else if time_task < 0.4{
                             ProgressView(value: time_task).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.red)
                         }
-                        Text("\(task[correct_answer-1])").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
+                        Image("\(country)").resizable().frame(width: UIScreen.main.bounds.width*0.6, height: UIScreen.main.bounds.width*0.35).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.orange, lineWidth: 4))
+                        .shadow(radius: 2).padding(.top)
+                        Text("\(country)").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
                         Button{
                             answer = 1
                             show_answers = true
@@ -53,16 +58,18 @@ struct GuessingFlagFromCountryGame: View {
                             }
                         }label: {
                             if show_answers == false{
-                                Image("\(task[0])").resizable().frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                Color.indigo.overlay(
+                                    Text("\(task[0])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                             }else{
                                 if correct_answer == 1{
                                     Color.green.overlay(
                                         Text("\(task[0])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                                 }else{
                                     Color.red.overlay(
                                         Text("\(task[0])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                                 }
                             }
                         }
@@ -74,16 +81,18 @@ struct GuessingFlagFromCountryGame: View {
                             }
                         }label: {
                             if show_answers == false{
-                                Image("\(task[1])").resizable().frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                Color.indigo.overlay(
+                                    Text("\(task[1])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                             }else{
                                 if correct_answer == 2{
                                     Color.green.overlay(
                                         Text("\(task[1])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                                 }else{
                                     Color.red.overlay(
                                         Text("\(task[1])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                                 }
                             }
                         }
@@ -95,37 +104,34 @@ struct GuessingFlagFromCountryGame: View {
                             }
                         }label: {
                             if show_answers == false{
-                                Image("\(task[2])").resizable().frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                Color.indigo.overlay(
+                                    Text("\(task[2])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                             }else{
                                 if correct_answer == 3{
                                     Color.green.overlay(
                                         Text("\(task[2])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                                 }else{
                                     Color.red.overlay(
                                         Text("\(task[2])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                    ).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                    ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                                 }
                             }
                         }
+                        
+                    }.frame(width: UIScreen.main.bounds.width/1.05).padding()
+                        .frame(width: UIScreen.main.bounds.width*0.95)
+                        .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                         .padding(.bottom)
-                    }.frame(width: UIScreen.main.bounds.width/1.05).background(
-                        LinearGradient(gradient: Gradient(colors: [Color(hex: 0x3b34), Color(hex: 0x56388A)]), startPoint: animateGradient1 ? .topLeading : .bottomLeading, endPoint: animateGradient1 ? .bottomTrailing : .topTrailing)).cornerRadius(15).padding(.bottom, 30.0)
                     Spacer()
                 }else{
                     Text("Score").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
                     Text("\(score)").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
                 }
             }
-        }.background(
-            LinearGradient(gradient: Gradient(colors: [Color(hex: 0x26527C), Color(hex: 0x20805E)]), startPoint: animateGradient ? .topLeading : .bottomLeading, endPoint: animateGradient ? .bottomTrailing : .topTrailing).ignoresSafeArea().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height).onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-                    withAnimation(.linear(duration: 5).repeatForever(autoreverses: true)) {
-                        animateGradient.toggle()
-                    }
-                }
-            }
-        ).onAppear{
+        }.onAppear{
             for i in 1...3{
                 DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                     before_game = before_game - 1
@@ -143,12 +149,13 @@ struct GuessingFlagFromCountryGame: View {
                         createTask()
                     }
                 }else{
-                    if score > GlobalUserData.result_country_flag[choice-1]{
-                        GlobalUserData.result_country_flag[choice-1] = score
+                    if score > GlobalUserData.result_country_population[choice-1]{
+                        GlobalUserData.result_country_population[choice-1] = score
                     }
                 }
             }
         }
+    }
     }
     func createTask(){
         if answer == correct_answer{
@@ -183,36 +190,48 @@ struct GuessingFlagFromCountryGame: View {
             
         }
         let sortedArray = Array(randomNumbers).sorted()
+        correct_answer = Int.random(in: 1..<4)
         if choice == 1{
-            task[0] = String(allcountries[sortedArray[0]][0])
-            task[1] = String(allcountries[sortedArray[1]][0])
-            task[2] = String(allcountries[sortedArray[2]][0])
+            task[0] = String(allcountries[sortedArray[0]][2])
+            task[1] = String(allcountries[sortedArray[1]][2])
+            task[2] = String(allcountries[sortedArray[2]][2])
+            country = String(allcountries[sortedArray[correct_answer-1]][0])
         }else if choice == 2{
-            task[0] = String(countriesEurope[sortedArray[0]][0])
-            task[1] = String(countriesEurope[sortedArray[1]][0])
-            task[2] = String(countriesEurope[sortedArray[2]][0])
+            task[0] = String(countriesEurope[sortedArray[0]][2])
+            task[1] = String(countriesEurope[sortedArray[1]][2])
+            task[2] = String(countriesEurope[sortedArray[2]][2])
+            country = String(countriesEurope[sortedArray[correct_answer-1]][0])
         }else if choice == 3{
-            task[0] = String(countriesAfrica[sortedArray[0]][0])
-            task[1] = String(countriesAfrica[sortedArray[1]][0])
-            task[2] = String(countriesAfrica[sortedArray[2]][0])
+            task[0] = String(countriesAfrica[sortedArray[0]][2])
+            task[1] = String(countriesAfrica[sortedArray[1]][2])
+            task[2] = String(countriesAfrica[sortedArray[2]][2])
+            country = String(countriesAfrica[sortedArray[correct_answer-1]][0])
         }
         else if choice == 4{
-            task[0] = String(countriesAsia[sortedArray[0]][0])
-            task[1] = String(countriesAsia[sortedArray[1]][0])
-            task[2] = String(countriesAsia[sortedArray[2]][0])
+            task[0] = String(countriesAsia[sortedArray[0]][2])
+            task[1] = String(countriesAsia[sortedArray[1]][2])
+            task[2] = String(countriesAsia[sortedArray[2]][2])
+            country = String(countriesAsia[sortedArray[correct_answer-1]][0])
         }
         else if choice == 5{
-            task[0] = String(countriesAmericas[sortedArray[0]][0])
-            task[1] = String(countriesAmericas[sortedArray[1]][0])
-            task[2] = String(countriesAmericas[sortedArray[2]][0])
+            task[0] = String(countriesAmericas[sortedArray[0]][2])
+            task[1] = String(countriesAmericas[sortedArray[1]][2])
+            task[2] = String(countriesAmericas[sortedArray[2]][2])
+            country = String(countriesAmericas[sortedArray[correct_answer-1]][0])
         }
-        correct_answer = Int.random(in: 1..<4)
+        for i in 0..<3{
+            if Int(task[i])! > 1000000{
+                var buf: Int = Int(task[i])!%1000000
+                buf = buf / 100000
+                task[i] = String(Int(task[i])!/1000000) + "," + String(buf) + " mil."
+            }
+        }
         
     }
 }
 
-struct GuessingFlagFromCountryGame_Previews: PreviewProvider {
+struct GuessNumberGame_Previews: PreviewProvider {
     static var previews: some View {
-        GuessingFlagFromCountryGame(GlobalUserData: userData(), choice: Int())
+        GuessNumberGame(GlobalUserData: userData(), choice: Int())
     }
 }

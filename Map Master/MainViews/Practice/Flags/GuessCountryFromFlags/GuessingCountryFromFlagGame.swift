@@ -1,13 +1,13 @@
 //
-//  GuessCapitalOfCoutryGame.swift
+//  LightGuessingFlagGame.swift
 //  Map Master
 //
-//  Created by Rostyslav on 03.02.2023.
+//  Created by Rostyslav on 01.02.2023.
 //
 
 import SwiftUI
 
-struct GuessCapitalOfCoutryGame: View {
+struct GuessingCountryFromFlagGame: View {
     @StateObject var GlobalUserData: userData
     @State private var animateGradient = false
     @State var choice: Int
@@ -19,11 +19,12 @@ struct GuessCapitalOfCoutryGame: View {
     @State var show_answers: Bool = false
     @State var timeLeft: Double = 60.00
     @State var time_task: Double = 1
-    @State var capitals: [String] = ["", "", ""]
     @State private var animateGradient1 = false
     @State var task: [String] = ["","",""]
     var timer = Timer.publish(every: 0.015, on: .main, in: .common).autoconnect()
     var body: some View {
+        ZStack{
+            MainBack()
         VStack{
             
             if before_game > 0{
@@ -34,8 +35,7 @@ struct GuessCapitalOfCoutryGame: View {
             }else{
                 if timeLeft > 0{
                     Text("Score: \(score)").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
-                    Text("Time Left").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
-                    Text("\(String(format: "%.2f", ceil(timeLeft*100)/100))").fontWeight(.heavy).foregroundColor(.white).font(.system(size: 50)).padding(.bottom, -10.0)
+                    Text("Time Left: \(String(format: "%.0f", ceil(timeLeft*100)/100)) s.").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
                     
                     VStack{
                         if time_task >= 0.7{
@@ -45,11 +45,11 @@ struct GuessCapitalOfCoutryGame: View {
                         }else if time_task < 0.4{
                             ProgressView(value: time_task).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.red)
                         }
-                        Image("\(task[correct_answer-1])").resizable().frame(width: UIScreen.main.bounds.width*0.6, height: UIScreen.main.bounds.width*0.35).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.orange, lineWidth: 4))
-                        .shadow(radius: 2).padding(.top)
-                        Text("\(task[correct_answer-1])").fontWeight(.heavy)
-                            .padding(.bottom).font(.largeTitle).foregroundColor(.white)
+                        Image("\(task[correct_answer-1])").resizable()
+                        
+                            .frame(width: UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.width*0.45).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.orange, lineWidth: 4))
+                            .shadow(radius: 2).padding(.vertical)
                         Button{
                             answer = 1
                             show_answers = true
@@ -58,8 +58,8 @@ struct GuessCapitalOfCoutryGame: View {
                             }
                         }label: {
                             if show_answers == false{
-                                Color.mint.overlay(
-                                    Text("\(capitals[0])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                Color.indigo.overlay(
+                                    Text("\(task[0])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
                                 ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                             }else{
                                 if correct_answer == 1{
@@ -81,8 +81,8 @@ struct GuessCapitalOfCoutryGame: View {
                             }
                         }label: {
                             if show_answers == false{
-                                Color.mint.overlay(
-                                    Text("\(capitals[1])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                Color.indigo.overlay(
+                                    Text("\(task[1])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
                                 ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                             }else{
                                 if correct_answer == 2{
@@ -104,8 +104,8 @@ struct GuessCapitalOfCoutryGame: View {
                             }
                         }label: {
                             if show_answers == false{
-                                Color.mint.overlay(
-                                    Text("\(capitals[2])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                Color.indigo.overlay(
+                                    Text("\(task[2])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
                                 ).frame(width:  UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height/15).cornerRadius(30).padding(.vertical, 10.0)
                             }else{
                                 if correct_answer == 3{
@@ -120,23 +120,17 @@ struct GuessCapitalOfCoutryGame: View {
                             }
                         }
                         .padding(.bottom)
-                    }.frame(width: UIScreen.main.bounds.width/1.05).background(
-                        LinearGradient(gradient: Gradient(colors: [Color(hex: 0x3b34), Color(hex: 0x56388A)]), startPoint: animateGradient1 ? .topLeading : .bottomLeading, endPoint: animateGradient1 ? .bottomTrailing : .topTrailing)).cornerRadius(15).padding(.bottom, 30.0)
+                    }.frame(width: UIScreen.main.bounds.width/1.05).padding()
+                        .frame(width: UIScreen.main.bounds.width*0.95)
+                        .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     Spacer()
                 }else{
                     Text("Score").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
                     Text("\(score)").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
                 }
             }
-        }.background(
-            LinearGradient(gradient: Gradient(colors: [Color(hex: 0x26527C), Color(hex: 0x20805E)]), startPoint: animateGradient ? .topLeading : .bottomLeading, endPoint: animateGradient ? .bottomTrailing : .topTrailing).ignoresSafeArea().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height).onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-                    withAnimation(.linear(duration: 5).repeatForever(autoreverses: true)) {
-                        animateGradient.toggle()
-                    }
-                }
-            }
-        ).onAppear{
+        }.onAppear{
             for i in 1...3{
                 DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                     before_game = before_game - 1
@@ -160,6 +154,7 @@ struct GuessCapitalOfCoutryGame: View {
                 }
             }
         }
+    }
     }
     func createTask(){
         if answer == correct_answer{
@@ -198,47 +193,32 @@ struct GuessCapitalOfCoutryGame: View {
             task[0] = String(allcountries[sortedArray[0]][0])
             task[1] = String(allcountries[sortedArray[1]][0])
             task[2] = String(allcountries[sortedArray[2]][0])
-            capitals[0] = allcountries[sortedArray[0]][1]
-            capitals[1] = allcountries[sortedArray[1]][1]
-            capitals[2] = allcountries[sortedArray[2]][1]
         }else if choice == 2{
             task[0] = String(countriesEurope[sortedArray[0]][0])
             task[1] = String(countriesEurope[sortedArray[1]][0])
             task[2] = String(countriesEurope[sortedArray[2]][0])
-            capitals[0] = countriesEurope[sortedArray[0]][1]
-            capitals[1] = countriesEurope[sortedArray[1]][1]
-            capitals[2] = countriesEurope[sortedArray[2]][1]
         }else if choice == 3{
             task[0] = String(countriesAfrica[sortedArray[0]][0])
             task[1] = String(countriesAfrica[sortedArray[1]][0])
             task[2] = String(countriesAfrica[sortedArray[2]][0])
-            capitals[0] = countriesAfrica[sortedArray[0]][1]
-            capitals[1] = countriesAfrica[sortedArray[1]][1]
-            capitals[2] = countriesAfrica[sortedArray[2]][1]
         }
         else if choice == 4{
             task[0] = String(countriesAsia[sortedArray[0]][0])
             task[1] = String(countriesAsia[sortedArray[1]][0])
             task[2] = String(countriesAsia[sortedArray[2]][0])
-            capitals[0] = countriesAsia[sortedArray[0]][1]
-            capitals[1] = countriesAsia[sortedArray[1]][1]
-            capitals[2] = countriesAsia[sortedArray[2]][1]
         }
         else if choice == 5{
             task[0] = String(countriesAmericas[sortedArray[0]][0])
             task[1] = String(countriesAmericas[sortedArray[1]][0])
             task[2] = String(countriesAmericas[sortedArray[2]][0])
-            capitals[0] = countriesAmericas[sortedArray[0]][1]
-            capitals[1] = countriesAmericas[sortedArray[1]][1]
-            capitals[2] = countriesAmericas[sortedArray[2]][1]
         }
         correct_answer = Int.random(in: 1..<4)
         
     }
 }
 
-struct GuessCapitalOfCoutryGame_Previews: PreviewProvider {
+struct GuessingCountryFromFlagGame_Previews: PreviewProvider {
     static var previews: some View {
-        GuessCapitalOfCoutryGame(GlobalUserData: userData(), choice: Int())
+        GuessingCountryFromFlagGame(GlobalUserData: userData(), choice: Int())
     }
 }

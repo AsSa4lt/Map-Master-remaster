@@ -64,7 +64,7 @@ struct Unit4Lesson13: View {
                                             correct = correct + 0.1
                                         }else{
                                             GlobalUserData.hearts = GlobalUserData.hearts - 1
-                                            if GlobalUserData.hearts <= 10{
+                                            if GlobalUserData.hearts <= 0{
                                                 current = 10
                                             }
                                         }
@@ -100,7 +100,7 @@ struct Unit4Lesson13: View {
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     Spacer()
                 }else{
-                    if GlobalUserData.hearts <= 10{
+                    if GlobalUserData.hearts <= 0{
                         Text("You ran you of hearts!").font(.title).fontWeight(.heavy)
                             .foregroundColor(Color.white)
                             .padding(.bottom, -10.0)
