@@ -69,7 +69,6 @@ struct RatingGames: View {
             GlobalUserData.games_left = 0
         }
         let components = calendar.dateComponents([.day], from: Date())
-
             if components.day! != GlobalUserData.last_day{
                 if GlobalUserData.is_pro == false{
                     GlobalUserData.last_day = components.day!

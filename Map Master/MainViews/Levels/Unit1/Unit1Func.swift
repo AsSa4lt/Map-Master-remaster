@@ -12,66 +12,16 @@ import SwiftUI
 @ViewBuilder
 func Unit1(GlobalUserData: userData) -> some View{
     if GlobalUserData.hearts <= 0{
-        Text("You ran out of hearts")
-            .font(.largeTitle)
-            .fontWeight(.heavy)
-            .foregroundColor(Color.white)
-            .padding(.top)
+        Text("You ran out of hearts").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.top)
         VStack{
             Text("Unit 1")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.white)
                 .padding(.top)
-            HStack{
-                    VStack{
-                            Image("Germany").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        Text("Flags 1").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
-                
-                    VStack{
-                            Image("Czechia").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        Text("Flags 2").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
-                    VStack{
-                            Image("France").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        Text("Flags 3").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
-                
-                
-            }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
-            
-            HStack{
-                    VStack{
-                            Image("Norway").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        
-                        Text("Capitals 1").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
-                    VStack{
-                            Image("Italy").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        Text("Capitals 2").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
-                    VStack{
-                            Image("Ukraine").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        Text("Capitals 3").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
-            }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
-            
-            HStack{
-                    VStack{
-                            Image("Canada").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        Text("People 1").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
-                    VStack{
-                            Image("Mexico").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        Text("People 2").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
-                    VStack{
-                            Image("Iceland").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        Text("People 3").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
-            }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
-            
+            RatingPanel(image1: "Germany", image2: "Czechia", image3: "France", text_level: "Flags", start: 1)
+            RatingPanel(image1: "Norway", image2: "Italy", image3: "Ukraine", text_level: "Capitals", start: 1)
+            RatingPanel(image1: "Canada", image2: "Mexico", image3: "Iceland", text_level: "People", start: 1)
         }.frame(width: UIScreen.main.bounds.width*0.95).foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous)).padding(.top)
     }else{
@@ -83,105 +33,38 @@ func Unit1(GlobalUserData: userData) -> some View{
                 .padding(.top)
             HStack{
                 NavigationLink(destination: Lesson1(GlobalUserData: GlobalUserData)) {
-                    VStack{
-                        if GlobalUserData.unit1[0] == false{
-                            Image("Germany").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        }else{
-                            Image("Germany").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                        }
-                        Text("Flags 1").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
+                    RatingPanelActive(image: "Germany", active: GlobalUserData.unit1[0], text_level: "Flags 1")
                 }
-                
                 NavigationLink(destination: Lesson2(GlobalUserData: GlobalUserData)) {
-                    VStack{
-                        if GlobalUserData.unit1[1] == false{
-                            Image("Czechia").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        }else{
-                            Image("Czechia").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                        }
-                        Text("Flags 2").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
+                    RatingPanelActive(image: "Czechia", active: GlobalUserData.unit1[1], text_level: "Flags 2")
                 }
-                
                 NavigationLink(destination: Lesson3(GlobalUserData: GlobalUserData)) {
-                    VStack{
-                        if GlobalUserData.unit1[2] == false{
-                            Image("France").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        }else{
-                            Image("France").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                        }
-                        Text("Flags 3").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
+                    RatingPanelActive(image: "France", active: GlobalUserData.unit1[2], text_level: "Flags 3")
                 }
-                
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             
             HStack{
                 NavigationLink(destination: Lesson4(GlobalUserData: GlobalUserData)) {
-                    VStack{
-                        if GlobalUserData.unit1[3] == false{
-                            Image("Norway").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        }else{
-                            Image("Norway").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                        }
-                        Text("Capitals 1").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
+                    RatingPanelActive(image: "Norway", active: GlobalUserData.unit1[3], text_level: "Capitals 1")
                 }
-                
                 NavigationLink(destination: Lesson5(GlobalUserData: GlobalUserData)) {
-                    VStack{
-                        if GlobalUserData.unit1[4] == false{
-                            Image("Italy").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        }else{
-                            Image("Italy").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                        }
-                        Text("Capitals 2").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
+                    RatingPanelActive(image: "Italy", active: GlobalUserData.unit1[4], text_level: "Capitals 2")
                 }
                 NavigationLink(destination: Lesson6(GlobalUserData: GlobalUserData)) {
-                    VStack{
-                        if GlobalUserData.unit1[5] == false{
-                            Image("Ukraine").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        }else{
-                            Image("Ukraine").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                        }
-                        Text("Capitals 3").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
+                    RatingPanelActive(image: "Ukraine", active: GlobalUserData.unit1[5], text_level: "Capitals 3")
                 }
                 
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             
             HStack{
                 NavigationLink(destination: Lesson7(GlobalUserData: GlobalUserData)) {
-                    VStack{
-                        if GlobalUserData.unit1[6] == false{
-                            Image("Canada").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        }else{
-                            Image("Canada").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                        }
-                        Text("People 1").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
+                    RatingPanelActive(image: "Canada", active: GlobalUserData.unit1[6], text_level: "People 1")
                 }
                 NavigationLink(destination: Lesson8(GlobalUserData: GlobalUserData)) {
-                    VStack{
-                        if GlobalUserData.unit1[7] == false{
-                            Image("Mexico").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        }else{
-                            Image("Mexico").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                        }
-                        Text("People 2").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width*0.31)
+                    RatingPanelActive(image: "Mexico", active: GlobalUserData.unit1[7], text_level: "People 2")
                 }
                 NavigationLink(destination: Lesson9(GlobalUserData: GlobalUserData)) {
-                    VStack{
-                        if GlobalUserData.unit1[8] == false{
-                            Image("Iceland").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                        }else{
-                            Image("Iceland").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                        }
-                        Text("People 3").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                    }
+                    RatingPanelActive(image: "Iceland", active: GlobalUserData.unit1[8], text_level: "People 3")
                 }.frame(width: UIScreen.main.bounds.width*0.31)
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             

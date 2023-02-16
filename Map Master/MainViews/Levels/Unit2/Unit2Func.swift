@@ -23,80 +23,12 @@ func Unit2(GlobalUserData: userData) -> some View{
                 .foregroundColor(Color.white)
                 .padding(.top)
         }
-        
         VStack{
-            Text("Unit 2")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(Color.white).padding(.top)
-            HStack{
-                VStack{
-                    Image("United States").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth:3)).opacity(0.15)
-                    Text("Flags 4").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                }.frame(width: UIScreen.main.bounds.width*0.31)
-                VStack{
-                    Image("Belgium").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth:3)).opacity(0.15)
-                    Text("Flags 5").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                }.frame(width: UIScreen.main.bounds.width*0.31)
-                
-                VStack{
-                    Image("Sweden").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth:3)).opacity(0.15)
-                    Text("Flags 6").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                }.frame(width: UIScreen.main.bounds.width*0.31)
-            }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
-            
-            HStack{
-                        VStack{
-                                Image("Cyprus").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-
-                            Text("Borders 1").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
-                        VStack{
-                                Image("Dominica").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-
-                            Text("Borders 2").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
-
-                        VStack{
-                                Image("Ireland").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-
-                            Text("Borders 3").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
-                    
-            }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
-            
-            HStack{
-                        VStack{
-                                Image("Poland").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            Text("Capitals 4").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
-                    
-
-                        VStack{
-                                Image("Romania").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            Text("Capitals 5").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
-                    
-                        VStack{
-                                Image("Saudi Arabia").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            Text("Capitals 6").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
-            }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
-            
-            HStack{
-                        VStack{
-                                Image("Senegal").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            Text("People 4").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
-                        VStack{
-                                Image("Slovenia").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            Text("People 5").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
-                        VStack{
-                                Image("Switzerland").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            Text("People 6").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
-            }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
+            Text("Unit 2").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.top)
+            RatingPanel(image1: "United States", image2: "Belgium", image3: "Sweden", text_level: "Flags", start: 4)
+            RatingPanel(image1: "Cyprus", image2: "Dominica", image3: "Ireland", text_level: "Borders", start: 1)
+            RatingPanel(image1: "Poland", image2: "Romania", image3: "Saudi Arabia", text_level: "Capitals", start: 4)
+            RatingPanel(image1: "Senegal", image2: "Slovenia", image3: "Switzerland", text_level: "People", start: 4)
         }.frame(width: UIScreen.main.bounds.width*0.95).foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous)).opacity(0.3)
     }else{
