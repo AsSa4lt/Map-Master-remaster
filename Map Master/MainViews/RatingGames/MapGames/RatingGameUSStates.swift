@@ -10,7 +10,7 @@ import InteractiveMap
 
 struct RatingGameUSStates: View {
     @StateObject var GlobalUserData: userData
-    @State var before_game: Int = 0
+    @State var before_game: Int = 3
     @State var score: Int = 0
     var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var answer: String = ""
@@ -151,6 +151,9 @@ struct RatingGameUSStates: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                         before_game = before_game - 1
                     }
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                    GlobalUserData.games_left -= 1
                 }
                 CreateTask()
                 score = 0

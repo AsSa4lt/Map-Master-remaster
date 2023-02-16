@@ -104,6 +104,10 @@ struct RatingGameNameAllCountries: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                         before_game = before_game - 1
                     }
+                    
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                    GlobalUserData.games_left -= 1
                 }
                 score = 0
             }.onReceive(timer){ _ in

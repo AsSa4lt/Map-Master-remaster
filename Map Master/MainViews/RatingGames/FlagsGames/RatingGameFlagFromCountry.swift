@@ -92,6 +92,9 @@ struct RatingGameFlagFromCountry: View {
                         before_game = before_game - 1
                     }
                 }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                    GlobalUserData.games_left -= 1
+                }
                 createTask()
                 score = 0
             }.onReceive(timer){ _ in

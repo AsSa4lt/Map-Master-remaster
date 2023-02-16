@@ -37,4 +37,8 @@ public class userData: ObservableObject{
     @AppStorage("unit3") var unit3: [Bool] = [Bool](repeating: false, count: 15)
     @AppStorage("unit4") var unit4: [Bool] = [Bool](repeating: false, count: 18)
     
+    @AppStorage("games_left") var games_left: Int = 10
+    @AppStorage("last_day_games") var last_day: Int = -1
+    @AppStorage("is_pro") var is_pro: Bool = false
+    
 }
