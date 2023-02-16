@@ -17,27 +17,10 @@ struct Practice: View {
                     VStack{
                         Text("Flags").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: GuessingCountryFromFlagStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Guess Country").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("Canada").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color.indigo.cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Guess county", image_game: "Canada", color_game: .indigo)
                         }
-                        
                         NavigationLink(destination: GuessingFlagFromCountryStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Guess Flag").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("United Kingdom").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color.indigo.cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Guess Flag", image_game: "United Kingdom", color_game: .indigo)
                         }
                     }.padding()
                         .frame(width: UIScreen.main.bounds.width*0.95)
@@ -47,27 +30,11 @@ struct Practice: View {
                     VStack{
                         Text("Capitals").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: GuessCapitalOfCoutryStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Guess Capital").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("Mexico").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color.cyan.cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Guess Capital", image_game: "Mexico", color_game: .cyan)
+
                         }
-                        
                         NavigationLink(destination: GuessCountryFromCapitalStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Guess Country").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("Ukraine").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color.cyan.cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Guess Country", image_game: "Ukraine", color_game: .cyan)
                         }
                     }.padding()
                         .frame(width: UIScreen.main.bounds.width*0.95)
@@ -77,27 +44,10 @@ struct Practice: View {
                     VStack{
                         Text("Borders").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: GuessCountryByBorderStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Guess Border").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("Czechia").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color(hex: 0x3645).cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Guess Border", image_game: "Czechia", color_game: Color(hex: 0x3645))
                         }
-                        
                         NavigationLink(destination: GuessCountryFromBorder(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Guess Country").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("Finland").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color(hex: 0x3645).cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Guess Country", image_game: "Finland", color_game: Color(hex: 0x3645))
                         }
                     }.padding()
                         .frame(width: UIScreen.main.bounds.width*0.95)
@@ -107,27 +57,10 @@ struct Practice: View {
                     VStack{
                         Text("Population").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: GuessNumberStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Guess Number").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("Iceland").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color(hex: 0xb42315).cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Guess Number", image_game: "Iceland", color_game: Color(hex: 0xb42315))
                         }
-                        
                         NavigationLink(destination: GuessMostPopulatedCountryStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Guess Country").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("Ireland").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color(hex: 0xb42315).cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Guess Country", image_game: "Ireland", color_game: Color(hex: 0xb42315))
                         }
                     }.padding()
                         .frame(width: UIScreen.main.bounds.width*0.95)
@@ -137,38 +70,14 @@ struct Practice: View {
                     VStack{
                         Text("Maps").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: FindCountryStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Find Country").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("Angola").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color(hex: 0xb423).cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Find Country", image_game: "Angola", color_game: Color(hex: 0xb423))
+
                         }
-                        
                         NavigationLink(destination: NameCountryStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("Name Country").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("Argentina").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color(hex: 0xb423).cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "Name Country", image_game: "Argentina", color_game: Color(hex: 0xb423))
                         }
                         NavigationLink(destination: UnitedStatesStart(GlobalUserData: GlobalUserData)) {
-                            VStack{
-                                HStack{
-                                    Text("US States").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                    Spacer()
-                                    Image("United States").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                                }
-                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-                                Color(hex: 0xb423).cornerRadius(15).shadow(radius: 3)
-                            )
+                            PanelPractice(text_game: "US States", image_game: "United States", color_game: Color(hex: 0xb423))
                         }
                     }.padding()
                         .frame(width: UIScreen.main.bounds.width*0.95)

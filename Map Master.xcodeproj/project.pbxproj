@@ -61,6 +61,7 @@
 		6351A5C5299D76FB00CE9F9C /* UnitedStatesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A5C4299D76FB00CE9F9C /* UnitedStatesGame.swift */; };
 		6351A5C7299EB09600CE9F9C /* RatingGamesActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A5C6299EB09600CE9F9C /* RatingGamesActive.swift */; };
 		6351A5C9299EB10F00CE9F9C /* RatingGamesInactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A5C8299EB10F00CE9F9C /* RatingGamesInactive.swift */; };
+		6351A5CB299EB42000CE9F9C /* CreatePanelPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A5CA299EB42000CE9F9C /* CreatePanelPractice.swift */; };
 		636B2892298984C5000282EA /* Map_MasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B2891298984C5000282EA /* Map_MasterApp.swift */; };
 		636B2896298984C6000282EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636B2895298984C6000282EA /* Assets.xcassets */; };
 		636B2899298984C6000282EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636B2898298984C6000282EA /* Preview Assets.xcassets */; };
@@ -203,6 +204,7 @@
 		6351A5C4299D76FB00CE9F9C /* UnitedStatesGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitedStatesGame.swift; sourceTree = "<group>"; };
 		6351A5C6299EB09600CE9F9C /* RatingGamesActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGamesActive.swift; sourceTree = "<group>"; };
 		6351A5C8299EB10F00CE9F9C /* RatingGamesInactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGamesInactive.swift; sourceTree = "<group>"; };
+		6351A5CA299EB42000CE9F9C /* CreatePanelPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePanelPractice.swift; sourceTree = "<group>"; };
 		636B288E298984C5000282EA /* Map Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		636B2891298984C5000282EA /* Map_MasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_MasterApp.swift; sourceTree = "<group>"; };
 		636B2895298984C6000282EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -353,12 +355,13 @@
 		6351A58F299CFAD700CE9F9C /* Practice */ = {
 			isa = PBXGroup;
 			children = (
+				6351A590299CFAEC00CE9F9C /* Practice.swift */,
 				6351A5B6299D6E7000CE9F9C /* Maps */,
 				6351A5B0299D651A00CE9F9C /* Population */,
 				6351A5AA299D56D600CE9F9C /* Borders */,
 				6351A5A4299D4F3800CE9F9C /* Capitals */,
 				6351A59F299D4EFC00CE9F9C /* Flags */,
-				6351A590299CFAEC00CE9F9C /* Practice.swift */,
+				6351A5CA299EB42000CE9F9C /* CreatePanelPractice.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -925,6 +928,7 @@
 				63DC747129981647008066B0 /* Lesson6.swift in Sources */,
 				63DC746F299813CA008066B0 /* Lesson5.swift in Sources */,
 				63DC743B29940F94008066B0 /* RatingGameFlagOfCountry.swift in Sources */,
+				6351A5CB299EB42000CE9F9C /* CreatePanelPractice.swift in Sources */,
 				6351A5BE299D74F000CE9F9C /* NameCountryStart.swift in Sources */,
 				63DC743D29955BA5008066B0 /* RatingGameFlagFromCountry.swift in Sources */,
 				6351A5A9299D53CE00CE9F9C /* GuessCountryFromCapital.swift in Sources */,
