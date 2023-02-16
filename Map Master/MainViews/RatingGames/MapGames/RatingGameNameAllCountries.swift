@@ -18,6 +18,7 @@ struct RatingGameNameAllCountries: View {
     @State var timeLeft: Double = 600.00
     @State private var clickedPath: [PathData] = []
     @State var answers = all_names
+    @State var games_remove: Bool = false
     var body: some View {
         ZStack{
             HomeBackGround()
@@ -80,6 +81,10 @@ struct RatingGameNameAllCountries: View {
                                     timeLeft = 0
                                 }
                                 answer = ""
+                                if games_remove == false{
+                                    games_remove = true
+                                    GlobalUserData.games_left -= 1
+                                }
                             }label: {
                                 Color.indigo.overlay(
                                     Text("Submit").font(.title).fontWeight(.heavy).foregroundColor(.white)
@@ -105,9 +110,6 @@ struct RatingGameNameAllCountries: View {
                         before_game = before_game - 1
                     }
                     
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                    GlobalUserData.games_left -= 1
                 }
                 score = 0
             }.onReceive(timer){ _ in

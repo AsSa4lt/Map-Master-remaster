@@ -687,13 +687,13 @@
 		63DC743929940948008066B0 /* RatingGames */ = {
 			isa = PBXGroup;
 			children = (
+				636B28C1298984E4000282EA /* RatingGames.swift */,
 				6351A5CD299EB85800CE9F9C /* ViewFunctions */,
 				6351A5CC299EB84800CE9F9C /* Leagues */,
 				63DC744C29957F84008066B0 /* MapGames */,
 				63DC744629957507008066B0 /* BordersGames */,
 				63DC743F29955FD0008066B0 /* CapitalsGames */,
 				63DC743E29955FAF008066B0 /* FlagsGames */,
-				636B28C1298984E4000282EA /* RatingGames.swift */,
 			);
 			path = RatingGames;
 			sourceTree = "<group>";

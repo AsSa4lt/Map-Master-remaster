@@ -19,6 +19,7 @@ struct RatingGameBorderOfCountry: View {
     @State var timeLeft: Double = 60.00
     @State var time_task: Double = 1
     @State var isTapped: Bool = false
+    @State var games_remove = false
     @State private var animateGradient1 = false
     @State var task: [String] = ["","",""]
     var body: some View {
@@ -54,6 +55,10 @@ struct RatingGameBorderOfCountry: View {
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                             createTask()
                                         }
+                                        if games_remove == false{
+                                            games_remove = true
+                                            GlobalUserData.games_left -= 1
+                                        }
                                     }
                                 }label: {
                                     if show_answers == false{
@@ -88,9 +93,6 @@ struct RatingGameBorderOfCountry: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                         before_game = before_game - 1
                     }
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                    GlobalUserData.games_left -= 1
                 }
                 createTask()
                 score = 0

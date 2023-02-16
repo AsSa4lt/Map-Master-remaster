@@ -24,6 +24,7 @@ struct RatingGameUSStates: View {
     @State var pathsWrong: [PathData] = []
     @State var pathsCorrect: [PathData] = []
     @State var isTapped: Bool = false
+    @State var games_remove: Bool = false
     var body: some View {
         ZStack{
             HomeBackGround()
@@ -127,6 +128,10 @@ struct RatingGameUSStates: View {
                                         CreateTask()
                                     }
                                 }
+                                if games_remove == false{
+                                    games_remove = true
+                                    GlobalUserData.games_left -= 1
+                                }
                             }label: {
                                 Color.indigo.overlay(
                                     Text("Submit").font(.title).fontWeight(.heavy).foregroundColor(.white)
@@ -151,9 +156,6 @@ struct RatingGameUSStates: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                         before_game = before_game - 1
                     }
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                    GlobalUserData.games_left -= 1
                 }
                 CreateTask()
                 score = 0

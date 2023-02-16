@@ -21,6 +21,7 @@ struct RatingGameFlagFromCountry: View {
     @State var time_task: Double = 1
     @State private var animateGradient1 = false
     @State var task: [String] = ["","",""]
+    @State var games_remove: Bool = false
     var body: some View {
         ZStack{
             HomeBackGround()
@@ -55,6 +56,10 @@ struct RatingGameFlagFromCountry: View {
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                             createTask()
                                         }
+                                    }
+                                    if games_remove == false{
+                                        games_remove = true
+                                        GlobalUserData.games_left -= 1
                                     }
                                 }label: {
                                     if show_answers == false{
@@ -91,9 +96,6 @@ struct RatingGameFlagFromCountry: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                         before_game = before_game - 1
                     }
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                    GlobalUserData.games_left -= 1
                 }
                 createTask()
                 score = 0

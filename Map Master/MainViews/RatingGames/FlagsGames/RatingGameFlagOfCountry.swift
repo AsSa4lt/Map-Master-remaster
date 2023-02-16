@@ -21,6 +21,7 @@ struct RatingGameFlagOfCountry: View {
     @State var isTapped: Bool = false
     @State private var animateGradient1 = false
     @State var task: [String] = ["","",""]
+    @State var games_remove: Bool = false
     var body: some View {
         ZStack{
             HomeBackGround()
@@ -55,6 +56,10 @@ struct RatingGameFlagOfCountry: View {
                                             createTask()
                                         }
                                     }
+                                    if games_remove == false{
+                                        games_remove = true
+                                        GlobalUserData.games_left -= 1
+                                    }
                                 }label: {
                                     if show_answers == false{
                                         Image("\(task[i])").resizable().frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
@@ -88,9 +93,6 @@ struct RatingGameFlagOfCountry: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                         before_game = before_game - 1
                     }
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                    GlobalUserData.games_left -= 1
                 }
                 createTask()
                 score = 0

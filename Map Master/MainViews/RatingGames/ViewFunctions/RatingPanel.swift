@@ -21,5 +21,5 @@ func RatingPanel(game_description: String, game_time: String, score: Int, image_
             Image("\(image_name)").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
         }
     }.padding(.all).frame(width: UIScreen.main.bounds.width*0.9).background(
-        color.cornerRadius(15).shadow(radius: 3)).opacity(0.3)
+        color.cornerRadius(15).shadow(radius: 3))
 }
