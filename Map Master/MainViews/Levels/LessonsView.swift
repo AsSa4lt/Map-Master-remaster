@@ -34,8 +34,16 @@ struct LessonsView: View {
                         }
                     }
                     ScrollView(showsIndicators: false){
-                        Unit1(GlobalUserData: GlobalUserData)
-                        Unit2(GlobalUserData: GlobalUserData)
+                        if GlobalUserData.hearts <= 0{
+                            Unit1Inactive(GlobalUserData: GlobalUserData)
+                        }else{
+                            Unit1(GlobalUserData: GlobalUserData)
+                        }
+                        if GlobalUserData.unit1.contains(false) || GlobalUserData.hearts <= 0{
+                            Unit2Inactive(GlobalUserData: GlobalUserData)
+                        }else{
+                            Unit2(GlobalUserData: GlobalUserData)
+                        }
                         Unit3(GlobalUserData: GlobalUserData)
                         Unit4(GlobalUserData: GlobalUserData)
                         
