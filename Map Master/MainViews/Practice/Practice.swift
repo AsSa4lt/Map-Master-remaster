@@ -22,11 +22,7 @@ struct Practice: View {
                         NavigationLink(destination: GuessingFlagFromCountryStart(GlobalUserData: GlobalUserData)) {
                             PanelPractice(text_game: "Guess Flag", image_game: "United Kingdom", color_game: .indigo)
                         }
-                    }.padding()
-                        .frame(width: UIScreen.main.bounds.width*0.95)
-                        .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                    
+                    }.padding().frame(width: UIScreen.main.bounds.width*0.95).foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom)).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     VStack{
                         Text("Capitals").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: GuessCapitalOfCoutryStart(GlobalUserData: GlobalUserData)) {
@@ -36,11 +32,7 @@ struct Practice: View {
                         NavigationLink(destination: GuessCountryFromCapitalStart(GlobalUserData: GlobalUserData)) {
                             PanelPractice(text_game: "Guess Country", image_game: "Ukraine", color_game: .cyan)
                         }
-                    }.padding()
-                        .frame(width: UIScreen.main.bounds.width*0.95)
-                        .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                    
+                    }.padding().frame(width: UIScreen.main.bounds.width*0.95).foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom)).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     VStack{
                         Text("Borders").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: GuessCountryByBorderStart(GlobalUserData: GlobalUserData)) {
@@ -49,11 +41,7 @@ struct Practice: View {
                         NavigationLink(destination: GuessCountryFromBorder(GlobalUserData: GlobalUserData)) {
                             PanelPractice(text_game: "Guess Country", image_game: "Finland", color_game: Color(hex: 0x3645))
                         }
-                    }.padding()
-                        .frame(width: UIScreen.main.bounds.width*0.95)
-                        .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                    
+                    }.padding().frame(width: UIScreen.main.bounds.width*0.95).foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom)).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     VStack{
                         Text("Population").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: GuessNumberStart(GlobalUserData: GlobalUserData)) {
@@ -62,11 +50,7 @@ struct Practice: View {
                         NavigationLink(destination: GuessMostPopulatedCountryStart(GlobalUserData: GlobalUserData)) {
                             PanelPractice(text_game: "Guess Country", image_game: "Ireland", color_game: Color(hex: 0xb42315))
                         }
-                    }.padding()
-                        .frame(width: UIScreen.main.bounds.width*0.95)
-                        .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                    
+                    }.padding().frame(width: UIScreen.main.bounds.width*0.95).foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom)).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     VStack{
                         Text("Maps").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 5.0)
                         NavigationLink(destination: FindCountryStart(GlobalUserData: GlobalUserData)) {
@@ -79,13 +63,9 @@ struct Practice: View {
                         NavigationLink(destination: UnitedStatesStart(GlobalUserData: GlobalUserData)) {
                             PanelPractice(text_game: "US States", image_game: "United States", color_game: Color(hex: 0xb423))
                         }
-                    }.padding()
-                        .frame(width: UIScreen.main.bounds.width*0.95)
-                        .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    }.padding().frame(width: UIScreen.main.bounds.width*0.95).foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom)).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                 }.mask(
                     VStack(spacing: 0) {
-
                         // Top gradient
                         LinearGradient(gradient:
                            Gradient(
@@ -93,12 +73,9 @@ struct Practice: View {
                                startPoint: .top, endPoint: .bottom
                            )
                            .frame(height: 10)
-
                         // Middle
                         Rectangle().fill(Color.black)
-
                         // Bottom gradient
-
                     }
                 )
             }

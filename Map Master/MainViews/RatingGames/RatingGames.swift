@@ -49,24 +49,15 @@ struct RatingGames: View {
                     }else{
                         RatingGamesInactive(GlobalUserData: GlobalUserData)
                     }
-                    
-                    
                 }.mask(
                     VStack(spacing: 0) {
-
-                        // Top gradient
                         LinearGradient(gradient:
                            Gradient(
                                colors: [Color.black.opacity(0), Color.black]),
                                startPoint: .top, endPoint: .bottom
                            )
                            .frame(height: 10)
-
-                        // Middle
                         Rectangle().fill(Color.black)
-
-                        // Bottom gradient
-
                     }
                  )
             }.onAppear{
