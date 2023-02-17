@@ -44,7 +44,11 @@ struct LessonsView: View {
                         }else{
                             Unit2(GlobalUserData: GlobalUserData)
                         }
-                        Unit3(GlobalUserData: GlobalUserData)
+                        if GlobalUserData.unit2.contains(false) || GlobalUserData.hearts <= 0{
+                            Unit3Inactive(GlobalUserData: GlobalUserData)
+                        }else{
+                            Unit3(GlobalUserData: GlobalUserData)
+                        }
                         //Unit4(GlobalUserData: GlobalUserData)
                         
                     }.mask(

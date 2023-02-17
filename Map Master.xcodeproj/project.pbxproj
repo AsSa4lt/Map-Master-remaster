@@ -67,6 +67,7 @@
 		6351A5D6299EC21000CE9F9C /* LevelsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A5D5299EC21000CE9F9C /* LevelsActive.swift */; };
 		6351A5D8299EC69900CE9F9C /* Unit1InActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A5D7299EC69900CE9F9C /* Unit1InActive.swift */; };
 		6351A5DA299EC73100CE9F9C /* Unit2Inactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A5D9299EC73100CE9F9C /* Unit2Inactive.swift */; };
+		6351A5DC299FCEE600CE9F9C /* Unit3Inactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A5DB299FCEE600CE9F9C /* Unit3Inactive.swift */; };
 		636B2892298984C5000282EA /* Map_MasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636B2891298984C5000282EA /* Map_MasterApp.swift */; };
 		636B2896298984C6000282EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636B2895298984C6000282EA /* Assets.xcassets */; };
 		636B2899298984C6000282EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636B2898298984C6000282EA /* Preview Assets.xcassets */; };
@@ -214,6 +215,7 @@
 		6351A5D5299EC21000CE9F9C /* LevelsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsActive.swift; sourceTree = "<group>"; };
 		6351A5D7299EC69900CE9F9C /* Unit1InActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit1InActive.swift; sourceTree = "<group>"; };
 		6351A5D9299EC73100CE9F9C /* Unit2Inactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Inactive.swift; sourceTree = "<group>"; };
+		6351A5DB299FCEE600CE9F9C /* Unit3Inactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Inactive.swift; sourceTree = "<group>"; };
 		636B288E298984C5000282EA /* Map Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		636B2891298984C5000282EA /* Map_MasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_MasterApp.swift; sourceTree = "<group>"; };
 		636B2895298984C6000282EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				63262AA9299980140088F4B7 /* Unit3Lesson14.swift */,
 				63262AAB299982670088F4B7 /* Unit3Lesson15.swift */,
 				63262AAD299987060088F4B7 /* Unit3Func.swift */,
+				6351A5DB299FCEE600CE9F9C /* Unit3Inactive.swift */,
 			);
 			path = Unit3;
 			sourceTree = "<group>";
@@ -948,6 +951,7 @@
 				6351A596299CFCC300CE9F9C /* Leagues.swift in Sources */,
 				63DC747329981AD0008066B0 /* Lesson7.swift in Sources */,
 				63DC748229992C82008066B0 /* Unit2Lesson4.swift in Sources */,
+				6351A5DC299FCEE600CE9F9C /* Unit3Inactive.swift in Sources */,
 				63B18360298D7A3A00818ECB /* GuessMostPopulatedCountryGame.swift in Sources */,
 				63CB40EE299AD5F50011812D /* Unit4Lesson18.swift in Sources */,
 				63262A8D29995F890088F4B7 /* Unit2Func.swift in Sources */,
