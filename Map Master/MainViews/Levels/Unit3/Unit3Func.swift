@@ -18,166 +18,60 @@ func Unit3(GlobalUserData: userData) -> some View{
                 .padding(.top)
             HStack{
                     NavigationLink(destination: Unit3Lesson1(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[0] == false{
-                                Image("Moldova").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Moldova").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("Flags 7").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Moldova", active: GlobalUserData.unit3[0], text_level: "Flags 7")
                     }
                     NavigationLink(destination: Unit3Lesson2(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[1] == false{
-                                Image("Mongolia").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Mongolia").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("Flags 8").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Mongolia", active: GlobalUserData.unit3[1], text_level: "Flags 8")
                     }
                     NavigationLink(destination: Unit3Lesson3(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[2] == false{
-                                Image("Oman").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Oman").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("Flags 9").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Oman", active: GlobalUserData.unit3[2], text_level: "Flags 9")
                     }
-
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             HStack{
                     NavigationLink(destination: Unit3Lesson4(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[3] == false{
-                                Image("Burundi").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Burundi").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("Borders 4").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Burundi", active: GlobalUserData.unit3[3], text_level: "Borders 4")
                     }
                     NavigationLink(destination: Unit3Lesson6(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[4] == false{
-                                Image("Chile").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Chile").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("Borders 5").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Chile", active: GlobalUserData.unit3[4], text_level: "Borders 5")
                     }
                     NavigationLink(destination: Unit2Lesson3(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[5] == false{
-                                Image("Bangladesh").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Bangladesh").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("Borders 6").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Bangladesh", active: GlobalUserData.unit3[5], text_level: "Borders 6")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             HStack{
                     NavigationLink(destination: Unit3Lesson7(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[6] == false{
-                                Image("Singapore").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Singapore").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("Capitals 7").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Singapore", active: GlobalUserData.unit3[6], text_level: "Capitals 7")
                     }
                     NavigationLink(destination: Unit3Lesson8(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[7] == false{
-                                Image("China").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("China").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("Capitals 8").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "China", active: GlobalUserData.unit3[7], text_level: "Capitals 8")
                     }
                     NavigationLink(destination: Unit2Lesson9(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[8] == false{
-                                Image("Angola").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Angola").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("Capitals 9").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Angola", active: GlobalUserData.unit3[8], text_level: "Capitals 9")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
+            
             HStack{
                     NavigationLink(destination: Unit3Lesson10(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[9] == false{
-                                Image("New Zealand").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("New Zealand").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("People 4").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "New Zealand", active: GlobalUserData.unit3[9], text_level: "People 4")
                     }
                     NavigationLink(destination: Unit3Lesson11(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[10] == false{
-                                Image("Peru").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Peru").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("People 5").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Peru", active: GlobalUserData.unit3[10], text_level: "People 5")
                     }
                     NavigationLink(destination: Unit2Lesson12(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[11] == false{
-                                Image("Jamaica").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Jamaica").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("People 6").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Jamaica", active: GlobalUserData.unit3[11], text_level: "People 6")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             HStack{
                     NavigationLink(destination: Unit3Lesson13(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[12] == false{
-                                Image("Thailand").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Thailand").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("GPD 1").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Thailand", active: GlobalUserData.unit3[12], text_level: "GPD 1")
                     }
                     NavigationLink(destination: Unit3Lesson14(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[13] == false{
-                                Image("Jordan").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Jordan").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("GPD 2").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Jordan", active: GlobalUserData.unit3[13], text_level: "GPD 2")
                     }
                     NavigationLink(destination: Unit2Lesson12(GlobalUserData: GlobalUserData)) {
-                        VStack{
-                            if GlobalUserData.unit3[14] == false{
-                                Image("Western Sahara").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3)).opacity(0.15)
-                            }else{
-                                Image("Western Sahara").resizable().frame(width: UIScreen.main.bounds.width * 0.25, height: UIScreen.main.bounds.width * 0.15).shadow(radius: 2).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 3))
-                            }
-                            Text("GPD 3").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                        }.frame(width: UIScreen.main.bounds.width*0.31)
+                        RatingPanelActive(image: "Western Sahara", active: GlobalUserData.unit3[14], text_level: "GPD 3")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
         }.frame(width: UIScreen.main.bounds.width*0.95).foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous)).padding(.top)
-    
 }
