@@ -11,7 +11,7 @@ import InteractiveMap
 struct FindCountryGamePractice: View {
     
     @StateObject var GlobalUserData: userData
-    @State var before_game: Int = 0
+    @State var before_game: Int = 3
     @State var score: Int = 0
     var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var answer: String = ""
