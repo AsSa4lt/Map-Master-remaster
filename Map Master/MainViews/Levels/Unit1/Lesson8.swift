@@ -35,7 +35,7 @@ struct Lesson8: View {
                 if current < 10{
                     VStack{
                         HStack{
-                            Text("Question \(current+1)/10").font(.largeTitle).fontWeight(.heavy)
+                            Text("Question \(current+1)/10").font(.title).fontWeight(.heavy)
                                 .foregroundColor(Color.white)
                             Image(systemName: "heart.fill").resizable().frame(width: 30, height: 25).foregroundColor(.red).padding(.leading)
                             Text("\(GlobalUserData.hearts)").font(.title).fontWeight(.heavy).foregroundColor(.red)
