@@ -52,13 +52,13 @@ func Unit3(GlobalUserData: userData) -> some View{
             
             HStack{
                     NavigationLink(destination: Unit3Lesson10(GlobalUserData: GlobalUserData)) {
-                        RatingPanelActive(image: "New Zealand", active: GlobalUserData.unit3[9], text_level: "People 4")
+                        RatingPanelActive(image: "New Zealand", active: GlobalUserData.unit3[9], text_level: "People 7")
                     }
                     NavigationLink(destination: Unit3Lesson11(GlobalUserData: GlobalUserData)) {
-                        RatingPanelActive(image: "Peru", active: GlobalUserData.unit3[10], text_level: "People 5")
+                        RatingPanelActive(image: "Peru", active: GlobalUserData.unit3[10], text_level: "People 8")
                     }
                     NavigationLink(destination: Unit2Lesson12(GlobalUserData: GlobalUserData)) {
-                        RatingPanelActive(image: "Jamaica", active: GlobalUserData.unit3[11], text_level: "People 6")
+                        RatingPanelActive(image: "Jamaica", active: GlobalUserData.unit3[11], text_level: "People 9")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             HStack{

@@ -27,6 +27,19 @@ struct LessonsView: View {
                                 .onAppear {
                                     showAnimation = true
                                     reniew()
+                                    if GlobalUserData.unit1Change == true && GlobalUserData.is_apple_id == true{
+                                        GlobalUserData.setUnit1()
+                                        
+                                    }
+                                    if GlobalUserData.unit2Change == true && GlobalUserData.is_apple_id == true{
+                                        GlobalUserData.setUnit2()
+                                    }
+                                    if GlobalUserData.unit3Change == true && GlobalUserData.is_apple_id == true{
+                                        GlobalUserData.setUnit3()
+                                    }
+                                    if GlobalUserData.unit4Change == true && GlobalUserData.is_apple_id == true{
+                                        GlobalUserData.setUnit4()
+                                    }
                                 }.onReceive(timer) { _ in
                                     reniew()
                                 }
@@ -107,15 +120,15 @@ struct LessonsView: View {
             GlobalUserData.hearts = 0
         }
         let components = calendar.dateComponents([.day], from: Date())
-            if components.day! != GlobalUserData.last_refill_hearts{
-                if GlobalUserData.is_pro == false{
-                    GlobalUserData.last_refill_hearts = components.day!
-                    GlobalUserData.hearts = 20
-                }else{
-                    GlobalUserData.last_refill_hearts = components.day!
-                    GlobalUserData.hearts = 50
-                }
+        if components.day! != GlobalUserData.last_refill_hearts{
+            if GlobalUserData.is_pro == false{
+                GlobalUserData.last_refill_hearts = components.day!
+                GlobalUserData.hearts = 20
+            }else{
+                GlobalUserData.last_refill_hearts = components.day!
+                GlobalUserData.hearts = 50
             }
+        }
     }
 }
 

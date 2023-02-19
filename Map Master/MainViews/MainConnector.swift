@@ -30,7 +30,9 @@ struct MainConnector: View {
                     Image(systemName: "slider.horizontal.3")
                     Text("Settings").foregroundColor(.white)
                 }
-            }.colorScheme(.dark)
+            }.colorScheme(.dark).onAppear{
+                GlobalUserData.is_logged = true
+            }
                 }.navigationViewStyle(StackNavigationViewStyle()).accentColor(.white)
     }
 }

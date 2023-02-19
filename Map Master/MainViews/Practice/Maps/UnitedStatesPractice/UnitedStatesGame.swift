@@ -27,7 +27,7 @@ struct UnitedStatesGame: View {
     @State var isTapped: Bool = false
     var body: some View {
         ZStack{
-            HomeBackGround()
+            MainBack()
             VStack{
                 if before_game > 0{
                     Spacer()

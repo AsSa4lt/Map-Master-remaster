@@ -75,6 +75,7 @@ struct Unit4Lesson1: View {
                                     }
                                     if correct >= 0.7{
                                         GlobalUserData.unit4[0] = true
+                                        GlobalUserData.unit4Change = true
                                     }
                                 }
                             }label: {

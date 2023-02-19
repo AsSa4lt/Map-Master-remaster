@@ -11,7 +11,11 @@ import SwiftUI
 struct Map_MasterApp: App {
     var body: some Scene {
         WindowGroup {
-            MainConnector(GlobalUserData: userData())
+            if userData().is_logged == false{
+                LoginPage(GlobalUserData: userData())
+            }else{
+                MainConnector(GlobalUserData: userData())
+            }
         }
     }
 }
