@@ -14,6 +14,7 @@ public class userData: ObservableObject{
     @AppStorage("is_apple_id") var is_apple_id: Bool = false
     @AppStorage("is_record_exist") var is_record_exist: Bool = false
     @AppStorage("is_logged") var is_logged: Bool = false
+    @AppStorage("minus_game") var minus_game: Bool = false
     
     @AppStorage("is_data_inserted") var is_data_inserted: Bool = false
     @AppStorage("name") var name: String = "Player"
@@ -293,5 +294,292 @@ public class userData: ObservableObject{
         }
     }
     
+    func set_rating_border_country(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["rating_border_country"] = self.rating_border_country as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func set_rating_capital_country(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["rating_capital_country"] = self.rating_capital_country as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    func set_rating_country_border(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["rating_country_border"] = self.rating_country_border as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func set_rating_country_capital(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["rating_country_capital"] = self.rating_country_capital as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    func set_rating_country_flag(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["rating_country_flag"] = self.rating_country_flag as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func set_rating_find_country(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["rating_find_country"] = self.rating_find_country as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func set_rating_find_states(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["rating_find_states"] = self.rating_find_states as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func set_rating_flag_country(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["rating_flag_country"] = self.rating_flag_country as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func set_rating_name_country(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["rating_name_country"] = self.rating_name_country as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    func setGamesLeft(){
+        let container = CKContainer.default()
+        let privateDatabase = container.privateCloudDatabase
+
+        // Create a CKRecordID with the user's ID as the recordName
+        let recordID = CKRecord.ID(recordName: self.user_id)
+        
+        privateDatabase.fetch(withRecordID: recordID) { (record, fetchError) in
+            if let error = fetchError {
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            } else if let record = record {
+                DispatchQueue.main.async {
+                    record["last_day"] = self.last_day as CKRecordValue
+                    record["games_left"] = self.games_left as CKRecordValue
+                    privateDatabase.save(record) { (savedRecord, saveError) in
+                        if let error = saveError {
+                            print(error)
+                        } else {
+                            DispatchQueue.main.async {
+                                print("Result setted to Cloud")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 

@@ -131,6 +131,7 @@ struct RatingGameFindCountries: View {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                         CreateTask()
                                     }
+                                    GlobalUserData.minus_game = true
                                 }
                             }label: {
                                 Color.indigo.overlay(
@@ -169,9 +170,7 @@ struct RatingGameFindCountries: View {
                     }else{
                         if score > GlobalUserData.rating_find_country{
                             GlobalUserData.rating_find_country = score
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                            GlobalUserData.games_left -= 1
+                            GlobalUserData.set_rating_find_country()
                         }
                     }
                 }

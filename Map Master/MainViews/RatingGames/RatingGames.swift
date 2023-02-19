@@ -25,6 +25,11 @@ struct RatingGames: View {
                     .padding(.top, 1.0)
                     .frame(width: UIScreen.main.bounds.width*0.95).onAppear{
                         reniew()
+                        if GlobalUserData.minus_game{
+                            GlobalUserData.games_left -= 1
+                            GlobalUserData.minus_game = false
+                            GlobalUserData.setGamesLeft()
+                        }
                     }.onReceive(timer) { _ in
                         reniew()
                     }

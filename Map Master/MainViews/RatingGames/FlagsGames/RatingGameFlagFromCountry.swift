@@ -57,6 +57,7 @@ struct RatingGameFlagFromCountry: View {
                                             createTask()
                                         }
                                     }
+                                    GlobalUserData.minus_game = true
                                 }label: {
                                     if show_answers == false{
                                         Color.cyan.overlay(
@@ -105,12 +106,11 @@ struct RatingGameFlagFromCountry: View {
                             createTask()
                         }
                     }else{
-                        if score > GlobalUserData.rating_flag_country{
-                            GlobalUserData.rating_flag_country = score
+                        if score > GlobalUserData.rating_country_flag{
+                            GlobalUserData.rating_country_flag = score
+                            GlobalUserData.set_rating_country_flag()
                         }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                            GlobalUserData.games_left -= 1
-                        }
+                
                     }
                 }
             }

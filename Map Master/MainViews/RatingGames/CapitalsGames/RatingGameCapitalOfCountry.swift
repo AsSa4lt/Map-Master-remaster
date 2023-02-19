@@ -57,6 +57,7 @@ struct RatingGameCapitalOfCountry: View {
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                             createTask()
                                         }
+                                        GlobalUserData.minus_game = true
                                     }
                                 }label: {
                                     if show_answers == false{
@@ -106,11 +107,9 @@ struct RatingGameCapitalOfCountry: View {
                             createTask()
                         }
                     }else{
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                            GlobalUserData.games_left -= 1
-                        }
                         if score > GlobalUserData.rating_country_capital{
                             GlobalUserData.rating_country_capital = score
+                            GlobalUserData.set_rating_country_capital()
                         }
                     }
                 }

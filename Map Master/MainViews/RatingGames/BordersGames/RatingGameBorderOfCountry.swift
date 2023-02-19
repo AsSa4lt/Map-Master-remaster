@@ -55,19 +55,20 @@ struct RatingGameBorderOfCountry: View {
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                             createTask()
                                         }
+                                        GlobalUserData.minus_game = true
                                     }
                                 }label: {
                                     if show_answers == false{
-                                        Image("\(task[i])B").resizable().frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                        Image("\(task[i])B").resizable().frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                                     }else{
                                         if correct_answer == i+1{
                                             Color.green.overlay(
                                                 Text("\(task[i])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                            ).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                            ).frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                                         }else{
                                             Color.red.overlay(
                                                 Text("\(task[i])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
-                                            ).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                            ).frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
                                         }
                                     }
                                 }
@@ -102,11 +103,9 @@ struct RatingGameBorderOfCountry: View {
                             createTask()
                         }
                     }else{
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                            GlobalUserData.games_left -= 1
-                        }
                         if score > GlobalUserData.rating_country_border{
                             GlobalUserData.rating_country_border = score
+                            GlobalUserData.set_rating_country_border()
                         }
                     }
                 }

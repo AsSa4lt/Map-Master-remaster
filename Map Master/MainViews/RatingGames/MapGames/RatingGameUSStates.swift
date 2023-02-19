@@ -127,6 +127,7 @@ struct RatingGameUSStates: View {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                         CreateTask()
                                     }
+                                    GlobalUserData.minus_game = true
                                 }
                                 if games_remove == false{
                                     games_remove = true
@@ -169,9 +170,7 @@ struct RatingGameUSStates: View {
                     }else{
                         if score > GlobalUserData.rating_find_states{
                             GlobalUserData.rating_find_states = score
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                            GlobalUserData.games_left -= 1
+                            GlobalUserData.set_rating_find_states()
                         }
                     }
                 }

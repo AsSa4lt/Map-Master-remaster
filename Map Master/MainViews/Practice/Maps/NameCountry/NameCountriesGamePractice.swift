@@ -31,10 +31,45 @@ struct NameCountriesGamePractice: View {
                 }else{
                     if timeLeft > 0{
                     Text("Score: \(score)").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
-                    Text("Time Left: \(String(format: "%.0f", ceil(timeLeft*100)/100)) s.").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
+                        Text("Time Left: \(String(format: "%.0f", ceil(timeLeft*100)/100)) s.").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white).padding(.bottom, -5.0)
+                        
                         VStack{
-                            Text("Countries: \(score/500)/\(all_names.count)").fontWeight(.heavy).font(.largeTitle).foregroundColor(.white)
+                            Text("Countries: \(score/500)/\(all_names.count)").fontWeight(.heavy).font(.largeTitle).foregroundColor(.white).padding(.bottom, -20.0)
                             
+                            HStack{
+                                if #available(iOS 16.0, *) {
+                                    TextField("Enter country", text: $answer).multilineTextAlignment(.center).font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/).fontWeight(/*@START_MENU_TOKEN@*/.heavy/*@END_MENU_TOKEN@*/).foregroundColor(.white)
+                                } else {
+                                    // Fallback on earlier versions
+                                    TextField("Enter country", text: $answer).multilineTextAlignment(.center).font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/).foregroundColor(.white)
+                                }
+                                Button {
+                                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                                    var where_del = -1
+                                    if answer != ""{
+                                        for i in 0..<answers.count{
+                                            for j in 0..<answers[i].count{
+                                                if answer == answers[i][j]{
+                                                    clickedPath.append(PathData(name: "\(answers[i][0])", id: "\(answers[i][0])", path: []))
+                                                    score = score + 200
+                                                    where_del = i
+                                                }
+                                            }
+                                        }
+                                        if where_del != -1{
+                                            answers.remove(at: where_del)
+                                        }
+                                    }
+                                    if answers.count == 0 {
+                                        timeLeft = 0
+                                    }
+                                    answer = ""
+                                }label: {
+                                    Color.indigo.overlay(
+                                        Text("Submit").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                    ).frame(width: UIScreen.main.bounds.width*0.25, height: UIScreen.main.bounds.width*0.15).cornerRadius(20).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
+                                }
+                            }
                             ZStack{
                                 Rectangle().frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).foregroundColor(Color(hue: 0.552, saturation: 0.577, brightness: 0.968)).cornerRadius(15)
                                 InteractiveMap(svgName: "world-low") { pathData in // is a PathData
@@ -54,38 +89,7 @@ struct NameCountriesGamePractice: View {
                                     
                                 }.frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6)
                             }.frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6)
-                            if #available(iOS 16.0, *) {
-                                TextField("Enter country", text: $answer).multilineTextAlignment(.center).font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/).fontWeight(/*@START_MENU_TOKEN@*/.heavy/*@END_MENU_TOKEN@*/).foregroundColor(.white)
-                            } else {
-                                // Fallback on earlier versions
-                                TextField("Enter country", text: $answer).multilineTextAlignment(.center).font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/).foregroundColor(.white)
-                            }
-                            Button {
-                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                                var where_del = -1
-                                if answer != ""{
-                                    for i in 0..<answers.count{
-                                        for j in 0..<answers[i].count{
-                                            if answer == answers[i][j]{
-                                                clickedPath.append(PathData(name: "\(answers[i][0])", id: "\(answers[i][0])", path: []))
-                                                score = score + 200
-                                                where_del = i
-                                            }
-                                        }
-                                    }
-                                    if where_del != -1{
-                                        answers.remove(at: where_del)
-                                    }
-                                }
-                                if answers.count == 0 {
-                                    timeLeft = 0
-                                }
-                                answer = ""
-                            }label: {
-                                Color.indigo.overlay(
-                                    Text("Submit").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                                ).frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.2).cornerRadius(20).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
-                            }
+                           
                             
                             
                         }.padding()
