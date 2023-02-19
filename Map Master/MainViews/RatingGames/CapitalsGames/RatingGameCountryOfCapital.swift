@@ -57,10 +57,6 @@ struct RatingGameCountryOfCapital: View {
                                             createTask()
                                         }
                                     }
-                                    if games_remove == false{
-                                        games_remove = true
-                                        GlobalUserData.games_left -= 1
-                                    }
                                 }label: {
                                     HStack{
                                         if show_answers == false{
@@ -111,6 +107,9 @@ struct RatingGameCountryOfCapital: View {
                             createTask()
                         }
                     }else{
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            GlobalUserData.games_left -= 1
+                        }
                         if score > GlobalUserData.rating_capital_country{
                             GlobalUserData.rating_capital_country = score
                         }

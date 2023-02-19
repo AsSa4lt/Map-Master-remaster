@@ -132,10 +132,6 @@ struct RatingGameFindCountries: View {
                                         CreateTask()
                                     }
                                 }
-                                if games_remove == false{
-                                    games_remove = true
-                                    GlobalUserData.games_left -= 1
-                                }
                             }label: {
                                 Color.indigo.overlay(
                                     Text("Submit").font(.title).fontWeight(.heavy).foregroundColor(.white)
@@ -173,6 +169,9 @@ struct RatingGameFindCountries: View {
                     }else{
                         if score > GlobalUserData.rating_find_country{
                             GlobalUserData.rating_find_country = score
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            GlobalUserData.games_left -= 1
                         }
                     }
                 }

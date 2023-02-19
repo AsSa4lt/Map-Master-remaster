@@ -170,6 +170,9 @@ struct RatingGameUSStates: View {
                         if score > GlobalUserData.rating_find_states{
                             GlobalUserData.rating_find_states = score
                         }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            GlobalUserData.games_left -= 1
+                        }
                     }
                 }
             }

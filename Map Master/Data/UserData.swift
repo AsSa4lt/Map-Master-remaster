@@ -38,7 +38,7 @@ public class userData: ObservableObject{
     @AppStorage("rating_name_country") var rating_name_country: Int = 0
     @AppStorage("rating_find_country") var rating_find_country: Int = 0
     @AppStorage("rating_find_states") var rating_find_states: Int = 0
-    @AppStorage("hearts") var hearts: Int = 20
+
     
     @AppStorage("unit1changed") var unit1Change: Bool = false
     @AppStorage("unit1") var unit1: [Bool] = [Bool](repeating: false, count: 9)
@@ -52,6 +52,7 @@ public class userData: ObservableObject{
     @AppStorage("unit4changed") var unit4Change: Bool = false
     @AppStorage("unit4") var unit4: [Bool] = [Bool](repeating: false, count: 18)
     
+    @AppStorage("hearts") var hearts: Int = 20
     @AppStorage("games_left") var games_left: Int = 10
     @AppStorage("last_day_games") var last_day: Int = -1
     @AppStorage("is_pro") var is_pro: Bool = false

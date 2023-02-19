@@ -56,10 +56,6 @@ struct RatingGameFlagOfCountry: View {
                                             createTask()
                                         }
                                     }
-                                    if games_remove == false{
-                                        games_remove = true
-                                        GlobalUserData.games_left -= 1
-                                    }
                                 }label: {
                                     if show_answers == false{
                                         Image("\(task[i])").resizable().frame(width: UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.25).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.vertical)
@@ -108,6 +104,9 @@ struct RatingGameFlagOfCountry: View {
                     }else{
                         if score > GlobalUserData.rating_country_flag{
                             GlobalUserData.rating_country_flag = score
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            GlobalUserData.games_left -= 1
                         }
                     }
                 }

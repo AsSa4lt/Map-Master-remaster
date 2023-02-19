@@ -81,10 +81,6 @@ struct RatingGameNameAllCountries: View {
                                     timeLeft = 0
                                 }
                                 answer = ""
-                                if games_remove == false{
-                                    games_remove = true
-                                    GlobalUserData.games_left -= 1
-                                }
                             }label: {
                                 Color.indigo.overlay(
                                     Text("Submit").font(.title).fontWeight(.heavy).foregroundColor(.white)
@@ -119,6 +115,9 @@ struct RatingGameNameAllCountries: View {
                     }else{
                         if score > GlobalUserData.rating_name_country{
                             GlobalUserData.rating_name_country = score
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            GlobalUserData.games_left -= 1
                         }
                     }
                 }

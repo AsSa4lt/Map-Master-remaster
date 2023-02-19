@@ -55,10 +55,6 @@ struct RatingGameBorderOfCountry: View {
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                             createTask()
                                         }
-                                        if games_remove == false{
-                                            games_remove = true
-                                            GlobalUserData.games_left -= 1
-                                        }
                                     }
                                 }label: {
                                     if show_answers == false{
@@ -106,6 +102,9 @@ struct RatingGameBorderOfCountry: View {
                             createTask()
                         }
                     }else{
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            GlobalUserData.games_left -= 1
+                        }
                         if score > GlobalUserData.rating_country_border{
                             GlobalUserData.rating_country_border = score
                         }
