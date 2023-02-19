@@ -31,10 +31,10 @@ func Unit3(GlobalUserData: userData) -> some View{
                     NavigationLink(destination: Unit3Lesson4(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Burundi", active: GlobalUserData.unit3[3], text_level: "Borders 4")
                     }
-                    NavigationLink(destination: Unit3Lesson6(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: Unit3Lesson5(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Chile", active: GlobalUserData.unit3[4], text_level: "Borders 5")
                     }
-                    NavigationLink(destination: Unit2Lesson3(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: Unit2Lesson6(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Bangladesh", active: GlobalUserData.unit3[5], text_level: "Borders 6")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)

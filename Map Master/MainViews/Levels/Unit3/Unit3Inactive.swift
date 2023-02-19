@@ -16,12 +16,6 @@ func Unit3Inactive(GlobalUserData: userData) -> some View{
             .fontWeight(.heavy)
             .foregroundColor(Color.white)
             .padding(.top)
-    }else{
-        Text("You ran out of hearts")
-            .font(.largeTitle)
-            .fontWeight(.heavy)
-            .foregroundColor(Color.white)
-            .padding(.top)
     }
     VStack{
         Text("Unit 3")

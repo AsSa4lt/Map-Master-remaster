@@ -11,7 +11,8 @@ struct LessonsView: View {
     @StateObject var GlobalUserData: userData
     @State var result: Int = 0
     @State var showAnimation: Bool = false
-
+    let calendar = Calendar.current
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
             ZStack{
                 LessonsBack()
@@ -25,6 +26,9 @@ struct LessonsView: View {
                             .animation(Animation.easeInOut(duration: 1.0).repeatForever(autoreverses: true))
                                 .onAppear {
                                     showAnimation = true
+                                    reniew()
+                                }.onReceive(timer) { _ in
+                                    reniew()
                                 }
                     }.frame(width: UIScreen.main.bounds.width*0.9).onAppear{
                         if GlobalUserData.hearts == 0{
@@ -95,6 +99,21 @@ struct LessonsView: View {
                             }
                         }
                     }
+                }
+            }
+    }
+    func reniew(){
+        if GlobalUserData.hearts < 0{
+            GlobalUserData.hearts = 0
+        }
+        let components = calendar.dateComponents([.day], from: Date())
+            if components.day! != GlobalUserData.last_refill_hearts{
+                if GlobalUserData.is_pro == false{
+                    GlobalUserData.last_refill_hearts = components.day!
+                    GlobalUserData.hearts = 20
+                }else{
+                    GlobalUserData.last_refill_hearts = components.day!
+                    GlobalUserData.hearts = 50
                 }
             }
     }

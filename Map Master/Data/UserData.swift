@@ -40,5 +40,5 @@ public class userData: ObservableObject{
     @AppStorage("games_left") var games_left: Int = 10
     @AppStorage("last_day_games") var last_day: Int = -1
     @AppStorage("is_pro") var is_pro: Bool = false
-    
+    @AppStorage("last_day_hearts") var last_refill_hearts: Int = -1
 }

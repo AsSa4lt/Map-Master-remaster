@@ -16,7 +16,7 @@ public let unit2level12: [[String]] = [
     ["Croatia", "Burundi"], //6
     ["Burkina Faso", "Slovakia"], //7
     ["Venezuela", "Zambia"], //8
-    ["Uzbekistan", "United Arab Emirates"], //9
+    ["Uzbekistan", "Czechia"], //9
     ["Oman", "Myanmar"] //10
 ]
 public let unit2level12Pop: [[String]] = [
@@ -28,7 +28,7 @@ public let unit2level12Pop: [[String]] = [
     ["4 million", "12 million"],
     ["21 million", "5.5 million"],
     ["28 million", "18 million"],
-    ["33 million", "10 million"],
+    ["33 million", "11 million"],
     ["5 million", "54 million"]
 ]
 public let unit2answers12 = [1, 0, 1, 0, 1, 1, 0, 0, 0, 1]
