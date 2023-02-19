@@ -17,12 +17,11 @@ struct LoginPage: View {
     var body: some View {
         NavigationView{
             ZStack{
-                MainBack()
+                LessonsBack()
                 VStack{
                     Spacer()
-                    //Image("logo").renderingMode(.original).resizable().foregroundColor(Color.red).frame(width: UIScreen.main.bounds.width*0.7, height: UIScreen.main.bounds.width*0.7).cornerRadius(30).overlay(RoundedRectangle(cornerRadius: 30)
-                        //.stroke(Color.orange, lineWidth: 4))
-                    //.shadow(radius: 100)
+                    Image("logo").renderingMode(.original).resizable().foregroundColor(Color.red).frame(width: UIScreen.main.bounds.width*0.7, height: UIScreen.main.bounds.width*0.7).cornerRadius(30).overlay(RoundedRectangle(cornerRadius: 30)
+                        .stroke(Color.orange, lineWidth: 4)).shadow(radius: 100)
                     Spacer()
                     SignInWithAppleButton(.signIn, onRequest: onRequest, onCompletion: onCompletion)
                         .signInWithAppleButtonStyle(.white).frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/15).cornerRadius(30)
@@ -40,7 +39,7 @@ struct LoginPage: View {
                         Text("By logging in you agree to our").foregroundColor(.white)
                         HStack{
                             Button(action: {
-                                if let url = URL(string: "https://www.freeprivacypolicy.com/live/65662290-8d44-4922-a743-55e572c96b0c") {
+                                if let url = URL(string: "https://www.freeprivacypolicy.com/live/ef874c63-835e-449b-b7d3-bc705067ccda") {
                                     UIApplication.shared.open(url)
                                 }
                             }) {
