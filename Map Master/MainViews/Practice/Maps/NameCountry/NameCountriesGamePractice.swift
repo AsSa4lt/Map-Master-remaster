@@ -34,7 +34,7 @@ struct NameCountriesGamePractice: View {
                         Text("Time Left: \(String(format: "%.0f", ceil(timeLeft*100)/100)) s.").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white).padding(.bottom, -5.0)
                         
                         VStack{
-                            Text("Countries: \(score/500)/\(all_names.count)").fontWeight(.heavy).font(.largeTitle).foregroundColor(.white).padding(.bottom, -20.0)
+                            Text("Countries: \(score/200)/\(all_names.count)").fontWeight(.heavy).font(.largeTitle).foregroundColor(.white).padding(.bottom, -20.0)
                             
                             HStack{
                                 if #available(iOS 16.0, *) {
@@ -47,6 +47,9 @@ struct NameCountriesGamePractice: View {
                                     /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                                     var where_del = -1
                                     if answer != ""{
+                                        if answer.last == " " {
+                                            answer.removeLast()
+                                        }
                                         for i in 0..<answers.count{
                                             for j in 0..<answers[i].count{
                                                 if answer == answers[i][j]{

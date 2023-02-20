@@ -20,5 +20,5 @@ func Unit1Inactive(GlobalUserData: userData) -> some View{
         RatingPanel(image1: "Norway", image2: "Italy", image3: "Ukraine", text_level: "Capitals", start: 1)
         RatingPanel(image1: "Canada", image2: "Mexico", image3: "Iceland", text_level: "People", start: 1)
     }.frame(width: UIScreen.main.bounds.width*0.95).foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous)).padding(.top)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous)).padding(.top).opacity(0.3)
 }

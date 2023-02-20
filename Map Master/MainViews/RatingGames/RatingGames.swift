@@ -17,21 +17,20 @@ struct RatingGames: View {
                 HomeBackGround()
                 ScrollView(showsIndicators: false){
                     Text("Rating games").foregroundColor(Color.white).fontWeight(.heavy).font(.system(size: 47))
-                    HStack{
-                        Text("Games left today: ").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                        Text("\(GlobalUserData.games_left)").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                        Spacer()
-                    }
-                    .padding(.top, 1.0)
-                    .frame(width: UIScreen.main.bounds.width*0.95).onAppear{
-                        reniew()
-                        if GlobalUserData.minus_game{
-                            GlobalUserData.games_left -= 1
-                            GlobalUserData.minus_game = false
-                            GlobalUserData.setGamesLeft()
+                    if GlobalUserData.is_pro{
+                        HStack{
+                            Text("Games left today: ").font(.title).fontWeight(.heavy).foregroundColor(.white)
+                            Text("\(GlobalUserData.games_left)").font(.title).fontWeight(.heavy).foregroundColor(.white)
+                            Spacer()
+                        }.padding(.top, 1.0).frame(width: UIScreen.main.bounds.width*0.95)
+                    }else{
+                        NavigationLink(destination: SubscriptionView(GlobalUserData: GlobalUserData)) {
+                            HStack{
+                                Text("Games left today: ").font(.title).fontWeight(.heavy).foregroundColor(.white)
+                                Text("\(GlobalUserData.games_left)").font(.title).fontWeight(.heavy).foregroundColor(.white)
+                                Spacer()
+                            }.padding(.top, 1.0).frame(width: UIScreen.main.bounds.width*0.95)
                         }
-                    }.onReceive(timer) { _ in
-                        reniew()
                     }
                     NavigationLink(destination: Leagues(GlobalUserData: GlobalUserData)) {
                         VStack{
@@ -48,6 +47,15 @@ struct RatingGames: View {
                                 Spacer()
                             }.frame(width: UIScreen.main.bounds.width*0.95)
                         }
+                    }.onAppear{
+                        reniew()
+                        if GlobalUserData.minus_game{
+                            GlobalUserData.games_left -= 1
+                            GlobalUserData.minus_game = false
+                            GlobalUserData.setGamesLeft()
+                        }
+                    }.onReceive(timer) { _ in
+                        reniew()
                     }
                     if GlobalUserData.games_left > 0{
                         RatingGamesActive(GlobalUserData: GlobalUserData)
@@ -80,7 +88,7 @@ struct RatingGames: View {
                     GlobalUserData.games_left = 10
                 }else{
                     GlobalUserData.last_day = components.day!
-                    GlobalUserData.games_left = 50
+                    GlobalUserData.games_left = 30
                 }
             }
     }

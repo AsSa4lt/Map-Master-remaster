@@ -14,11 +14,11 @@ public let unit3level7: [[String]] = [
 ["Kenya", "Djibouti",  "Nairobi", "Kigali"], //5
 ["Gibraltar", "Gibraltar", "San Marino", "Andorra"], //6
 ["Saint Kitts and Nevis", "Castries", "Kingstown", "Basseterre"], //7
-["Saint Vincent and the Grenadines", "Castries", "Kingstown", "Basseterre"], //8
-["Antigua and Barbuda", "St. John's", "Roseau", "Bridgetown"], //9
+["Ukraine", "Kyiv", "Kingstown", "Basseterre"], //8
+["Spain", "St. John's", "Madrid", "Bridgetown"], //9
 ["Dominica", "St. John's", "Basseterre", "Roseau"] //10
 ]
-public let unit3answers7 = [1, 2, 0, 0, 1, 0, 2, 1, 0, 2]
+public let unit3answers7 = [1, 2, 0, 0, 1, 0, 2, 0, 1, 2]
 
 struct Unit3Lesson7: View {
     @State var isTapped: Bool = false

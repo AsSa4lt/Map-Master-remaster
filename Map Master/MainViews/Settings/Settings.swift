@@ -6,11 +6,21 @@
 //
 
 import SwiftUI
+import RevenueCat
 
 struct Settings: View {
     @StateObject var GlobalUserData: userData
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            LessonsBack()
+            VStack{
+                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            }.onAppear{
+                Purchases.shared.getCustomerInfo{ (customerInfo, error) in
+                    GlobalUserData.is_pro = customerInfo?.entitlements.all["pro"]?.isActive == true
+                }
+            }
+        }
     }
 }
 

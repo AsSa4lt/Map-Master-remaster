@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RevenueCat
 
 struct Practice: View {
     @StateObject var GlobalUserData: userData
@@ -77,7 +78,11 @@ struct Practice: View {
                         Rectangle().fill(Color.black)
                         // Bottom gradient
                     }
-                )
+                ).onAppear{
+                    Purchases.shared.getCustomerInfo{ (customerInfo, error) in
+                        GlobalUserData.is_pro = customerInfo?.entitlements.all["pro"]?.isActive == true
+                    }
+                }
             }
         }
     

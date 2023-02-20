@@ -11,7 +11,7 @@ public let unit3level11: [[String]] = [
     ["Nigeria", "Vietnam"], //1
     [ "Iran", "Egypt"], //2
     ["Ethiopia", "Turkey"], //3
-    ["Democratic Republic of the Congo", "Thailand"], //4
+    ["Japan", "Thailand"], //4
     ["United Kingdom", "Uzbekistan"], //5
     ["France", "Malaysia"], //6
     ["Italy", "Yemen"], //7
@@ -23,7 +23,7 @@ public let unit3level11Pop: [[String]] = [
     ["211 million", "98 million"],
     ["83 million", "98 million"],
     ["115 million", "84 million"],
-    ["98 million", "70 million"],
+    ["127 million", "70 million"],
     ["67 million", "34 million"],
     ["67 million", "32 million"],
     ["60 million", "30 million"],

@@ -33,7 +33,7 @@ struct RatingGameNameAllCountries: View {
                     Text("Score: \(score)").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
                         Text("Time Left: \(String(format: "%.0f", ceil(timeLeft*100)/100)) s.").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white).padding(.bottom, -10.0)
                         VStack{
-                            Text("Countries: \(score/500)/\(all_names.count)").fontWeight(.heavy).font(.largeTitle).foregroundColor(.white)
+                            Text("Countries: \(score/200)/\(all_names.count)").fontWeight(.heavy).font(.largeTitle).foregroundColor(.white)
                             HStack{
                                 if #available(iOS 16.0, *) {
                                     TextField("Enter country", text: $answer).multilineTextAlignment(.center).font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/).fontWeight(/*@START_MENU_TOKEN@*/.heavy/*@END_MENU_TOKEN@*/).foregroundColor(.white)
@@ -46,6 +46,9 @@ struct RatingGameNameAllCountries: View {
                                     var where_del = -1
                                     GlobalUserData.minus_game = true
                                     if answer != ""{
+                                        if answer.last == " " {
+                                            answer.removeLast()
+                                        }
                                         for i in 0..<answers.count{
                                             for j in 0..<answers[i].count{
                                                 if answer == answers[i][j]{

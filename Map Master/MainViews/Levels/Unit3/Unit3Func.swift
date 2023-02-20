@@ -34,7 +34,7 @@ func Unit3(GlobalUserData: userData) -> some View{
                     NavigationLink(destination: Unit3Lesson5(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Chile", active: GlobalUserData.unit3[4], text_level: "Borders 5")
                     }
-                    NavigationLink(destination: Unit2Lesson6(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: Unit3Lesson6(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Bangladesh", active: GlobalUserData.unit3[5], text_level: "Borders 6")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
@@ -45,7 +45,7 @@ func Unit3(GlobalUserData: userData) -> some View{
                     NavigationLink(destination: Unit3Lesson8(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "China", active: GlobalUserData.unit3[7], text_level: "Capitals 8")
                     }
-                    NavigationLink(destination: Unit2Lesson9(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: Unit3Lesson9(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Angola", active: GlobalUserData.unit3[8], text_level: "Capitals 9")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
@@ -57,7 +57,7 @@ func Unit3(GlobalUserData: userData) -> some View{
                     NavigationLink(destination: Unit3Lesson11(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Peru", active: GlobalUserData.unit3[10], text_level: "People 8")
                     }
-                    NavigationLink(destination: Unit2Lesson12(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: Unit3Lesson12(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Jamaica", active: GlobalUserData.unit3[11], text_level: "People 9")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
@@ -68,7 +68,7 @@ func Unit3(GlobalUserData: userData) -> some View{
                     NavigationLink(destination: Unit3Lesson14(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Jordan", active: GlobalUserData.unit3[13], text_level: "GPD 2")
                     }
-                    NavigationLink(destination: Unit2Lesson12(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: Unit3Lesson15(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Western Sahara", active: GlobalUserData.unit3[14], text_level: "GPD 3")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)

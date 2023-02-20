@@ -34,7 +34,7 @@ func Unit4(GlobalUserData: userData) -> some View{
                         RatingPanelActive(image: "San Marino", active: GlobalUserData.unit4[4], text_level: "Maps 2")
                     }
 
-                    NavigationLink(destination: Unit4Lesson3(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: Unit4Lesson6(GlobalUserData: GlobalUserData)) {
                             RatingPanelActive(image: "Somalia", active: GlobalUserData.unit4[5], text_level: "Maps 3")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
@@ -80,7 +80,7 @@ func Unit4(GlobalUserData: userData) -> some View{
                     NavigationLink(destination: Unit4Lesson17(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Mayotte", active: GlobalUserData.unit4[16], text_level: "Borders 8")
                     }
-                    NavigationLink(destination: Unit4Lesson15(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: Unit4Lesson18(GlobalUserData: GlobalUserData)) {
                         RatingPanelActive(image: "Guadeloupe", active: GlobalUserData.unit4[17], text_level: "Borders 9")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)

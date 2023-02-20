@@ -6,18 +6,18 @@
 //
 import SwiftUI
 public let unit4level14: [[String]] = [
-["Armenia",  "Yerevan", "Naypyidaw", "Islamabad"], //1
-["Estonia", "Seoul", "Manila", "Tallinn"], //2
-["Denmark", "Copenhagen", "Damascus", "Pyongyang"], //3
-["Angola", "Helsinki", "Luanda", "Ljubljana"], //4
-["Nigeria", "Bern",  "Abuja", "Stockholm"], //5
-["Serbia", "Luxembourg", "Kishinev", "Belgrade"], //6
-["Senegal", "Dakar", "Bangkok", "Riga"], //7
-["Latvia", "Gaborone", "Riga", "Nairobi"], //8
-["Mauritania", "Maseru", "Quito", "Nouakchott"], //9
-["Greenland", "Nuuk", "Brasilia", "Noumea"] //10
+["Liberia",  "Niamey", "Oslo", "Monrovia"], //1
+["Cuba", "Yaren", "Dakar", "Havana"], //2
+["Slovenia", "Ljubljana", "Podgorica", "Dublin"], //3
+["Bulgaria", "Amsterdam", "Sofia", "Bucharest"], //4
+["Egypt", "Zahreb",  "Riga", "Cairo"], //5
+["Albania", "Tirane", "Vilnius", "Moscow"], //6
+["Eritrea", "Budapest", "Asmara", "Athens"], //7
+["Rwanda", "Bratislava", "Kigali", "Mogadishu"], //8
+["Micronesia", "Tunis", "Malabo", "Palikir"], //9
+["Tonga", "Nukualofa", "Brasilia", "Ottawa"] //10
 ]
-public let unit4answers14 = [0, 2, 0, 1, 1, 2, 0, 1, 2, 0]
+public let unit4answers14 = [2, 2, 0, 1, 2, 0, 1, 1, 2, 0]
 
 struct Unit4Lesson14: View {
     @State var isTapped: Bool = false
@@ -50,8 +50,8 @@ struct Unit4Lesson14: View {
                             ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.red).shadow(radius: 3)
                         }
                         
-                        Text("\(unit4level13[current][0])") .font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.top)
-                        Image("\(unit4level13[current][0])").resizable().frame(width: UIScreen.main.bounds.width*0.6, height: UIScreen.main.bounds.width*0.4).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.bottom)
+                        Text("\(unit4level14[current][0])") .font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.top)
+                        Image("\(unit4level14[current][0])").resizable().frame(width: UIScreen.main.bounds.width*0.6, height: UIScreen.main.bounds.width*0.4).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.bottom)
                         
                         ForEach(1..<unit4level13[0].count, id: \.self){ i in
                             Button{
@@ -59,7 +59,7 @@ struct Unit4Lesson14: View {
                                     isTapped = true
                                     show_answers = true
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        if unit4answers13[current] == i-1{
+                                        if unit4answers14[current] == i-1{
                                             correct = correct + 0.1
                                         }else{
                                             GlobalUserData.hearts = GlobalUserData.hearts - 1
@@ -72,23 +72,23 @@ struct Unit4Lesson14: View {
                                         isTapped = false
                                     }
                                     if correct >= 0.7{
-                                        GlobalUserData.unit4[12] = true
+                                        GlobalUserData.unit4[13] = true
                                         GlobalUserData.unit4Change = true
                                     }
                                 }
                             }label: {
                                 if show_answers == false{
                                     Color.cyan.overlay(
-                                        Text("\(unit4level13[current][i])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                        Text("\(unit4level14[current][i])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
                                     ).frame(width:  UIScreen.main.bounds.width*0.6, height: UIScreen.main.bounds.height/15).cornerRadius(15).padding(.vertical, 10.0).shadow(radius: 5)
                                 }else{
-                                    if unit4answers13[current] == i-1{
+                                    if unit4answers14[current] == i-1{
                                         Color.green.overlay(
-                                            Text("\(unit4level13[current][i])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                            Text("\(unit4level14[current][i])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
                                         ).frame(width:  UIScreen.main.bounds.width*0.6, height: UIScreen.main.bounds.height/15).cornerRadius(15).padding(.vertical, 10.0).shadow(radius: 5)
                                     }else{
                                         Color.red.overlay(
-                                            Text("\(unit4level13[current][i])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
+                                            Text("\(unit4level14[current][i])").font(.title2).fontWeight(.heavy).foregroundColor(.white)
                                         ).frame(width:  UIScreen.main.bounds.width*0.6, height: UIScreen.main.bounds.height/15).cornerRadius(15).padding(.vertical, 10.0).shadow(radius: 5)
                                     }
                                 }

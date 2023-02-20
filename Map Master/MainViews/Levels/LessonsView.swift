@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import RevenueCat
 struct LessonsView: View {
     @StateObject var GlobalUserData: userData
     @State var result: Int = 0
@@ -18,31 +18,17 @@ struct LessonsView: View {
                 LessonsBack()
                 VStack{
                     HStack{
+                        if GlobalUserData.is_pro == false{
+                            NavigationLink(destination: SubscriptionView(GlobalUserData: GlobalUserData)) {
+                                Image("noPro").resizable().frame(width: 40, height: 30).foregroundColor(.white).shadow(radius: 5)
+                            }
+                        }else{
+                            Image("Pro").resizable().frame(width: 40, height: 30).foregroundColor(.white).shadow(radius: 5)
+                        }
                         Text("\(result)").font(.title).fontWeight(.heavy).foregroundColor(.yellow)
                         Image(systemName: "microbe.fill").resizable().frame(width: 25, height: 25).foregroundColor(.yellow)
                         Spacer()
-                        Text("\(GlobalUserData.hearts)").font(.title).fontWeight(.heavy).foregroundColor(Color(hue: 1.0, saturation: 0.718, brightness: 0.905))
-                        Image(systemName: "heart.fill").resizable().frame(width: 25, height: 25).foregroundColor(Color(hue: 1.0, saturation: 0.718, brightness: 0.905)).scaleEffect(showAnimation ? 1.4 : 1.0)
-                            .animation(Animation.easeInOut(duration: 1.0).repeatForever(autoreverses: true))
-                                .onAppear {
-                                    showAnimation = true
-                                    reniew()
-                                    if GlobalUserData.unit1Change == true && GlobalUserData.is_apple_id == true{
-                                        GlobalUserData.setUnit1()
-                                        
-                                    }
-                                    if GlobalUserData.unit2Change == true && GlobalUserData.is_apple_id == true{
-                                        GlobalUserData.setUnit2()
-                                    }
-                                    if GlobalUserData.unit3Change == true && GlobalUserData.is_apple_id == true{
-                                        GlobalUserData.setUnit3()
-                                    }
-                                    if GlobalUserData.unit4Change == true && GlobalUserData.is_apple_id == true{
-                                        GlobalUserData.setUnit4()
-                                    }
-                                }.onReceive(timer) { _ in
-                                    reniew()
-                                }
+                        Hearts(GlobalUserData: GlobalUserData, showAnimation: showAnimation)
                     }.frame(width: UIScreen.main.bounds.width*0.9).onAppear{
                         if GlobalUserData.hearts == 0{
                             showAnimation = true
@@ -90,6 +76,24 @@ struct LessonsView: View {
 
                         }
                     ).onAppear{
+                        Purchases.shared.getCustomerInfo{ (customerInfo, error) in
+                            GlobalUserData.is_pro = customerInfo?.entitlements.all["pro"]?.isActive == true
+                        }
+                        showAnimation = true
+                        reniew()
+                        if GlobalUserData.unit1Change == true && GlobalUserData.is_apple_id == true{
+                            GlobalUserData.setUnit1()
+                            
+                        }
+                        if GlobalUserData.unit2Change == true && GlobalUserData.is_apple_id == true{
+                            GlobalUserData.setUnit2()
+                        }
+                        if GlobalUserData.unit3Change == true && GlobalUserData.is_apple_id == true{
+                            GlobalUserData.setUnit3()
+                        }
+                        if GlobalUserData.unit4Change == true && GlobalUserData.is_apple_id == true{
+                            GlobalUserData.setUnit4()
+                        }
                         result = 0
                         for i in 0..<GlobalUserData.unit1.count{
                             if GlobalUserData.unit1[i] == true{
@@ -111,6 +115,8 @@ struct LessonsView: View {
                                 result += 1
                             }
                         }
+                    }.onReceive(timer) { _ in
+                        reniew()
                     }
                 }
             }
@@ -123,10 +129,10 @@ struct LessonsView: View {
         if components.day! != GlobalUserData.last_refill_hearts{
             if GlobalUserData.is_pro == false{
                 GlobalUserData.last_refill_hearts = components.day!
-                GlobalUserData.hearts = 20
+                GlobalUserData.hearts = 10
             }else{
                 GlobalUserData.last_refill_hearts = components.day!
-                GlobalUserData.hearts = 50
+                GlobalUserData.hearts = 30
             }
         }
     }

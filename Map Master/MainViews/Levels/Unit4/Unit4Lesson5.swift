@@ -66,70 +66,60 @@ struct Unit4Lesson5: View {
                         }else if correct < 0.4{
                             ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.red).shadow(radius: 3)
                         }
-                    ZStack{
-                        Rectangle().frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).foregroundColor(Color(hue: 0.552, saturation: 0.577, brightness: 0.968)).cornerRadius(15)
-                        Rectangle().foregroundColor(.secondary).opacity(0.05).frame(width: UIScreen.main.bounds.width*20, height: UIScreen.main.bounds.width*20).gesture(
-                            DragGesture()
-                                .onChanged { value in
-                                    self.dragAmount.height = self.dragAmount.height + value.translation.height
-                                    self.dragAmount.width = self.dragAmount.width + value.translation.width
-                                }
-                                .onEnded { value in
-                                    //self.dragAmount = self.dragAmount + value.translation
-                                    offsetControl()
-                                }
-                        ).offset(x: dragAmount.width, y: dragAmount.height)
-                        
-                        InteractiveMap(svgName: "world-low") { pathData in // is a PathData
-                            if pathsWrong.contains(pathData){
-                                InteractiveShape(pathData)
-                                    .stroke(.black, lineWidth: 0.2)
-                                    .background(InteractiveShape(pathData).fill(Color.red)) // filling the shapes
-                                    .onTapGesture {
-                                        clickedPath = pathData
+                        ZStack{
+                            ZStack{
+                                Rectangle().frame(width: UIScreen.main.bounds.width*20, height: UIScreen.main.bounds.width*20).foregroundColor(Color(hue: 0.552, saturation: 0.577, brightness: 0.968)).cornerRadius(15)
+                                Rectangle().foregroundColor(.secondary).opacity(0.05).frame(width: UIScreen.main.bounds.width*20, height: UIScreen.main.bounds.width*20)
+                                
+                                InteractiveMap(svgName: "world-low") { pathData in // is a PathData
+                                    if pathsWrong.contains(pathData){
+                                        InteractiveShape(pathData)
+                                            .stroke(.black, lineWidth: 0.2)
+                                            .background(InteractiveShape(pathData).fill(Color.red)) // filling the shapes
+                                            .onTapGesture {
+                                                clickedPath = pathData
+                                            }
+                                    }else if pathsCorrect.contains(pathData){
+                                        InteractiveShape(pathData)
+                                            .stroke(.black, lineWidth: 0.2)
+                                            .background(InteractiveShape(pathData).fill(Color.green)) // filling the shapes
+                                            .onTapGesture {
+                                                clickedPath = pathData
+                                            }
+                                    } else if clickedPath != pathData{
+                                        InteractiveShape(pathData)
+                                            .stroke(.black, lineWidth: 0.2)
+                                            .background(InteractiveShape(pathData).fill(Color(white: 0.9))) // filling the shapes
+                                            .onTapGesture {
+                                                clickedPath = pathData
+                                            }
+                                    }else{
+                                        InteractiveShape(pathData)
+                                            .stroke(.black, lineWidth: 0.2)
+                                            .background(InteractiveShape(pathData).fill(Color.orange)) // filling the shapes
+                                            .onTapGesture {
+                                                clickedPath = pathData
+                                            }
                                     }
-                            }else if pathsCorrect.contains(pathData){
-                                InteractiveShape(pathData)
-                                    .stroke(.black, lineWidth: 0.2)
-                                    .background(InteractiveShape(pathData).fill(Color.green)) // filling the shapes
-                                    .onTapGesture {
-                                        clickedPath = pathData
+                                }.clipShape(Rectangle()).frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).cornerRadius(15)//.offset(x: dragAmount.width, y: dragAmount.height)
+                             
+                            }.scaleEffect(CGFloat(1+scale*2)).frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).gesture(
+                                DragGesture()
+                                    .onChanged { value in
+                                        self.dragAmount.height = self.dragAmount.height + value.translation.height
+                                        self.dragAmount.width = self.dragAmount.width + value.translation.width
                                     }
-                            } else if clickedPath != pathData{
-                                InteractiveShape(pathData)
-                                    .stroke(.black, lineWidth: 0.2)
-                                    .background(InteractiveShape(pathData).fill(Color(white: 0.9))) // filling the shapes
-                                    .onTapGesture {
-                                        clickedPath = pathData
+                                    .onEnded { value in
+                                        //self.dragAmount = self.dragAmount + value.translation
+                                        offsetControl()
                                     }
-                            }else{
-                                InteractiveShape(pathData)
-                                    .stroke(.black, lineWidth: 0.2)
-                                    .background(InteractiveShape(pathData).fill(Color.orange)) // filling the shapes
-                                    .onTapGesture {
-                                        clickedPath = pathData
-                                    }
-                            }
-                        }.scaleEffect(CGFloat(1+scale*2)).gesture(
-                            DragGesture()
-                                .onChanged { value in
-                                    self.dragAmount.height = self.dragAmount.height + value.translation.height
-                                    self.dragAmount.width = self.dragAmount.width + value.translation.width
-                                }
-                                .onEnded { value in
-                                    //self.dragAmount = self.dragAmount + value.translation
-                                    offsetControl()
-                                }
-                        ).offset(x: dragAmount.width, y: dragAmount.height).clipShape(Rectangle()).frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).cornerRadius(15)
-                        
-                        
-                        
-                        Stepper(value: $scale, in: 0...10) {
-                            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Label@*/Text("Stepper")/*@END_MENU_TOKEN@*/
-                        }.background(Color.green).cornerRadius(10).labelsHidden().foregroundColor(.white).offset(x: UIScreen.main.bounds.width*0.325,y: UIScreen.main.bounds.width*0.25)
-                    }.padding(.top).frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).onChange(of: scale){ _ in
-                        offsetControl()
-                    }
+                            ).offset(x: dragAmount.width, y: dragAmount.height)
+                            Stepper(value: $scale, in: 0...10) {
+                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Label@*/Text("Stepper")/*@END_MENU_TOKEN@*/
+                            }.background(Color.green).cornerRadius(10).labelsHidden().foregroundColor(.white).offset(x: UIScreen.main.bounds.width*0.325,y: UIScreen.main.bounds.width*0.25)
+                        }.clipShape(Rectangle()).frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).cornerRadius(15).onChange(of: scale){ _ in
+                            offsetControl()
+                        }
                     
                     
                     Button {
@@ -139,11 +129,11 @@ struct Unit4Lesson5: View {
                             if clickedPath.name == unit4lesson5[current][0]{
                                 stateOfAnswer = 1
                                 correct = correct + 0.1
-                                pathsCorrect.append(PathData(name: "\(unit4lesson6[current][0])", id: "\(unit4lesson6[current][0])", path: []))
+                                pathsCorrect.append(PathData(name: "\(unit4lesson5[current][0])", id: "\(unit4lesson5[current][0])", path: []))
                             }else{
                                 stateOfAnswer = 2
                                 GlobalUserData.hearts -= 1
-                                pathsWrong.append(PathData(name: "\(unit4lesson6[current][0])", id: "\(unit4lesson6[current][0])", path: []))
+                                pathsWrong.append(PathData(name: "\(unit4lesson5[current][0])", id: "\(unit4lesson5[current][0])", path: []))
                             }
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 current += 1

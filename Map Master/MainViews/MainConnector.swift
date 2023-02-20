@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RevenueCat
 
 struct MainConnector: View {
     @StateObject var GlobalUserData: userData
@@ -32,8 +33,11 @@ struct MainConnector: View {
                 }
             }.colorScheme(.dark).onAppear{
                 GlobalUserData.is_logged = true
+                Purchases.shared.getCustomerInfo{ (customerInfo, error) in
+                    GlobalUserData.is_pro = customerInfo?.entitlements.all["pro"]?.isActive == true
+                }
             }
-                }.navigationViewStyle(StackNavigationViewStyle()).accentColor(.white)
+                }.navigationViewStyle(StackNavigationViewStyle()).accentColor(.white).navigationBarBackButtonHidden(true)
     }
 }
 

@@ -47,8 +47,43 @@ struct RatingGameUSStates: View {
                                 Text("Click on \(task)").fontWeight(.heavy).font(.title).foregroundColor(.red)
                             }
                             ZStack{
-                                Rectangle().frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).foregroundColor(Color(hue: 0.552, saturation: 0.577, brightness: 0.968)).cornerRadius(15)
-                                Rectangle().foregroundColor(.secondary).opacity(0.05).frame(width: UIScreen.main.bounds.width*20, height: UIScreen.main.bounds.width*20).gesture(
+                                ZStack{
+                                    Rectangle().frame(width: UIScreen.main.bounds.width*20, height: UIScreen.main.bounds.width*20).foregroundColor(Color(hue: 0.552, saturation: 0.577, brightness: 0.968)).cornerRadius(15)
+                                    Rectangle().foregroundColor(.secondary).opacity(0.05).frame(width: UIScreen.main.bounds.width*20, height: UIScreen.main.bounds.width*20)
+                                    
+                                    InteractiveMap(svgName: "usa-low") { pathData in // is a PathData
+                                        if pathsWrong.contains(pathData){
+                                            InteractiveShape(pathData)
+                                                .stroke(.black, lineWidth: 0.2)
+                                                .background(InteractiveShape(pathData).fill(Color.red)) // filling the shapes
+                                                .onTapGesture {
+                                                    clickedPath = pathData
+                                                }
+                                        }else if pathsCorrect.contains(pathData){
+                                            InteractiveShape(pathData)
+                                                .stroke(.black, lineWidth: 0.2)
+                                                .background(InteractiveShape(pathData).fill(Color.green)) // filling the shapes
+                                                .onTapGesture {
+                                                    clickedPath = pathData
+                                                }
+                                        } else if clickedPath != pathData{
+                                            InteractiveShape(pathData)
+                                                .stroke(.black, lineWidth: 0.2)
+                                                .background(InteractiveShape(pathData).fill(Color(white: 0.9))) // filling the shapes
+                                                .onTapGesture {
+                                                    clickedPath = pathData
+                                                }
+                                        }else{
+                                            InteractiveShape(pathData)
+                                                .stroke(.black, lineWidth: 0.2)
+                                                .background(InteractiveShape(pathData).fill(Color.orange)) // filling the shapes
+                                                .onTapGesture {
+                                                    clickedPath = pathData
+                                                }
+                                        }
+                                    }.clipShape(Rectangle()).frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).cornerRadius(15)//.offset(x: dragAmount.width, y: dragAmount.height)
+                                 
+                                }.scaleEffect(CGFloat(1+scale*2)).frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).gesture(
                                     DragGesture()
                                         .onChanged { value in
                                             self.dragAmount.height = self.dragAmount.height + value.translation.height
@@ -59,55 +94,10 @@ struct RatingGameUSStates: View {
                                             offsetControl()
                                         }
                                 ).offset(x: dragAmount.width, y: dragAmount.height)
-                                
-                                InteractiveMap(svgName: "usa-low") { pathData in // is a PathData
-                                    if pathsWrong.contains(pathData){
-                                        InteractiveShape(pathData)
-                                            .stroke(.black, lineWidth: 0.2)
-                                            .background(InteractiveShape(pathData).fill(Color.red)) // filling the shapes
-                                            .onTapGesture {
-                                                clickedPath = pathData
-                                            }
-                                    }else if pathsCorrect.contains(pathData){
-                                        InteractiveShape(pathData)
-                                            .stroke(.black, lineWidth: 0.2)
-                                            .background(InteractiveShape(pathData).fill(Color.green)) // filling the shapes
-                                            .onTapGesture {
-                                                clickedPath = pathData
-                                            }
-                                    } else if clickedPath != pathData{
-                                        InteractiveShape(pathData)
-                                            .stroke(.black, lineWidth: 0.2)
-                                            .background(InteractiveShape(pathData).fill(Color(white: 0.9))) // filling the shapes
-                                            .onTapGesture {
-                                                clickedPath = pathData
-                                            }
-                                    }else{
-                                        InteractiveShape(pathData)
-                                            .stroke(.black, lineWidth: 0.2)
-                                            .background(InteractiveShape(pathData).fill(Color.orange)) // filling the shapes
-                                            .onTapGesture {
-                                                clickedPath = pathData
-                                            }
-                                    }
-                                }.scaleEffect(CGFloat(1+scale*2)).gesture(
-                                    DragGesture()
-                                        .onChanged { value in
-                                            self.dragAmount.height = self.dragAmount.height + value.translation.height
-                                            self.dragAmount.width = self.dragAmount.width + value.translation.width
-                                        }
-                                        .onEnded { value in
-                                            //self.dragAmount = self.dragAmount + value.translation
-                                            offsetControl()
-                                        }
-                                ).offset(x: dragAmount.width, y: dragAmount.height).clipShape(Rectangle()).frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).cornerRadius(15)
-                                
-                                
-                                
-                                Stepper(value: $scale, in: 0...5) {
+                                Stepper(value: $scale, in: 0...10) {
                                     /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Label@*/Text("Stepper")/*@END_MENU_TOKEN@*/
                                 }.background(Color.green).cornerRadius(10).labelsHidden().foregroundColor(.white).offset(x: UIScreen.main.bounds.width*0.325,y: UIScreen.main.bounds.width*0.25)
-                            }.frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).onChange(of: scale){ _ in
+                            }.clipShape(Rectangle()).frame(width: UIScreen.main.bounds.width*0.92, height: UIScreen.main.bounds.width*0.6).cornerRadius(15).onChange(of: scale){ _ in
                                 offsetControl()
                             }
                             
