@@ -70,8 +70,8 @@ struct LoginPage: View {
                     as? ASAuthorizationAppleIDCredential
             else { return }
             GlobalUserData.user_id = credential.user
-            GlobalUserData.name = credential.fullName?.givenName ?? "Rostyslav"
-            GlobalUserData.email = credential.email ?? "st1tchqwerty@gmail.com"
+            GlobalUserData.name = credential.fullName?.givenName ?? "Player1834"
+            GlobalUserData.email = credential.email ?? "No email"
             GlobalUserData.is_apple_id = true
             GlobalUserData.setDataFromCloudKit()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
