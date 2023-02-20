@@ -11,6 +11,8 @@ import AuthenticationServices
 
 struct Settings: View {
     @StateObject var GlobalUserData: userData
+    @State var start: Date = Date()
+    @State var end: Date = Date()
     @State private var isPresentingConfirm: Bool = false
     @State private var isPresentingConfirmDelete: Bool = false
     var body: some View {
@@ -18,12 +20,25 @@ struct Settings: View {
             LessonsBack()
             VStack{
                 VStack{
-                    VStack{
-                        if GlobalUserData.is_pro == false{
-                            
+                    if GlobalUserData.is_pro == true{
+                        NavigationLink(destination: SubscriptionView(GlobalUserData: GlobalUserData)) {
+                            HStack{
+                                Text("No subscription").font(.title3).fontWeight(.heavy).foregroundColor(.white)
+                                Spacer()
+                                Text("Subcribe").foregroundColor(.white).fontWeight(.heavy).font(.title).padding(.all, 5).background(Color(hex: 0xd44326).cornerRadius(10))
+                            }.padding(.all).frame(width: UIScreen.main.bounds.width*0.85).background(Color.indigo.cornerRadius(15))
                         }
-                        
-                        
+                    }else{
+                        HStack{
+                            Image(systemName: "checkmark.circle.fill").resizable().frame(width: UIScreen.main.bounds.width*0.13, height: UIScreen.main.bounds.width*0.13).foregroundColor(.white)
+                            VStack{
+                                Text("Member since: \(start.formatted(.dateTime.day().month().year()) )").frame(alignment: .leading).foregroundColor(Color.white)
+                                Text("Expires at: \(end.formatted(.dateTime.day().month().year()) )").frame(alignment: .leading).foregroundColor(Color.white)
+                            }
+                            Spacer()
+                        }.padding(.all).frame(width: UIScreen.main.bounds.width*0.85).background(Color.indigo.cornerRadius(15))
+                    }
+                    VStack{
                         Text("By logging in you agree to our").foregroundColor(.white)
                         HStack{
                             Button(action: {
@@ -76,6 +91,8 @@ struct Settings: View {
             }.onAppear{
                 Purchases.shared.getCustomerInfo{ (customerInfo, error) in
                     GlobalUserData.is_pro = customerInfo?.entitlements.all["pro"]?.isActive == true
+                    start = customerInfo?.purchaseDate(forEntitlement: "pro") ?? Date()
+                    end = customerInfo?.expirationDate(forEntitlement: "pro") ?? Date()
                 }
             }
         }
