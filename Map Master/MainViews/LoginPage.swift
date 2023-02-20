@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AuthenticationServices
+import RevenueCat
 
 struct LoginPage: View {
     @State private var animateGradient = false
@@ -73,6 +74,13 @@ struct LoginPage: View {
             GlobalUserData.name = credential.fullName?.givenName ?? "Player1834"
             GlobalUserData.email = credential.email ?? "No email"
             GlobalUserData.is_apple_id = true
+            Purchases.shared.getCustomerInfo{ (customerInfo, error) in
+                GlobalUserData.is_pro = customerInfo?.entitlements.all["pro"]?.isActive == true
+                if GlobalUserData.is_pro == true{
+                    GlobalUserData.hearts = 30
+                    userData().hearts = 30
+                }
+            }
             GlobalUserData.setDataFromCloudKit()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 if GlobalUserData.is_apple_id == true && GlobalUserData.is_record_exist == true{
@@ -82,6 +90,7 @@ struct LoginPage: View {
                     showMainScreen = true
                 }
             }
+            
         case .failure (let error):
             print("Authorization failed: " + error.localizedDescription)
         }

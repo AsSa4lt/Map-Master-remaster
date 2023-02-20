@@ -28,15 +28,30 @@ struct LessonsView: View {
                         Text("\(result)").font(.title).fontWeight(.heavy).foregroundColor(.yellow)
                         Image(systemName: "microbe.fill").resizable().frame(width: 25, height: 25).foregroundColor(.yellow)
                         Spacer()
-                        Hearts(GlobalUserData: GlobalUserData, showAnimation: showAnimation)
+                        HStack{
+                            if GlobalUserData.is_pro{
+                                Text("\(GlobalUserData.hearts)").font(.title).fontWeight(.heavy).foregroundColor(Color(hue: 1.0, saturation: 0.718, brightness: 0.905))
+                                Image(systemName: "heart.fill").resizable().frame(width: 25, height: 25).foregroundColor(Color(hue: 1.0, saturation: 0.718, brightness: 0.905))
+                                    
+                            }else{
+                                NavigationLink(destination: SubscriptionView(GlobalUserData: GlobalUserData)) {
+                                    Text("\(GlobalUserData.hearts)").font(.title).fontWeight(.heavy).foregroundColor(Color(hue: 1.0, saturation: 0.718, brightness: 0.905))
+                                    Image(systemName: "heart.fill").resizable().frame(width: 25, height: 25).foregroundColor(Color(hue: 1.0, saturation: 0.718, brightness: 0.905))
+                                }
+                            }
+                        }
                     }.frame(width: UIScreen.main.bounds.width*0.9).onAppear{
                         if GlobalUserData.hearts == 0{
                             showAnimation = true
                         }else{
                             showAnimation = false
                         }
+                        GlobalUserData.hearts = userData().hearts
                     }
                     ScrollView(showsIndicators: false){
+                        if GlobalUserData.hearts <= 0{
+                            Text("Refills in \(24 - calendar.dateComponents([.hour], from: Date()).hour!) hours").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, -10)
+                        }
                         if GlobalUserData.hearts <= 0{
                             Unit1Inactive(GlobalUserData: GlobalUserData)
                         }else{

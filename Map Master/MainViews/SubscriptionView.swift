@@ -105,6 +105,8 @@ struct SubscriptionView: View {
                                 if customerInfo?.entitlements.all["pro"]?.isActive == true{
                                     userData().is_pro = true
                                     GlobalUserData.is_pro = true
+                                    GlobalUserData.hearts = 30
+                                    GlobalUserData.games_left = 30
                                 }
                             }
                         }else if selected == 2{
@@ -112,6 +114,8 @@ struct SubscriptionView: View {
                                 if customerInfo?.entitlements.all["pro"]?.isActive == true{
                                     userData().is_pro = true
                                     GlobalUserData.is_pro = true
+                                    GlobalUserData.hearts = 30
+                                    GlobalUserData.games_left = 30
                                 }
                             }
                         }else if selected == 3{
@@ -119,6 +123,8 @@ struct SubscriptionView: View {
                                 if customerInfo?.entitlements.all["pro"]?.isActive == true{
                                     userData().is_pro = true
                                     GlobalUserData.is_pro = true
+                                    GlobalUserData.hearts = 30
+                                    GlobalUserData.games_left = 30
                                 }
                             }
                         }

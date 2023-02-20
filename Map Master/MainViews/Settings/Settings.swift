@@ -20,7 +20,7 @@ struct Settings: View {
             LessonsBack()
             VStack{
                 VStack{
-                    if GlobalUserData.is_pro == true{
+                    if GlobalUserData.is_pro == false{
                         NavigationLink(destination: SubscriptionView(GlobalUserData: GlobalUserData)) {
                             HStack{
                                 Text("No subscription").font(.title3).fontWeight(.heavy).foregroundColor(.white)
@@ -110,6 +110,13 @@ struct Settings: View {
             GlobalUserData.email = credential.email ?? GlobalUserData.email
             GlobalUserData.user_id = credential.user
             GlobalUserData.is_apple_id = true
+            Purchases.shared.getCustomerInfo{ (customerInfo, error) in
+                GlobalUserData.is_pro = customerInfo?.entitlements.all["pro"]?.isActive == true
+                if GlobalUserData.is_pro == true{
+                    GlobalUserData.hearts = 30
+                    userData().hearts = 30
+                }
+            }
             GlobalUserData.setDataFromCloudKit()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 if GlobalUserData.is_apple_id == true && GlobalUserData.is_record_exist == false {

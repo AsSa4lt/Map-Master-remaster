@@ -54,16 +54,16 @@ struct Leagues: View {
                     }
                     
                     Group{
-                        Text("Expert League").font(.title).fontWeight(.heavy).shadow(radius: 3).foregroundColor(Color(red: 0.5450980392156862, green: 0.0, blue: 0.5450980392156862))
+                        Text("Expert League").font(.title).fontWeight(.heavy).shadow(radius: 3).foregroundColor(Color.orange)
                         HStack{
                             if score >= 120000{
-                                ProgressView(value: 1).frame(width: UIScreen.main.bounds.width*0.55).scaleEffect(x: 1, y: 3, anchor: .center).accentColor(Color(red: 0.5450980392156862, green: 0.0, blue: 0.5450980392156862)).shadow(radius: 3)
+                                ProgressView(value: 1).frame(width: UIScreen.main.bounds.width*0.55).scaleEffect(x: 1, y: 3, anchor: .center).accentColor(Color.orange).shadow(radius: 3)
                             }else if score > 70000{
-                                ProgressView(value: Double(score-70000)/50000).frame(width: UIScreen.main.bounds.width*0.55).scaleEffect(x: 1, y: 3, anchor: .center).accentColor(Color(red: 0.5450980392156862, green: 0.0, blue: 0.5450980392156862)).shadow(radius: 3)
+                                ProgressView(value: Double(score-70000)/50000).frame(width: UIScreen.main.bounds.width*0.55).scaleEffect(x: 1, y: 3, anchor: .center).accentColor(Color.orange).shadow(radius: 3)
                             }else{
-                                ProgressView(value: 0).frame(width: UIScreen.main.bounds.width*0.55).scaleEffect(x: 1, y: 3, anchor: .center).accentColor(Color(red: 0.5450980392156862, green: 0.0, blue: 0.5450980392156862)).shadow(radius: 3)
+                                ProgressView(value: 0).frame(width: UIScreen.main.bounds.width*0.55).scaleEffect(x: 1, y: 3, anchor: .center).accentColor(Color.orange).shadow(radius: 3)
                             }
-                            Text("120 000").font(.title2).fontWeight(.heavy).shadow(radius: 3).foregroundColor(Color(red: 0.5450980392156862, green: 0.0, blue: 0.5450980392156862))
+                            Text("120 000").font(.title2).fontWeight(.heavy).shadow(radius: 3).foregroundColor(Color.orange)
                         }
                     }
                     Group{

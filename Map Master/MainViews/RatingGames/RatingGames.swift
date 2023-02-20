@@ -57,6 +57,9 @@ struct RatingGames: View {
                     }.onReceive(timer) { _ in
                         reniew()
                     }
+                    if GlobalUserData.games_left <= 0{
+                        Text("Refills in \(24 - calendar.dateComponents([.hour], from: Date()).hour!) hours").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, 0).padding(.top, 20)
+                    }
                     if GlobalUserData.games_left > 0{
                         RatingGamesActive(GlobalUserData: GlobalUserData)
                     }else{
