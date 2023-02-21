@@ -140,7 +140,7 @@ public class userData: ObservableObject{
             } else if let record = record {
                 DispatchQueue.main.async {
                     // The record already exists, get data
-                    self.name = record["name"] as? String ?? "Rostyslav Liapkin"
+                    self.name = record["name"] as? String ?? "Player386"
                     self.unit1 = record["unit1"] as? [Bool] ?? [Bool](repeating: false, count: 9)
                     self.unit2 = record["unit2"] as? [Bool] ?? [Bool](repeating: false, count: 12)
                     self.unit3 = record["unit3"] as? [Bool] ?? [Bool](repeating: false, count: 15)

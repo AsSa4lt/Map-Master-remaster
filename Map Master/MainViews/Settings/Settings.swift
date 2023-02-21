@@ -108,6 +108,7 @@ struct Settings: View {
                     as? ASAuthorizationAppleIDCredential
             else { return }
             GlobalUserData.email = credential.email ?? GlobalUserData.email
+            GlobalUserData.name = credential.fullName?.givenName ?? "Player645"
             GlobalUserData.user_id = credential.user
             GlobalUserData.is_apple_id = true
             Purchases.shared.getCustomerInfo{ (customerInfo, error) in
