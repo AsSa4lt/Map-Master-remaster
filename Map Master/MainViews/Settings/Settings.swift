@@ -20,6 +20,19 @@ struct Settings: View {
             LessonsBack()
             VStack{
                 VStack{
+                    if !GlobalUserData.is_pro{
+                        VStack{
+                            Text("If you bought premium before").font(.title3).fontWeight(.heavy).foregroundColor(.white)
+                            Button{
+                                Purchases.shared.restorePurchases { customerInfo, error in
+                                    //... check customerInfo to see if entitlement is now active
+                                    userData().is_pro = customerInfo?.entitlements.all["pro"]?.isActive == true
+                                }
+                            }label: {
+                                Text("Restore Purchase").foregroundColor(.white).fontWeight(.heavy).font(.title).padding(.vertical, 5).padding(.horizontal, 15).background(Color(hex: 0xd44326).cornerRadius(10))
+                            }
+                        }.padding(.all).frame(width: UIScreen.main.bounds.width*0.85).background(Color.indigo.cornerRadius(15))
+                    }
                     if GlobalUserData.is_pro == false{
                         NavigationLink(destination: SubscriptionView(GlobalUserData: GlobalUserData)) {
                             HStack{
