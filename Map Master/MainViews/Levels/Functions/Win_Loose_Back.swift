@@ -10,7 +10,7 @@ import SwiftUI
 struct Win_Loose_Back: View {
 
     var body: some View {
-        HappyCountryball(name: "France", hat: "franceHat", left_hand: "baget", right_hand: "croissant")
+        SadCountryball(name: "Switzerland", hat: "", left_hand: "money", right_hand: "cheese")
     }
 }
 

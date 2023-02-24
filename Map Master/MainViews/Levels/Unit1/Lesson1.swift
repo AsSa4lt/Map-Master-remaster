@@ -42,17 +42,8 @@ struct Lesson1: View {
                             Text("\(GlobalUserData.hearts)").font(.title).fontWeight(.heavy).foregroundColor(.red)
                             
                         }
-                        Text("Guess flag").font(.largeTitle).fontWeight(.heavy)
-                            .foregroundColor(Color.white)
-                            .padding(.bottom, -10.0)
-                        if correct >= 0.7{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.green).shadow(radius: 3)
-                        }else if correct < 0.7 && correct >= 0.4{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.yellow).shadow(radius: 3)
-                        }else if correct < 0.4{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.red).shadow(radius: 3)
-                        }
-                        
+                        Text("Guess flag").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.bottom, -10.0)
+                        CorrectProgress(correct: correct)
                         Text("\(level1[current][answers[current]])") .font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.top)
                         
                         
@@ -102,20 +93,7 @@ struct Lesson1: View {
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     Spacer()
                 }else{
-                    if GlobalUserData.hearts <= 0{
-                        Text("You ran you of hearts!").font(.title).fontWeight(.heavy)
-                            .foregroundColor(Color.white)
-                            .padding(.bottom, -10.0)
-                        Image(systemName: "heart.fill").resizable().padding(.top).frame(width: 100, height: 100).foregroundColor(.red)
-                    }
-                    if correct >= 0.7{
-                        Text("You passed lesson").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                        Image(systemName: "checkmark.seal.fill").resizable().frame(width: 200, height: 200).foregroundColor(.white)
-                    }else{
-                        Text("You didn't pass lesson").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                        SadCountryball(name: countryballs[ball][0], hat: countryballs[ball][1], left_hand: countryballs[ball][2], right_hand: countryballs[ball][3]).frame(height: UIScreen.main.bounds.width*0.6)
-                    }
-                    Spacer()
+                    EndOfLesson(correct:correct, ball: ball, hearts: GlobalUserData.hearts)
                 }
             }
         }
