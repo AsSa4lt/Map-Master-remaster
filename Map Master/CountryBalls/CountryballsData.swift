@@ -12,5 +12,9 @@ public let countryballs: [[String]] = [
     ["United Kingdom", "britainHat", "tea", ""],//3
     ["France", "franceHat", "baget", "croissant"],//4
     ["Ukraine", "flowersHat", "sunflower", ""],//5
-    ["China", "chinaHat", "rice", ""]//6
+    ["China", "chinaHat", "rice", ""],//6
+    ["Italy", "italyHat", "pizza", ""], //7
+    ["Japan", "", "sushi", "sakura"], //8
+    ["Switzerland", "", "money", "cheese"], //9
+    ["United States", "", "burger", "tank"]
 ]
