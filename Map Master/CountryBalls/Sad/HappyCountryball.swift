@@ -96,9 +96,7 @@ struct HappyCountryball: View {
                 shadow = shadow  + UIScreen.main.bounds.width/300
             }else{
                 k = true
-                if shadow <  UIScreen.main.bounds.width/2{
-                    shadow =  UIScreen.main.bounds.width/2
-                }
+                shadow =  UIScreen.main.bounds.width/2
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.015) {
