@@ -17,15 +17,16 @@ struct MainConnector: View {
                     Image(systemName: "signature")
                     Text("Lessons").foregroundColor(.white)
                 }
+                Practice(GlobalUserData: userData()).tabItem{
+                    Image(systemName: "brain.head.profile")
+                    Text("Skill Builder").foregroundColor(.white)
+                }
                 
                 RatingGames(GlobalUserData: userData()).tabItem{
                     Image(systemName: "person.bust")
                     Text("Rating games").foregroundColor(.white)
                 }
-                Practice(GlobalUserData: userData()).tabItem{
-                    Image(systemName: "brain.head.profile")
-                    Text("Skill Builder").foregroundColor(.white)
-                }
+                
                 
                 Settings(GlobalUserData: userData()).tabItem{
                     Image(systemName: "slider.horizontal.3")

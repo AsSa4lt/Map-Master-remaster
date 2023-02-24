@@ -26,6 +26,7 @@ struct Lesson1: View {
     @StateObject var GlobalUserData: userData
     @State var current: Int = 0
     @State var answer = 0
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
     @State var correct: Double = 0
     @State var show_answers = false
     var body: some View {
@@ -112,7 +113,7 @@ struct Lesson1: View {
                         Image(systemName: "checkmark.seal.fill").resizable().frame(width: 200, height: 200).foregroundColor(.white)
                     }else{
                         Text("You didn't pass lesson").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                        Image(systemName: "xmark.seal.fill").resizable().frame(width: 200, height: 200).foregroundColor(.white)
+                        SadCountryball(name: countryballs[ball][0], hat: countryballs[ball][1], left_hand: countryballs[ball][2], right_hand: countryballs[ball][3]).frame(height: UIScreen.main.bounds.width*0.6)
                     }
                     Spacer()
                 }
