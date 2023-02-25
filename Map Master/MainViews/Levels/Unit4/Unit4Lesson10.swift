@@ -37,6 +37,7 @@ struct Unit4Lesson10: View {
     @State var possible_countries = find_names
     @State var pathsWrong: [PathData] = []
     @State var pathsCorrect: [PathData] = []
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
     var body: some View {
         ZStack{
             LessonsBack()
@@ -136,10 +137,13 @@ struct Unit4Lesson10: View {
                                 GlobalUserData.hearts -= 1
                                 pathsWrong.append(PathData(name: "\(unit4lesson10[current][0])", id: "\(unit4lesson10[current][0])", path: []))
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                                 current += 1
                                 stateOfAnswer = 0
                                 isTapped = false
+                                if GlobalUserData.hearts <= 0{
+                                    current = 10
+                                }
                             }
                             if correct >= 0.7{
                                 GlobalUserData.unit4[9] = true
@@ -158,20 +162,7 @@ struct Unit4Lesson10: View {
                     .foregroundStyle(LinearGradient(colors: [.blue, .indigo], startPoint: .top, endPoint: .bottom))
                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
             }else{
-                if GlobalUserData.hearts <= 0{
-                    Text("You ran you of hearts!").font(.title).fontWeight(.heavy)
-                        .foregroundColor(Color.white)
-                        .padding(.bottom, -10.0)
-                    Image(systemName: "heart.fill").resizable().padding(.top).frame(width: 100, height: 100).foregroundColor(.red)
-                }
-                if correct >= 0.7{
-                    Text("You passed lesson").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                    Image(systemName: "checkmark.seal.fill").resizable().frame(width: 200, height: 200).foregroundColor(.white)
-                }else{
-                    Text("You didn't pass lesson").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                    Image(systemName: "xmark.seal.fill").resizable().frame(width: 200, height: 200).foregroundColor(.white)
-                }
-                Spacer()
+                EndOfLesson(correct:correct, ball: ball, hearts: GlobalUserData.hearts)
             }
                     
                 

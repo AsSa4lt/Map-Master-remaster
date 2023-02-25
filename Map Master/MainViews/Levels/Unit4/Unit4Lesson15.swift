@@ -27,6 +27,7 @@ struct Unit4Lesson15: View {
     @State var answer = 0
     @State var correct: Double = 0
     @State var show_answers = false
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
     var body: some View {
         ZStack{
             LessonsBack()
@@ -43,14 +44,8 @@ struct Unit4Lesson15: View {
                         Text("Guess capital").font(.largeTitle).fontWeight(.heavy)
                             .foregroundColor(Color.white)
                             .padding(.bottom, -10.0)
-                        if correct >= 0.7{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.green).shadow(radius: 3)
-                        }else if correct < 0.7 && correct >= 0.4{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.yellow).shadow(radius: 3)
-                        }else if correct < 0.4{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.red).shadow(radius: 3)
-                        }
-                        
+                        CorrectProgress(correct: correct)
+
                         Text("\(unit4level15[current][0])") .font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.top)
                         Image("\(unit4level15[current][0])").resizable().frame(width: UIScreen.main.bounds.width*0.6, height: UIScreen.main.bounds.width*0.4).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 4)).shadow(radius: 2).padding(.bottom)
                         
@@ -59,10 +54,11 @@ struct Unit4Lesson15: View {
                                 if isTapped == false{
                                     isTapped = true
                                     show_answers = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        if unit4answers15[current] == i-1{
-                                            correct = correct + 0.1
-                                        }else{
+                                    if unit4answers15[current] == i-1{
+                                        correct = correct + 0.1
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                        if unit4answers15[current] != i-1{
                                             GlobalUserData.hearts = GlobalUserData.hearts - 1
                                             if GlobalUserData.hearts <= 0{
                                                 current = 10
