@@ -40,6 +40,7 @@ struct Unit3Lesson10: View {
     @State var answer = 0
     @State var correct: Double = 0
     @State var show_answers = false
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
     var body: some View {
         ZStack{
             LessonsBack()
@@ -57,24 +58,18 @@ struct Unit3Lesson10: View {
                             .foregroundColor(Color.white)
                             .multilineTextAlignment(.center)
                             .padding(.bottom, -10.0)
-                        if correct >= 0.7{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.green).shadow(radius: 3)
-                        }else if correct < 0.7 && correct >= 0.4{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.yellow).shadow(radius: 3)
-                        }else if correct < 0.4{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.red).shadow(radius: 3)
-                        }
+                        CorrectProgress(correct: correct)
 
-                        
                         ForEach(0..<unit3level10[0].count, id: \.self){ i in
                             Button{
                                 if isTapped == false{
                                     isTapped = true
                                     show_answers = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-                                        if unit3answers10[current] == i{
-                                            correct = correct + 0.1
-                                        }else{
+                                    if unit3answers10[current] == i{
+                                        correct = correct + 0.1
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                        if unit3answers10[current] != i{
                                             GlobalUserData.hearts = GlobalUserData.hearts - 1
                                             if GlobalUserData.hearts <= 0{
                                                 current = 10
