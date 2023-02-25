@@ -53,10 +53,11 @@ struct Lesson1: View {
                                     isTapped = true
                                     answer = i
                                     show_answers = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        if answers[current] == i{
-                                            correct = correct + 0.1
-                                        }else{
+                                    if answers[current] == i{
+                                        correct = correct + 0.1
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                        if answers[current] != i{
                                             GlobalUserData.hearts = GlobalUserData.hearts - 1
                                             if GlobalUserData.hearts <= 0{
                                                 current = 10
