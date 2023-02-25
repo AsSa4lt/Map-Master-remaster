@@ -26,6 +26,7 @@ struct Unit2Lesson2: View {
     @State var answer = 0
     @State var correct: Double = 0
     @State var show_answers = false
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
     var body: some View {
         ZStack{
             LessonsBack()
@@ -42,13 +43,8 @@ struct Unit2Lesson2: View {
                         Text("Guess flag").font(.largeTitle).fontWeight(.heavy)
                             .foregroundColor(Color.white)
                             .padding(.bottom, -10.0)
-                        if correct >= 0.7{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.green).shadow(radius: 3)
-                        }else if correct < 0.7 && correct >= 0.4{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.yellow).shadow(radius: 3)
-                        }else if correct < 0.4{
-                            ProgressView(value: correct).padding(.top, 30.0).frame(width: UIScreen.main.bounds.width*0.8).scaleEffect(x: 1, y: 4, anchor: .bottom).accentColor(.red).shadow(radius: 3)
-                        }
+                        CorrectProgress(correct: correct)
+
                         
                         Text("\(level2unit2[current][answers2unit2[current]])") .font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.top)
                         
@@ -59,10 +55,11 @@ struct Unit2Lesson2: View {
                                     isTapped = true
                                     answer = i
                                     show_answers = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                        if answers2unit2[current] == i{
-                                            correct = correct + 0.1
-                                        }else{
+                                    if answers2unit2[current] == i{
+                                        correct = correct + 0.1
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                        if answers2unit2[current] != i{
                                             GlobalUserData.hearts = GlobalUserData.hearts - 1
                                             if GlobalUserData.hearts <= 0{
                                                 current = 10
@@ -99,20 +96,7 @@ struct Unit2Lesson2: View {
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     Spacer()
                 }else{
-                    if GlobalUserData.hearts <= 0{
-                        Text("You ran you of hearts!").font(.title).fontWeight(.heavy)
-                            .foregroundColor(Color.white)
-                            .padding(.bottom, -10.0)
-                        Image(systemName: "heart.fill").resizable().padding(.top).frame(width: 100, height: 100).foregroundColor(.red)
-                    }
-                    if correct >= 0.7{
-                        Text("You passed lesson").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                        Image(systemName: "checkmark.seal.fill").resizable().frame(width: 200, height: 200).foregroundColor(.white)
-                    }else{
-                        Text("You didn't pass lesson").font(.title).fontWeight(.heavy).foregroundColor(.white)
-                        Image(systemName: "xmark.seal.fill").resizable().frame(width: 200, height: 200).foregroundColor(.white)
-                    }
-                    Spacer()
+                    EndOfLesson(correct:correct, ball: ball, hearts: GlobalUserData.hearts)
                 }
             }
         }
