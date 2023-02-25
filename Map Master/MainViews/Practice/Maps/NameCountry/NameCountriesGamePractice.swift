@@ -19,6 +19,8 @@ struct NameCountriesGamePractice: View {
     @State var timeLeft: Double = 600.00
     @State private var clickedPath: [PathData] = []
     @State var answers = all_names
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
+
     var body: some View {
         ZStack{
             MainBack()
@@ -102,8 +104,7 @@ struct NameCountriesGamePractice: View {
                            
                     }else{
                         Spacer()
-                        Text("Score").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
-                        Text("\(score)").fontWeight(.heavy).font(.system(size: 80)).foregroundColor(.white)
+                        EndPractice(score: score, ball: ball)
                     }
                 }
                 Spacer()

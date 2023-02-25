@@ -25,6 +25,8 @@ struct GuessMostPopulatedCountryGame: View {
     @State var task: [String] = ["","",""]
     @State var isTapped: Bool = false
     var timer = Timer.publish(every: 0.015, on: .main, in: .common).autoconnect()
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
+
     var body: some View {
         ZStack{
             MainBack()
@@ -137,8 +139,8 @@ struct GuessMostPopulatedCountryGame: View {
                             LinearGradient(gradient: Gradient(colors: [Color(hex: 0x3b34), Color(hex: 0x56388A)]), startPoint: animateGradient1 ? .topLeading : .bottomLeading, endPoint: animateGradient1 ? .bottomTrailing : .topTrailing)).cornerRadius(15).padding(.bottom, 30.0)
                         Spacer()
                     }else{
-                        Text("Score").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
-                        Text("\(score)").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
+                        EndPractice(score: score, ball: ball)
+                        Spacer()
                     }
                 }
             }.onAppear{

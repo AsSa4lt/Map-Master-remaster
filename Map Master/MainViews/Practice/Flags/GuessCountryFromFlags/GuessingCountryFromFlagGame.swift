@@ -22,6 +22,8 @@ struct GuessingCountryFromFlagGame: View {
     @State private var animateGradient1 = false
     @State var task: [String] = ["","",""]
     var timer = Timer.publish(every: 0.015, on: .main, in: .common).autoconnect()
+    @State var isTapped: Bool = false
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
     var body: some View {
         ZStack{
             MainBack()
@@ -51,10 +53,13 @@ struct GuessingCountryFromFlagGame: View {
                                 .stroke(Color.orange, lineWidth: 4))
                             .shadow(radius: 2).padding(.vertical)
                         Button{
-                            answer = 1
-                            show_answers = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                createTask()
+                            if isTapped == false{
+                                isTapped = true
+                                answer = 1
+                                show_answers = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    createTask()
+                                }
                             }
                         }label: {
                             if show_answers == false{
@@ -74,10 +79,13 @@ struct GuessingCountryFromFlagGame: View {
                             }
                         }
                         Button{
-                            answer = 2
-                            show_answers = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                createTask()
+                            if isTapped == false{
+                                isTapped = true
+                                answer = 2
+                                show_answers = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    createTask()
+                                }
                             }
                         }label: {
                             if show_answers == false{
@@ -97,10 +105,13 @@ struct GuessingCountryFromFlagGame: View {
                             }
                         }
                         Button{
-                            answer = 3
-                            show_answers = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                createTask()
+                            if isTapped == false{
+                                isTapped = true
+                                answer = 3
+                                show_answers = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    createTask()
+                                }
                             }
                         }label: {
                             if show_answers == false{
@@ -126,8 +137,8 @@ struct GuessingCountryFromFlagGame: View {
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                     Spacer()
                 }else{
-                    Text("Score").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
-                    Text("\(score)").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
+                    EndPractice(score: score, ball: ball)
+                    Spacer()
                 }
             }
         }.onAppear{
@@ -157,6 +168,7 @@ struct GuessingCountryFromFlagGame: View {
     }
     }
     func createTask(){
+        isTapped = false
         if answer == correct_answer{
             score = score + Int(1000 * time_task)
         }else{

@@ -25,6 +25,7 @@ struct UnitedStatesGame: View {
     @State var pathsWrong: [PathData] = []
     @State var pathsCorrect: [PathData] = []
     @State var isTapped: Bool = false
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
     var body: some View {
         ZStack{
             MainBack()
@@ -131,9 +132,7 @@ struct UnitedStatesGame: View {
                             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                            
                     }else{
-                        Spacer()
-                        Text("Score").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
-                        Text("\(score)").fontWeight(.heavy).font(.system(size: 80)).foregroundColor(.white)
+                        EndPractice(score: score, ball: ball)
                     }
                 }
                 Spacer()

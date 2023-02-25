@@ -22,6 +22,7 @@ struct RatingGameBorderOfCountry: View {
     @State var games_remove = false
     @State private var animateGradient1 = false
     @State var task: [String] = ["","",""]
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
     var body: some View {
         ZStack{
             HomeBackGround()
@@ -79,9 +80,7 @@ struct RatingGameBorderOfCountry: View {
                             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                            
                     }else{
-                        Spacer()
-                        Text("Score").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
-                        Text("\(score)").fontWeight(.heavy).font(.system(size: 80)).foregroundColor(.white)
+                        EndPractice(score: score, ball: ball)
                     }
                 }
                 Spacer()

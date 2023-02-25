@@ -24,6 +24,7 @@ struct GuessNumberGame: View {
     @State var task: [String] = ["","",""]
     @State var isTapped: Bool = false
     var timer = Timer.publish(every: 0.015, on: .main, in: .common).autoconnect()
+    @State var ball: Int = Int.random(in: 0..<countryballs.count)
     var body: some View {
         ZStack{
             MainBack()
@@ -137,8 +138,8 @@ struct GuessNumberGame: View {
                         .padding(.bottom)
                     Spacer()
                 }else{
-                    Text("Score").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
-                    Text("\(score)").fontWeight(.heavy).font(.system(size: 70)).foregroundColor(.white)
+                    EndPractice(score: score, ball: ball)
+                    Spacer()
                 }
             }
         }.onAppear{

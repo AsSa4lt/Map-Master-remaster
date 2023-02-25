@@ -49,6 +49,7 @@
 		6330FE6329A96ADE005DCE7E /* HappyCountryball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE6229A96ADE005DCE7E /* HappyCountryball.swift */; };
 		6330FE6529A9759A005DCE7E /* EndOfLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE6429A9759A005DCE7E /* EndOfLesson.swift */; };
 		6330FE6729A97760005DCE7E /* CorrectProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE6629A97760005DCE7E /* CorrectProgressView.swift */; };
+		6330FE6A29AA723D005DCE7E /* EndPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE6929AA723D005DCE7E /* EndPractice.swift */; };
 		6351A591299CFAEC00CE9F9C /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A590299CFAEC00CE9F9C /* Practice.swift */; };
 		6351A594299CFB2400CE9F9C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A593299CFB2400CE9F9C /* Settings.swift */; };
 		6351A596299CFCC300CE9F9C /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A595299CFCC300CE9F9C /* Leagues.swift */; };
@@ -211,6 +212,7 @@
 		6330FE6229A96ADE005DCE7E /* HappyCountryball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyCountryball.swift; sourceTree = "<group>"; };
 		6330FE6429A9759A005DCE7E /* EndOfLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfLesson.swift; sourceTree = "<group>"; };
 		6330FE6629A97760005DCE7E /* CorrectProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectProgressView.swift; sourceTree = "<group>"; };
+		6330FE6929AA723D005DCE7E /* EndPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPractice.swift; sourceTree = "<group>"; };
 		6351A590299CFAEC00CE9F9C /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		6351A593299CFB2400CE9F9C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6351A595299CFCC300CE9F9C /* Leagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
@@ -414,9 +416,18 @@
 			path = Sad;
 			sourceTree = "<group>";
 		};
+		6330FE6829AA722E005DCE7E /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				6330FE6929AA723D005DCE7E /* EndPractice.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		6351A58F299CFAD700CE9F9C /* Practice */ = {
 			isa = PBXGroup;
 			children = (
+				6330FE6829AA722E005DCE7E /* Functions */,
 				6351A590299CFAEC00CE9F9C /* Practice.swift */,
 				6351A5B6299D6E7000CE9F9C /* Maps */,
 				6351A5B0299D651A00CE9F9C /* Population */,
@@ -996,6 +1007,7 @@
 				63262AA6299979C80088F4B7 /* Unit3Lesson12.swift in Sources */,
 				63262AC5299A8F330088F4B7 /* Unit4Lesson11.swift in Sources */,
 				63DC7477299823AD008066B0 /* Lesson9.swift in Sources */,
+				6330FE6A29AA723D005DCE7E /* EndPractice.swift in Sources */,
 				6351A5BB299D721B00CE9F9C /* FindCountryGamePractice.swift in Sources */,
 				63262AA4299978D50088F4B7 /* Unit3Lesson11.swift in Sources */,
 				6330FE4D29A91A9F005DCE7E /* HalfCircle.swift in Sources */,

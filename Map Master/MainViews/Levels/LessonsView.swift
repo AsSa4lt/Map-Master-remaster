@@ -20,7 +20,7 @@ struct LessonsView: View {
                     HStack{
                         if GlobalUserData.is_pro == false{
                             NavigationLink(destination: SubscriptionView(GlobalUserData: GlobalUserData)) {
-                                Image("noPro").resizable().frame(width: 40, height: 30).foregroundColor(.white).shadow(radius: 5)
+                                Image("noPro").resizable().frame(width: 40, height: 30).foregroundColor(.white).shadow(radius: 5).offset(y: 3)
                             }
                         }else{
                             Image("Pro").resizable().frame(width: 40, height: 30).foregroundColor(.white).shadow(radius: 5)
