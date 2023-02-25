@@ -23,6 +23,7 @@ struct GuessMostPopulatedCountryGame: View {
     @State var arr: [Int] = []
     @State var population: [String] = ["", "", ""]
     @State var task: [String] = ["","",""]
+    @State var isTapped: Bool = false
     var timer = Timer.publish(every: 0.015, on: .main, in: .common).autoconnect()
     var body: some View {
         ZStack{
@@ -50,10 +51,13 @@ struct GuessMostPopulatedCountryGame: View {
                             Text("Select country with").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
                             Text("biggest population").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
                             Button{
-                                answer = 1
-                                show_answers = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                    createTask()
+                                if isTapped == false{
+                                    isTapped = true
+                                    answer = 1
+                                    show_answers = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                        createTask()
+                                    }
                                 }
                             }label: {
                                 VStack{
@@ -75,10 +79,13 @@ struct GuessMostPopulatedCountryGame: View {
                                 }.frame(width: UIScreen.main.bounds.width*0.8)
                             }
                             Button{
-                                answer = 2
-                                show_answers = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                    createTask()
+                                if isTapped == false{
+                                    isTapped = true
+                                    answer = 2
+                                    show_answers = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                        createTask()
+                                    }
                                 }
                             }label: {
                                 VStack{
@@ -99,10 +106,13 @@ struct GuessMostPopulatedCountryGame: View {
                                 }
                             }
                             Button{
-                                answer = 3
-                                show_answers = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                    createTask()
+                                if isTapped == false{
+                                    isTapped = true
+                                    answer = 3
+                                    show_answers = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                        createTask()
+                                    }
                                 }
                             }label: {
                                 VStack{
@@ -158,6 +168,7 @@ struct GuessMostPopulatedCountryGame: View {
         }
     }
     func createTask(){
+        isTapped = false
         if answer == correct_answer{
             score = score + Int(1000 * time_task)
         }else{

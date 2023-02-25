@@ -13,7 +13,7 @@ public let level4: [[String]] = [
     ["Spain", "Madrid", "Kyiv"], //4
     ["Japan", "Tokyo", "Oslo"], //5
     ["Netherlands", "Amsterdam", "Paris"], //6
-    ["Czechia", "Sydney" ,"Prague"], //7
+    ["Czechia", "Canberra" ,"Prague"], //7
     ["Italy", "Bucharest", "Rome"], //8
     ["France", "Paris", "Lisbon"], //9
     ["China", "Beijing", "Beirut"] //10
@@ -55,11 +55,11 @@ struct Lesson4: View {
                                 if isTapped == false{
                                     isTapped = true
                                     show_answers = true
-                                    if answers4[current] == i{
+                                    if answers4[current] == i-1{
                                         correct = correct + 0.1
                                     }
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                                        if answers4[current] != i{
+                                        if answers4[current] != i-1{
                                             GlobalUserData.hearts = GlobalUserData.hearts - 1
                                             if GlobalUserData.hearts <= 0{
                                                 current = 10

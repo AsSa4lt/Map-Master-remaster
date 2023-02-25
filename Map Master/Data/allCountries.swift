@@ -162,7 +162,7 @@ public let allcountries = [
     ["Zimbabwe", "Harare", "14645468"],
     ["Western Sahara", "Laayoune", "565581"],
     //["American Samoa", "Pago Pago", "55312"],//
-    ["Australia", "Sydney", "25203198"],//
+    ["Australia", "Canberra", "25203198"],//
     ["East Timor", "Dili", "1340513"],
     ["Fiji", "Suva", "889953"],//
     //["French Polynesia", "Papeete", "279287"],//

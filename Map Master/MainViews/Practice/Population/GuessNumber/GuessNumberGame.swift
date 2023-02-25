@@ -22,6 +22,7 @@ struct GuessNumberGame: View {
     @State var time_task: Double = 1
     @State private var animateGradient1 = false
     @State var task: [String] = ["","",""]
+    @State var isTapped: Bool = false
     var timer = Timer.publish(every: 0.015, on: .main, in: .common).autoconnect()
     var body: some View {
         ZStack{
@@ -51,10 +52,13 @@ struct GuessNumberGame: View {
                         .shadow(radius: 2).padding(.top)
                         Text("\(country)").font(.largeTitle).fontWeight(.heavy).foregroundColor(.white)
                         Button{
-                            answer = 1
-                            show_answers = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                createTask()
+                            if isTapped == false{
+                                isTapped = true
+                                answer = 1
+                                show_answers = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    createTask()
+                                }
                             }
                         }label: {
                             if show_answers == false{
@@ -74,10 +78,13 @@ struct GuessNumberGame: View {
                             }
                         }
                         Button{
-                            answer = 2
-                            show_answers = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                createTask()
+                            if isTapped == false{
+                                isTapped = true
+                                answer = 2
+                                show_answers = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    createTask()
+                                }
                             }
                         }label: {
                             if show_answers == false{
@@ -97,10 +104,13 @@ struct GuessNumberGame: View {
                             }
                         }
                         Button{
-                            answer = 3
-                            show_answers = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                createTask()
+                            if isTapped == false{
+                                isTapped = true
+                                answer = 3
+                                show_answers = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    createTask()
+                                }
                             }
                         }label: {
                             if show_answers == false{
@@ -158,6 +168,7 @@ struct GuessNumberGame: View {
     }
     }
     func createTask(){
+        isTapped = false
         if answer == correct_answer{
             score = score + Int(1000 * time_task)
         }else{

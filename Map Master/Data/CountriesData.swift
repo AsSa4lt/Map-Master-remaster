@@ -170,7 +170,7 @@ public let countriesAfrica = [
 
 public let countriesOceania = [
     //["American Samoa", "Pago Pago", "55312"],//g
-    ["Australia", "Sydney", "25203198"],//g
+    ["Australia", "Canberra", "25203198"],//g
     ["East Timor", "Dili", "1340513"],
     ["Fiji", "Suva", "889953"],//g
     //["French Polynesia", "Papeete", "279287"],//g
