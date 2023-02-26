@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		63262A8D29995F890088F4B7 /* Unit2Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A8C29995F890088F4B7 /* Unit2Func.swift */; };
-		63262A90299962140088F4B7 /* Unit3Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A8F299962140088F4B7 /* Unit3Lesson1.swift */; };
-		63262A92299963F10088F4B7 /* Unit3Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A91299963F10088F4B7 /* Unit3Lesson2.swift */; };
-		63262A94299964DC0088F4B7 /* Unit3Lesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A93299964DC0088F4B7 /* Unit3Lesson3.swift */; };
 		63262A962999664B0088F4B7 /* Unit3Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A952999664B0088F4B7 /* Unit3Lesson4.swift */; };
 		63262A98299967950088F4B7 /* Unit3Lesson5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A97299967950088F4B7 /* Unit3Lesson5.swift */; };
 		63262A9A299968800088F4B7 /* Unit3Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63262A99299968800088F4B7 /* Unit3Lesson6.swift */; };
@@ -61,6 +58,9 @@
 		6330FE8B29ABACD9005DCE7E /* TwoBorderLessonDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE8A29ABACD9005DCE7E /* TwoBorderLessonDrawing.swift */; };
 		6330FE8D29ABB05F005DCE7E /* BiggerPopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE8C29ABB05F005DCE7E /* BiggerPopButton.swift */; };
 		6330FE8F29ABB0F6005DCE7E /* BiggerPopLessonDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE8E29ABB0F6005DCE7E /* BiggerPopLessonDrawing.swift */; };
+		6330FE9129ABB86B005DCE7E /* ThreeFlagAnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE9029ABB86B005DCE7E /* ThreeFlagAnswerButton.swift */; };
+		6330FE9329ABBD7D005DCE7E /* Unit3Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE9229ABBD7D005DCE7E /* Unit3Data.swift */; };
+		6330FE9529ABBD92005DCE7E /* ThreeAnswerFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE9429ABBD92005DCE7E /* ThreeAnswerFlag.swift */; };
 		6351A591299CFAEC00CE9F9C /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A590299CFAEC00CE9F9C /* Practice.swift */; };
 		6351A594299CFB2400CE9F9C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A593299CFB2400CE9F9C /* Settings.swift */; };
 		6351A596299CFCC300CE9F9C /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A595299CFCC300CE9F9C /* Leagues.swift */; };
@@ -164,9 +164,6 @@
 
 /* Begin PBXFileReference section */
 		63262A8C29995F890088F4B7 /* Unit2Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Func.swift; sourceTree = "<group>"; };
-		63262A8F299962140088F4B7 /* Unit3Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson1.swift; sourceTree = "<group>"; };
-		63262A91299963F10088F4B7 /* Unit3Lesson2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson2.swift; sourceTree = "<group>"; };
-		63262A93299964DC0088F4B7 /* Unit3Lesson3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson3.swift; sourceTree = "<group>"; };
 		63262A952999664B0088F4B7 /* Unit3Lesson4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson4.swift; sourceTree = "<group>"; };
 		63262A97299967950088F4B7 /* Unit3Lesson5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson5.swift; sourceTree = "<group>"; };
 		63262A99299968800088F4B7 /* Unit3Lesson6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Lesson6.swift; sourceTree = "<group>"; };
@@ -217,6 +214,9 @@
 		6330FE8A29ABACD9005DCE7E /* TwoBorderLessonDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBorderLessonDrawing.swift; sourceTree = "<group>"; };
 		6330FE8C29ABB05F005DCE7E /* BiggerPopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiggerPopButton.swift; sourceTree = "<group>"; };
 		6330FE8E29ABB0F6005DCE7E /* BiggerPopLessonDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiggerPopLessonDrawing.swift; sourceTree = "<group>"; };
+		6330FE9029ABB86B005DCE7E /* ThreeFlagAnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeFlagAnswerButton.swift; sourceTree = "<group>"; };
+		6330FE9229ABBD7D005DCE7E /* Unit3Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit3Data.swift; sourceTree = "<group>"; };
+		6330FE9429ABBD92005DCE7E /* ThreeAnswerFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeAnswerFlag.swift; sourceTree = "<group>"; };
 		6351A590299CFAEC00CE9F9C /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		6351A593299CFB2400CE9F9C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6351A595299CFCC300CE9F9C /* Leagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
@@ -334,9 +334,6 @@
 		63262A8E2999604A0088F4B7 /* Unit3 */ = {
 			isa = PBXGroup;
 			children = (
-				63262A8F299962140088F4B7 /* Unit3Lesson1.swift */,
-				63262A91299963F10088F4B7 /* Unit3Lesson2.swift */,
-				63262A93299964DC0088F4B7 /* Unit3Lesson3.swift */,
 				63262A952999664B0088F4B7 /* Unit3Lesson4.swift */,
 				63262A97299967950088F4B7 /* Unit3Lesson5.swift */,
 				63262A99299968800088F4B7 /* Unit3Lesson6.swift */,
@@ -351,6 +348,7 @@
 				63262AAB299982670088F4B7 /* Unit3Lesson15.swift */,
 				63262AAD299987060088F4B7 /* Unit3Func.swift */,
 				6351A5DB299FCEE600CE9F9C /* Unit3Inactive.swift */,
+				6330FE9229ABBD7D005DCE7E /* Unit3Data.swift */,
 			);
 			path = Unit3;
 			sourceTree = "<group>";
@@ -435,6 +433,8 @@
 				6330FE7129AB9CFD005DCE7E /* TwoFlagLessonDrawing.swift */,
 				6330FE8129ABA8B1005DCE7E /* ThreeFlagsButton.swift */,
 				6330FE8329ABAA1D005DCE7E /* ThreeFlagLessonDrawing.swift */,
+				6330FE9029ABB86B005DCE7E /* ThreeFlagAnswerButton.swift */,
+				6330FE9429ABBD92005DCE7E /* ThreeAnswerFlag.swift */,
 			);
 			path = Flags;
 			sourceTree = "<group>";
@@ -1016,7 +1016,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63262A92299963F10088F4B7 /* Unit3Lesson2.swift in Sources */,
 				63DC744829957757008066B0 /* RatingGameCountryOfBorder.swift in Sources */,
 				63B1834E298ACFF900818ECB /* allCountries.swift in Sources */,
 				636B28C2298984E4000282EA /* RatingGames.swift in Sources */,
@@ -1071,7 +1070,7 @@
 				6330FE7829ABA0D7005DCE7E /* TwoCapitalsButton.swift in Sources */,
 				6351A591299CFAEC00CE9F9C /* Practice.swift in Sources */,
 				63B1833D2989A77100818ECB /* Country.swift in Sources */,
-				63262A94299964DC0088F4B7 /* Unit3Lesson3.swift in Sources */,
+				6330FE9329ABBD7D005DCE7E /* Unit3Data.swift in Sources */,
 				6330FE8229ABA8B1005DCE7E /* ThreeFlagsButton.swift in Sources */,
 				63DC745229969FAF008066B0 /* FindCountryGame.swift in Sources */,
 				63DC743B29940F94008066B0 /* RatingGameFlagOfCountry.swift in Sources */,
@@ -1090,7 +1089,6 @@
 				6351A5AF299D60C500CE9F9C /* GuessCountryFromBorderGame.swift in Sources */,
 				63262AB5299A2EFB0088F4B7 /* Unit4Lesson3.swift in Sources */,
 				636B2892298984C5000282EA /* Map_MasterApp.swift in Sources */,
-				63262A90299962140088F4B7 /* Unit3Lesson1.swift in Sources */,
 				63262ABB299A82140088F4B7 /* Unit4Lesson6.swift in Sources */,
 				6351A5B9299D70FE00CE9F9C /* FindCountryStart.swift in Sources */,
 				63DC747929982A29008066B0 /* Unit1Func.swift in Sources */,
@@ -1104,6 +1102,7 @@
 				63DC74672997EBBB008066B0 /* SubscriptionView.swift in Sources */,
 				6351A5C0299D754600CE9F9C /* NameCountriesGamePractice.swift in Sources */,
 				6330FE7429AB9FF0005DCE7E /* unit1Data.swift in Sources */,
+				6330FE9129ABB86B005DCE7E /* ThreeFlagAnswerButton.swift in Sources */,
 				63262AC7299A90580088F4B7 /* Unit4Lesson12.swift in Sources */,
 				63DC74602997DD61008066B0 /* LessonsView.swift in Sources */,
 				63262A9A299968800088F4B7 /* Unit3Lesson6.swift in Sources */,
@@ -1114,6 +1113,7 @@
 				6351A5A3299D4F2200CE9F9C /* GuessingCountryFromFlagGame.swift in Sources */,
 				63DC744E2995814D008066B0 /* RatingGameNameAllCountries.swift in Sources */,
 				63DC744B299578F9008066B0 /* RatingGameBorderOfCountry.swift in Sources */,
+				6330FE9529ABBD92005DCE7E /* ThreeAnswerFlag.swift in Sources */,
 				6351A5A7299D510700CE9F9C /* GuessCountryFromCapitalStart.swift in Sources */,
 				63DC74542996A9EE008066B0 /* RatingGameUSStates.swift in Sources */,
 				63B18348298AA3CA00818ECB /* CountriesData.swift in Sources */,

@@ -17,13 +17,13 @@ func Unit3(GlobalUserData: userData) -> some View{
                 .foregroundColor(Color.white)
                 .padding(.top)
             HStack{
-                    NavigationLink(destination: Unit3Lesson1(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: ThreeAnswerFlag(GlobalUserData: GlobalUserData, answers: answers1unit3, level: level1unit3, unit_bool_change: GlobalUserData.$unit3[0], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Moldova", active: GlobalUserData.unit3[0], text_level: "Flags 7")
                     }
-                    NavigationLink(destination: Unit3Lesson2(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: ThreeAnswerFlag(GlobalUserData: GlobalUserData, answers: answers2unit3, level: level2unit3, unit_bool_change: GlobalUserData.$unit3[1], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Mongolia", active: GlobalUserData.unit3[1], text_level: "Flags 8")
                     }
-                    NavigationLink(destination: Unit3Lesson3(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: ThreeAnswerFlag(GlobalUserData: GlobalUserData, answers: answers3unit3, level: level3unit3, unit_bool_change: GlobalUserData.$unit3[2], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Oman", active: GlobalUserData.unit3[2], text_level: "Flags 9")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
