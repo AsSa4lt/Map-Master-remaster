@@ -28,13 +28,13 @@ func Unit3(GlobalUserData: userData) -> some View{
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             HStack{
-                    NavigationLink(destination: ThreeBordersLessonDrawing(GlobalUserData: GlobalUserData, answers: answers4unit3, level: level4unit3, unit_bool_change: GlobalUserData.$unit3[3], unit_change: GlobalUserData.$unit3Change)) {
+                    NavigationLink(destination: TwoBorderLessonDrawing(GlobalUserData: GlobalUserData, answers: answers4unit3, level: level4unit3, unit_bool_change: GlobalUserData.$unit3[3], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Burundi", active: GlobalUserData.unit3[3], text_level: "Borders 4")
                     }
-                    NavigationLink(destination: ThreeBordersLessonDrawing(GlobalUserData: GlobalUserData, answers: answers5unit3, level: level5unit3, unit_bool_change: GlobalUserData.$unit3[4], unit_change: GlobalUserData.$unit3Change)) {
+                    NavigationLink(destination: TwoBorderLessonDrawing(GlobalUserData: GlobalUserData, answers: answers5unit3, level: level5unit3, unit_bool_change: GlobalUserData.$unit3[4], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Chile", active: GlobalUserData.unit3[4], text_level: "Borders 5")
                     }
-                    NavigationLink(destination: ThreeBordersLessonDrawing(GlobalUserData: GlobalUserData, answers: answers6unit3, level: level6unit3, unit_bool_change: GlobalUserData.$unit3[5], unit_change: GlobalUserData.$unit3Change)) {
+                    NavigationLink(destination: TwoBorderLessonDrawing(GlobalUserData: GlobalUserData, answers: answers6unit3, level: level6unit3, unit_bool_change: GlobalUserData.$unit3[5], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Bangladesh", active: GlobalUserData.unit3[5], text_level: "Borders 6")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)

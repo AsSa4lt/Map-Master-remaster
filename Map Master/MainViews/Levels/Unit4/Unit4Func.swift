@@ -16,13 +16,13 @@ func Unit4(GlobalUserData: userData) -> some View{
                 .foregroundColor(Color.white)
                 .padding(.top)
             HStack{
-                    NavigationLink(destination: Unit4Lesson1(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: ThreeAnswerFlag(GlobalUserData: GlobalUserData, answers: answers1unit4, level: level1unit4, unit_bool_change: GlobalUserData.$unit4[0], unit_change: GlobalUserData.$unit4Change)) {
                         RatingPanelActive(image: "Gibraltar", active: GlobalUserData.unit4[0], text_level: "Flags 10")
                     }
-                    NavigationLink(destination: Unit4Lesson2(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: ThreeAnswerFlag(GlobalUserData: GlobalUserData, answers: answers2unit4, level: level2unit4, unit_bool_change: GlobalUserData.$unit4[1], unit_change: GlobalUserData.$unit4Change)) {
                         RatingPanelActive(image: "Yemen", active: GlobalUserData.unit4[1], text_level: "Flags 11")
                     }
-                    NavigationLink(destination: Unit4Lesson3(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: ThreeAnswerFlag(GlobalUserData: GlobalUserData, answers: answers2unit4, level: level2unit4, unit_bool_change: GlobalUserData.$unit4[2], unit_change: GlobalUserData.$unit4Change)) {
                         RatingPanelActive(image: "Cuba", active: GlobalUserData.unit4[2], text_level: "Flags 12")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
@@ -62,25 +62,25 @@ func Unit4(GlobalUserData: userData) -> some View{
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             HStack{
-                    NavigationLink(destination: Unit4Lesson13(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: unit4answers13, level: unit4level13, unit_bool_change: GlobalUserData.$unit4[12], unit_change: GlobalUserData.$unit4Change)) {
                         RatingPanelActive(image: "Seychelles", active: GlobalUserData.unit4[12], text_level: "Capitals 10")
                     }
-                    NavigationLink(destination: Unit4Lesson14(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: unit4answers14, level: unit4level14, unit_bool_change: GlobalUserData.$unit4[13], unit_change: GlobalUserData.$unit4Change)) {
                         RatingPanelActive(image: "Tanzania", active: GlobalUserData.unit4[13], text_level: "Capitals 11")
                     }
-                    NavigationLink(destination: Unit4Lesson15(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: unit4answers15, level: unit4level15, unit_bool_change: GlobalUserData.$unit4[14], unit_change: GlobalUserData.$unit4Change)) {
                         RatingPanelActive(image: "Burkina Faso", active: GlobalUserData.unit4[14], text_level: "Capitals 12")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             
             HStack{
-                    NavigationLink(destination: Unit4Lesson16(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: TwoBorderLessonDrawing(GlobalUserData: GlobalUserData, answers: answer16unit4, level: level16unit4, unit_bool_change: GlobalUserData.$unit4[15], unit_change: GlobalUserData.$unit4Change)) {
                         RatingPanelActive(image: "Faroes", active: GlobalUserData.unit4[15], text_level: "Borders 7")
                     }
-                    NavigationLink(destination: Unit4Lesson17(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: TwoBorderLessonDrawing(GlobalUserData: GlobalUserData, answers: answer17unit4, level: level17unit4, unit_bool_change: GlobalUserData.$unit4[16], unit_change: GlobalUserData.$unit4Change)) {
                         RatingPanelActive(image: "Mayotte", active: GlobalUserData.unit4[16], text_level: "Borders 8")
                     }
-                    NavigationLink(destination: Unit4Lesson18(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: TwoBorderLessonDrawing(GlobalUserData: GlobalUserData, answers: answer18unit4, level: level18unit4, unit_bool_change: GlobalUserData.$unit4[17], unit_change: GlobalUserData.$unit4Change)) {
                         RatingPanelActive(image: "Guadeloupe", active: GlobalUserData.unit4[17], text_level: "Borders 9")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)

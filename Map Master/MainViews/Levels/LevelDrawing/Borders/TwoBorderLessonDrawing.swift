@@ -37,7 +37,6 @@ struct TwoBorderLessonDrawing: View {
                             .padding(.bottom, -10.0)
                         CorrectProgress(correct: correct)
 
-                        
                         Text("\(level[current][answers[current]])") .font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.top)
                         
                         TwoBordersButton(isTapped: $isTapped, GlobalUserData: GlobalUserData, current: $current, answer: $answer, correct: $correct, show_answers: $show_answers, answers: answers, level: level, what_to_change: $unit_bool_change, unit_change: $unit_change)
