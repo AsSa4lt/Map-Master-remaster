@@ -12,13 +12,13 @@ func Unit2(GlobalUserData: userData) -> some View{
     VStack{
         Text("Unit 2").font(.largeTitle).fontWeight(.heavy).foregroundColor(Color.white).padding(.top)
         HStack{
-            NavigationLink(destination: Unit2Lesson1(GlobalUserData: GlobalUserData)) {
+            NavigationLink(destination: ThreeFlagLessonDrawing(GlobalUserData: GlobalUserData, answers: answers1unit2, level: level1unit2, unit_bool_change: GlobalUserData.$unit2[0], unit_change: GlobalUserData.$unit2Change)) {
                 RatingPanelActive(image: "United States", active: GlobalUserData.unit2[0], text_level: "Flags 4")
             }
-            NavigationLink(destination: Unit2Lesson2(GlobalUserData: GlobalUserData)) {
+            NavigationLink(destination: ThreeFlagLessonDrawing(GlobalUserData: GlobalUserData, answers: answers2unit2, level: level2unit2, unit_bool_change: GlobalUserData.$unit2[1], unit_change: GlobalUserData.$unit2Change)) {
                 RatingPanelActive(image: "Belgium", active: GlobalUserData.unit2[1], text_level: "Flags 5")
             }
-            NavigationLink(destination: Unit2Lesson3(GlobalUserData: GlobalUserData)) {
+            NavigationLink(destination: ThreeFlagLessonDrawing(GlobalUserData: GlobalUserData, answers: answers3unit2, level: level3unit2, unit_bool_change: GlobalUserData.$unit2[2], unit_change: GlobalUserData.$unit2Change)) {
                 RatingPanelActive(image: "Sweden", active: GlobalUserData.unit2[2], text_level: "Flags 6")
             }
         }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
