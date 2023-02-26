@@ -47,3 +47,45 @@ public let level3unit2: [[String]] = [
     ["Bulgaria", "Botswana", "Ecuador"] //10
 ]
 public let answers3unit2 =  [1, 0, 2, 1, 0, 2, 1, 0, 2, 1]
+
+public let level4unit2: [[String]] = [
+    ["Germany", "Ukraine"], //1
+    ["Greece", "Slovakia"], //2
+    ["India", "China"], //3
+    ["Mongolia", "Israel"], //4
+    ["Poland", "Czechia"], //5
+    ["Japan", "Mongolia"], //6
+    ["United Kingdom", "Mexico"], //7
+    ["United States", "Canada"], //8
+    ["Finland", "Egypt"], //9
+    ["China", "Chile"] //10
+]
+public let answers4unit2 =  [1, 0, 0, 1, 1, 0, 0, 1, 1, 0]
+
+public let level5unit2: [[String]] = [
+    ["Croatia", "Austria"], //1
+    ["France", "Fiji"], //2
+    ["Indonesia", "Kazakhstan"], //3
+    ["Qatar", "Russia"], //4
+    ["Thailand", "United Kingdom"], //5
+    ["Uzbekistan", "Mongolia"], //6
+    ["United States", "Namibia"], //7
+    ["Lithuania", "Iceland"], //8
+    ["Cuba", "Bulgaria"], //9
+    ["Bangladesh", "Kuwait"] //10
+]
+public let answers5unit2 =  [0, 1, 0, 1, 0, 1, 1, 0, 0, 1]
+
+public let level6unit2: [[String]] = [
+    ["Mauritania", "Palestine"], //1
+    ["Portugal", "Laos"], //2
+    ["Gabon", "Georgia"], //3
+    ["Comoros", "Bolivia"], //4
+    ["Armenia", "Australia"], //5
+    ["Algeria", "Belgium"], //6
+    ["Botswana", "Canada"], //7
+    ["Chad", "Estonia"], //8
+    ["Kenya", "Moldova"], //9
+    ["Norway", "Peru"] //10
+]
+public let answers6unit2 =  [1, 0, 1, 1, 0, 0, 1, 0, 1, 1]
