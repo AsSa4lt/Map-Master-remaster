@@ -48,13 +48,13 @@ func Unit2(GlobalUserData: userData) -> some View{
         }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
         
         HStack{
-            NavigationLink(destination: Unit2Lesson10(GlobalUserData: GlobalUserData)) {
+            NavigationLink(destination: BiggerPopLessonDrawing(GlobalUserData: GlobalUserData, answers: unit2answers10, level: unit2level10, level_pop: unit2level10Pop, unit_bool_change: GlobalUserData.$unit2[9], unit_change: GlobalUserData.$unit2Change)) {
                 RatingPanelActive(image: "Senegal", active: GlobalUserData.unit2[9], text_level: "People 4")
             }
-            NavigationLink(destination: Unit2Lesson11(GlobalUserData: GlobalUserData)) {
+            NavigationLink(destination:  BiggerPopLessonDrawing(GlobalUserData: GlobalUserData, answers: unit2answers11, level: unit2level11, level_pop: unit2level11Pop, unit_bool_change: GlobalUserData.$unit2[10], unit_change: GlobalUserData.$unit2Change)) {
                 RatingPanelActive(image: "Slovenia", active: GlobalUserData.unit2[10], text_level: "People 5")
             }
-            NavigationLink(destination: Unit2Lesson12(GlobalUserData: GlobalUserData)) {
+            NavigationLink(destination:  BiggerPopLessonDrawing(GlobalUserData: GlobalUserData, answers: unit2answers12, level: unit2level12, level_pop: unit2level12Pop, unit_bool_change: GlobalUserData.$unit2[11], unit_change: GlobalUserData.$unit2Change)) {
                 RatingPanelActive(image: "Switzerland", active: GlobalUserData.unit2[11], text_level: "People 6")
             }
         }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)

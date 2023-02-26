@@ -131,3 +131,81 @@ public let unit2level9: [[String]] = [
     ["Vietnam", "Hanoi",  "Tokyo", "Pyongyang"] //10
 ]
 public let unit2answers9 = [1, 2, 1, 0, 1, 2, 1, 0, 2, 0]
+
+public let unit2level10: [[String]] = [
+    ["United States", "Brazil"], //1
+    ["Argentina", "Australia"], //2
+    ["Colombia", "China"], //3
+    ["Germany", "Japan"], //4
+    ["Madagascar", "Ireland"], //5
+    ["Serbia", "South Korea"], //6
+    ["Kazakhstan", "Spain"], //7
+    ["Gabon", "Andorra"], //8
+    ["Greece", "Nepal"], //9
+    ["Pakistan", "North Korea"] //10
+]
+public let unit2level10Pop: [[String]] = [
+    ["331 million", "212 million"],
+    ["45 million", "25 million"],
+    ["51 million", "1430 million"],
+    ["84 million", "127 million"],
+    ["28 million", "5 million"],
+    ["9 million", "51 million"],
+    ["19 million", "47 million"],
+    ["2 million", "77 thousand"],
+    ["10 million", "29 million"],
+    ["220 million", "26 million"]
+]
+public let unit2answers10 = [0, 0, 1, 1, 0, 1, 1,0, 1,0]
+
+public let unit2level11: [[String]] = [
+    ["Moldova", "Malaysia"], //1
+    ["Mexico", "Morocco"], //2
+    ["Liechtenstein", "Luxembourg"], //3
+    ["Kuwait", "Netherlands"], //4
+    ["Mozambique", "Libya"], //5
+    ["Italy", "Honduras"], //6
+    ["Ethiopia", "Chile"], //7
+    ["Bangladesh", "Armenia"], //8
+    ["Afghanistan", "Algeria"], //9
+    ["Hungary", "Nigeria"] //10
+]
+public let unit2level11Pop: [[String]] = [
+    ["4 million", "32 million"],
+    ["128 million", "37 million"],
+    ["4 thousand", "630 thousand"],
+    ["4 million", "17 million"],
+    ["31 million", "7 million"],
+    ["60 million", "10 million"],
+    ["115 million", "20 million"],
+    ["165 million", "3 million"],
+    ["39 million", "44 million"],
+    ["10 million", "204 million"]
+]
+public let unit2answers11 = [1, 0, 1, 1, 0, 0, 0, 0, 1, 1]
+
+public let unit2level12: [[String]] = [
+    ["North Macedonia", "Kyrgyzstan"], //1
+    ["Jordan", "Georgia"], //2
+    ["Ecuador", "Cameroon"], //3
+    ["Bulgaria", "Botswana"], //4
+    ["Belarus", "Cuba"], //5
+    ["Croatia", "Burundi"], //6
+    ["Burkina Faso", "Slovakia"], //7
+    ["Venezuela", "Zambia"], //8
+    ["Uzbekistan", "Czechia"], //9
+    ["Oman", "Myanmar"] //10
+]
+public let unit2level12Pop: [[String]] = [
+    ["2 million", "6 million"],
+    ["10 million", "4 million"],
+    ["17 million", "26 million"],
+    ["7 million", "2.4 million"],
+    ["9.7 million", "11.3 million"],
+    ["4 million", "12 million"],
+    ["21 million", "5.5 million"],
+    ["28 million", "18 million"],
+    ["33 million", "11 million"],
+    ["5 million", "54 million"]
+]
+public let unit2answers12 = [1, 0, 1, 0, 1, 1, 0, 0, 0, 1]
