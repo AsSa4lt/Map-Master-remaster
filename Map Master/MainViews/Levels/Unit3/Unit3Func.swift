@@ -28,36 +28,36 @@ func Unit3(GlobalUserData: userData) -> some View{
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             HStack{
-                    NavigationLink(destination: Unit3Lesson4(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: ThreeBordersLessonDrawing(GlobalUserData: GlobalUserData, answers: answers4unit3, level: level4unit3, unit_bool_change: GlobalUserData.$unit3[3], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Burundi", active: GlobalUserData.unit3[3], text_level: "Borders 4")
                     }
-                    NavigationLink(destination: Unit3Lesson5(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: ThreeBordersLessonDrawing(GlobalUserData: GlobalUserData, answers: answers5unit3, level: level5unit3, unit_bool_change: GlobalUserData.$unit3[4], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Chile", active: GlobalUserData.unit3[4], text_level: "Borders 5")
                     }
-                    NavigationLink(destination: Unit3Lesson6(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: ThreeBordersLessonDrawing(GlobalUserData: GlobalUserData, answers: answers6unit3, level: level6unit3, unit_bool_change: GlobalUserData.$unit3[5], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Bangladesh", active: GlobalUserData.unit3[5], text_level: "Borders 6")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             HStack{
-                    NavigationLink(destination: Unit3Lesson7(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: unit3answers7, level: unit3level7, unit_bool_change: GlobalUserData.$unit3[6], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Singapore", active: GlobalUserData.unit3[6], text_level: "Capitals 7")
                     }
-                    NavigationLink(destination: Unit3Lesson8(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: unit3answers8, level: unit3level8, unit_bool_change: GlobalUserData.$unit3[7], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "China", active: GlobalUserData.unit3[7], text_level: "Capitals 8")
                     }
-                    NavigationLink(destination: Unit3Lesson9(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: unit3answers9, level: unit3level9, unit_bool_change: GlobalUserData.$unit3[8], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Angola", active: GlobalUserData.unit3[8], text_level: "Capitals 9")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             
             HStack{
-                    NavigationLink(destination: Unit3Lesson10(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: BiggerPopLessonDrawing(GlobalUserData: GlobalUserData, answers: unit3answers10, level: unit3level10, level_pop: unit3level10Pop, unit_bool_change: GlobalUserData.$unit3[9], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "New Zealand", active: GlobalUserData.unit3[9], text_level: "People 7")
                     }
-                    NavigationLink(destination: Unit3Lesson11(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: BiggerPopLessonDrawing(GlobalUserData: GlobalUserData, answers: unit3answers11, level: unit3level11, level_pop: unit3level11Pop, unit_bool_change: GlobalUserData.$unit3[10], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Peru", active: GlobalUserData.unit3[10], text_level: "People 8")
                     }
-                    NavigationLink(destination: Unit3Lesson12(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: BiggerPopLessonDrawing(GlobalUserData: GlobalUserData, answers: unit3answers12, level: unit3level12, level_pop: unit3level12Pop, unit_bool_change: GlobalUserData.$unit3[11], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Jamaica", active: GlobalUserData.unit3[11], text_level: "People 9")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
