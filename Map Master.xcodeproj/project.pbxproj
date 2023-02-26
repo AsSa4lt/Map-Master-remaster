@@ -53,6 +53,8 @@
 		6330FE6E29AB8CCC005DCE7E /* TwoFlagsButon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE6D29AB8CCC005DCE7E /* TwoFlagsButon.swift */; };
 		6330FE7229AB9CFD005DCE7E /* TwoFlagLessonDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE7129AB9CFD005DCE7E /* TwoFlagLessonDrawing.swift */; };
 		6330FE7429AB9FF0005DCE7E /* unit1Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE7329AB9FF0005DCE7E /* unit1Data.swift */; };
+		6330FE7829ABA0D7005DCE7E /* TwoCapitalsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE7729ABA0D7005DCE7E /* TwoCapitalsButton.swift */; };
+		6330FE7A29ABA13F005DCE7E /* TwoCapitalLessonDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE7929ABA13F005DCE7E /* TwoCapitalLessonDrawing.swift */; };
 		6351A591299CFAEC00CE9F9C /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A590299CFAEC00CE9F9C /* Practice.swift */; };
 		6351A594299CFB2400CE9F9C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A593299CFB2400CE9F9C /* Settings.swift */; };
 		6351A596299CFCC300CE9F9C /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A595299CFCC300CE9F9C /* Leagues.swift */; };
@@ -134,9 +136,6 @@
 		63DC74602997DD61008066B0 /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC745F2997DD61008066B0 /* LessonsView.swift */; };
 		63DC74622997DEBD008066B0 /* LessonsBackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74612997DEBD008066B0 /* LessonsBackGround.swift */; };
 		63DC74672997EBBB008066B0 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74662997EBBB008066B0 /* SubscriptionView.swift */; };
-		63DC746D29980C81008066B0 /* Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC746C29980C81008066B0 /* Lesson4.swift */; };
-		63DC746F299813CA008066B0 /* Lesson5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC746E299813CA008066B0 /* Lesson5.swift */; };
-		63DC747129981647008066B0 /* Lesson6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747029981647008066B0 /* Lesson6.swift */; };
 		63DC747329981AD0008066B0 /* Lesson7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747229981AD0008066B0 /* Lesson7.swift */; };
 		63DC747529982156008066B0 /* Lesson8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747429982156008066B0 /* Lesson8.swift */; };
 		63DC7477299823AD008066B0 /* Lesson9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC7476299823AD008066B0 /* Lesson9.swift */; };
@@ -216,6 +215,8 @@
 		6330FE6D29AB8CCC005DCE7E /* TwoFlagsButon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFlagsButon.swift; sourceTree = "<group>"; };
 		6330FE7129AB9CFD005DCE7E /* TwoFlagLessonDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFlagLessonDrawing.swift; sourceTree = "<group>"; };
 		6330FE7329AB9FF0005DCE7E /* unit1Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unit1Data.swift; sourceTree = "<group>"; };
+		6330FE7729ABA0D7005DCE7E /* TwoCapitalsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCapitalsButton.swift; sourceTree = "<group>"; };
+		6330FE7929ABA13F005DCE7E /* TwoCapitalLessonDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCapitalLessonDrawing.swift; sourceTree = "<group>"; };
 		6351A590299CFAEC00CE9F9C /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		6351A593299CFB2400CE9F9C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6351A595299CFCC300CE9F9C /* Leagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
@@ -299,9 +300,6 @@
 		63DC745F2997DD61008066B0 /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
 		63DC74612997DEBD008066B0 /* LessonsBackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsBackGround.swift; sourceTree = "<group>"; };
 		63DC74662997EBBB008066B0 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
-		63DC746C29980C81008066B0 /* Lesson4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson4.swift; sourceTree = "<group>"; };
-		63DC746E299813CA008066B0 /* Lesson5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson5.swift; sourceTree = "<group>"; };
-		63DC747029981647008066B0 /* Lesson6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson6.swift; sourceTree = "<group>"; };
 		63DC747229981AD0008066B0 /* Lesson7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson7.swift; sourceTree = "<group>"; };
 		63DC747429982156008066B0 /* Lesson8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson8.swift; sourceTree = "<group>"; };
 		63DC7476299823AD008066B0 /* Lesson9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson9.swift; sourceTree = "<group>"; };
@@ -427,6 +425,7 @@
 		6330FE6B29AB822A005DCE7E /* LevelDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				6330FE7C29ABA386005DCE7E /* People */,
 				6330FE7629ABA07B005DCE7E /* Capitals */,
 				6330FE7529ABA068005DCE7E /* Flags */,
 			);
@@ -452,8 +451,17 @@
 		6330FE7629ABA07B005DCE7E /* Capitals */ = {
 			isa = PBXGroup;
 			children = (
+				6330FE7729ABA0D7005DCE7E /* TwoCapitalsButton.swift */,
+				6330FE7929ABA13F005DCE7E /* TwoCapitalLessonDrawing.swift */,
 			);
 			path = Capitals;
+			sourceTree = "<group>";
+		};
+		6330FE7C29ABA386005DCE7E /* People */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 		6351A58F299CFAD700CE9F9C /* Practice */ = {
@@ -846,9 +854,6 @@
 		63DC74632997E7ED008066B0 /* Unit1 */ = {
 			isa = PBXGroup;
 			children = (
-				63DC746C29980C81008066B0 /* Lesson4.swift */,
-				63DC746E299813CA008066B0 /* Lesson5.swift */,
-				63DC747029981647008066B0 /* Lesson6.swift */,
 				63DC747229981AD0008066B0 /* Lesson7.swift */,
 				63DC747429982156008066B0 /* Lesson8.swift */,
 				63DC7476299823AD008066B0 /* Lesson9.swift */,
@@ -1047,8 +1052,8 @@
 				63262A9C29996A380088F4B7 /* Unit3Lesson7.swift in Sources */,
 				6351A5C7299EB09600CE9F9C /* RatingGamesActive.swift in Sources */,
 				63DC748C29993EAE008066B0 /* Unit2Lesson9.swift in Sources */,
-				63DC746D29980C81008066B0 /* Lesson4.swift in Sources */,
 				6330FE6329A96ADE005DCE7E /* HappyCountryball.swift in Sources */,
+				6330FE7A29ABA13F005DCE7E /* TwoCapitalLessonDrawing.swift in Sources */,
 				63262AC3299A8DE50088F4B7 /* Unit4Lesson10.swift in Sources */,
 				63262A9E29996BCF0088F4B7 /* Unit3Lesson8.swift in Sources */,
 				63262AB9299A7EE00088F4B7 /* Unit4Lesson5.swift in Sources */,
@@ -1076,13 +1081,12 @@
 				63262A962999664B0088F4B7 /* Unit3Lesson4.swift in Sources */,
 				6351A5B3299D6A2100CE9F9C /* GuessNumberStart.swift in Sources */,
 				6351A5D6299EC21000CE9F9C /* LevelsActive.swift in Sources */,
+				6330FE7829ABA0D7005DCE7E /* TwoCapitalsButton.swift in Sources */,
 				6351A591299CFAEC00CE9F9C /* Practice.swift in Sources */,
 				63B1833D2989A77100818ECB /* Country.swift in Sources */,
 				63262A94299964DC0088F4B7 /* Unit3Lesson3.swift in Sources */,
 				63262A89299959F80088F4B7 /* Unit2Lesson11.swift in Sources */,
 				63DC745229969FAF008066B0 /* FindCountryGame.swift in Sources */,
-				63DC747129981647008066B0 /* Lesson6.swift in Sources */,
-				63DC746F299813CA008066B0 /* Lesson5.swift in Sources */,
 				63DC743B29940F94008066B0 /* RatingGameFlagOfCountry.swift in Sources */,
 				6351A5CB299EB42000CE9F9C /* CreatePanelPractice.swift in Sources */,
 				6330FE7229AB9CFD005DCE7E /* TwoFlagLessonDrawing.swift in Sources */,

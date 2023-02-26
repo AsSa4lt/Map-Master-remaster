@@ -24,19 +24,19 @@ func Unit1(GlobalUserData: userData) -> some View{
                 NavigationLink(destination: TwoFlagLessonDrawing(GlobalUserData: GlobalUserData, answers: answers2, level: level2, unit_bool_change: GlobalUserData.$unit1[1], unit_change: GlobalUserData.$unit1Change)) {
                     RatingPanelActive(image: "Czechia", active: GlobalUserData.unit1[1], text_level: "Flags 2")
                 }
-                NavigationLink(destination: TwoFlagLessonDrawing(GlobalUserData: GlobalUserData, answers: answers3, level: level3, unit_bool_change: GlobalUserData.$unit1[1], unit_change: GlobalUserData.$unit1Change)) {
+                NavigationLink(destination: TwoFlagLessonDrawing(GlobalUserData: GlobalUserData, answers: answers3, level: level3, unit_bool_change: GlobalUserData.$unit1[2], unit_change: GlobalUserData.$unit1Change)) {
                     RatingPanelActive(image: "France", active: GlobalUserData.unit1[2], text_level: "Flags 3")
                 }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             
             HStack{
-                NavigationLink(destination: Lesson4(GlobalUserData: GlobalUserData)) {
+                NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: answers4, level: level4, unit_bool_change: GlobalUserData.$unit1[3], unit_change: GlobalUserData.$unit1Change)) {
                     RatingPanelActive(image: "Norway", active: GlobalUserData.unit1[3], text_level: "Capitals 1")
                 }
-                NavigationLink(destination: Lesson5(GlobalUserData: GlobalUserData)) {
+                NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: answers5, level: level5, unit_bool_change: GlobalUserData.$unit1[4], unit_change: GlobalUserData.$unit1Change)) {
                     RatingPanelActive(image: "Italy", active: GlobalUserData.unit1[4], text_level: "Capitals 2")
                 }
-                NavigationLink(destination: Lesson6(GlobalUserData: GlobalUserData)) {
+                NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: answers6, level: level6, unit_bool_change: GlobalUserData.$unit1[5], unit_change: GlobalUserData.$unit1Change)) {
                     RatingPanelActive(image: "Ukraine", active: GlobalUserData.unit1[5], text_level: "Capitals 3")
                 }
                 
