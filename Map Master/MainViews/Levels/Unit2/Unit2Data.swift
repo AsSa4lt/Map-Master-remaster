@@ -89,3 +89,45 @@ public let level6unit2: [[String]] = [
     ["Norway", "Peru"] //10
 ]
 public let answers6unit2 =  [1, 0, 1, 1, 0, 0, 1, 0, 1, 1]
+
+public let unit2level7: [[String]] = [
+    ["Hungary", "Budapest", "Brussels", "Helsinki"], //1
+    ["Ireland", "Bogota", "Dublin", "Lisbon"], //2
+    ["Serbia", "London", "Dushanbe", "Belgrade"], //3
+    ["Argentina", "Buenos Aires", "Windhoek", "Nairobi"], //4
+    ["Morocco", "Rabat", "Kinshasa", "Ljubljana"], //5
+    ["Uzbekistan", "Ashgabat", "Vienna", "Tashkent"], //6
+    ["Pakistan", "Jerusalem", "Islamabad" ,"Jakarta"], //7
+    ["Azerbaijan", "Thimphu", "Kathmandu", "Baku"], //8
+    ["Estonia", "Tallinn", "Sofia", "Ulaanbaatar"], //9
+    ["Portugal", "Lisbon",  "Vilnius", "Athens"] //10
+]
+public let unit2answers7 = [ 0, 1, 2, 0, 0, 2, 1, 2, 0, 0]
+
+public let unit2level8: [[String]] = [
+    ["Iraq", "Moscow", "Baghdad", "Madrid"], //1
+    ["Austria", "Vienna", "Seoul", "Tbilisi"], //2
+    ["Turkmenistan", "Beirut", "Tallinn", "Ashgabat"], //3
+    ["Botswana", "Gaborone", "Tirane", "Damascus"], //4
+    ["Myanmar", "Bishkek", "Naypyidaw", "Jakarta"], //5
+    ["Czechia", "Prague", "Manila", "Pyongyang"], //6
+    ["Netherlands", "Sofia", "Zahreb" ,"Amsterdam"], //7
+    ["Kenya", "Athens", "Nairobi", "Paris"], //8
+    ["Yemen", "Skopje", "Tashkent", "Sanaa"], //9
+    ["Madagascar", "Antananarivo",  "Ljubljana", "Podgorica"] //10
+]
+public let unit2answers8 = [1, 0, 2, 0, 1, 0, 2, 1, 2, 0]
+
+public let unit2level9: [[String]] = [
+    ["Iceland", "Liberia", "Reykjavik", "Podgorica"], //1
+    ["Kazakhstan", "Male", "Dublin", "Astana"], //2
+    ["Bhutan", "Amman", "Thimphu", "Zahreb"], //3
+    ["Moldova", "Kishinev", "Luxembourg", "Oslo"], //4
+    ["Burundi", "Riga", "Gitega", "Rome"], //5
+    ["Algeria", "Moscow", "Ljubljana", "Algiers"], //6
+    ["Congo", "Budapest", "Brazzaville" ,"Copenhagen"], //7
+    ["South Korea", "Seoul", "Prague", "Sarajevo"], //8
+    ["Iran", "Baku", "Dhaka", "Tehran"], //9
+    ["Vietnam", "Hanoi",  "Tokyo", "Pyongyang"] //10
+]
+public let unit2answers9 = [1, 2, 1, 0, 1, 2, 1, 0, 2, 0]

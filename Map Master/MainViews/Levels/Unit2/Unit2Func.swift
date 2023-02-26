@@ -36,13 +36,13 @@ func Unit2(GlobalUserData: userData) -> some View{
         }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
         
         HStack{
-            NavigationLink(destination: Unit2Lesson7(GlobalUserData: GlobalUserData)) {
+            NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: unit2answers7, level: unit2level7, unit_bool_change: GlobalUserData.$unit2[6], unit_change: GlobalUserData.$unit2Change)) {
                 RatingPanelActive(image: "Poland", active: GlobalUserData.unit2[6], text_level: "Capitals 4")
             }
-            NavigationLink(destination: Unit2Lesson8(GlobalUserData: GlobalUserData)) {
+            NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: unit2answers8, level: unit2level8, unit_bool_change: GlobalUserData.$unit2[7], unit_change: GlobalUserData.$unit2Change)) {
                 RatingPanelActive(image: "Romania", active: GlobalUserData.unit2[7], text_level: "Capitals 5")
             }
-            NavigationLink(destination: Unit2Lesson9(GlobalUserData: GlobalUserData)) {
+            NavigationLink(destination: TwoCapitalLessonDrawing(GlobalUserData: GlobalUserData, answers: unit2answers9, level: unit2level9, unit_bool_change: GlobalUserData.$unit2[8], unit_change: GlobalUserData.$unit2Change)) {
                 RatingPanelActive(image: "Saudi Arabia", active: GlobalUserData.unit2[8], text_level: "Capitals 6")
             }
         }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
