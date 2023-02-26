@@ -55,6 +55,8 @@
 		6330FE7429AB9FF0005DCE7E /* unit1Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE7329AB9FF0005DCE7E /* unit1Data.swift */; };
 		6330FE7829ABA0D7005DCE7E /* TwoCapitalsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE7729ABA0D7005DCE7E /* TwoCapitalsButton.swift */; };
 		6330FE7A29ABA13F005DCE7E /* TwoCapitalLessonDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE7929ABA13F005DCE7E /* TwoCapitalLessonDrawing.swift */; };
+		6330FE7E29ABA594005DCE7E /* PeopleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE7D29ABA594005DCE7E /* PeopleButton.swift */; };
+		6330FE8029ABA614005DCE7E /* PeopleLessonDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6330FE7F29ABA614005DCE7E /* PeopleLessonDrawing.swift */; };
 		6351A591299CFAEC00CE9F9C /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A590299CFAEC00CE9F9C /* Practice.swift */; };
 		6351A594299CFB2400CE9F9C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A593299CFB2400CE9F9C /* Settings.swift */; };
 		6351A596299CFCC300CE9F9C /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351A595299CFCC300CE9F9C /* Leagues.swift */; };
@@ -136,9 +138,6 @@
 		63DC74602997DD61008066B0 /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC745F2997DD61008066B0 /* LessonsView.swift */; };
 		63DC74622997DEBD008066B0 /* LessonsBackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74612997DEBD008066B0 /* LessonsBackGround.swift */; };
 		63DC74672997EBBB008066B0 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC74662997EBBB008066B0 /* SubscriptionView.swift */; };
-		63DC747329981AD0008066B0 /* Lesson7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747229981AD0008066B0 /* Lesson7.swift */; };
-		63DC747529982156008066B0 /* Lesson8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747429982156008066B0 /* Lesson8.swift */; };
-		63DC7477299823AD008066B0 /* Lesson9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC7476299823AD008066B0 /* Lesson9.swift */; };
 		63DC747929982A29008066B0 /* Unit1Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747829982A29008066B0 /* Unit1Func.swift */; };
 		63DC747C299920D4008066B0 /* Unit2Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747B299920D4008066B0 /* Unit2Lesson1.swift */; };
 		63DC747E29992712008066B0 /* Unit2Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC747D29992712008066B0 /* Unit2Lesson2.swift */; };
@@ -217,6 +216,8 @@
 		6330FE7329AB9FF0005DCE7E /* unit1Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unit1Data.swift; sourceTree = "<group>"; };
 		6330FE7729ABA0D7005DCE7E /* TwoCapitalsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCapitalsButton.swift; sourceTree = "<group>"; };
 		6330FE7929ABA13F005DCE7E /* TwoCapitalLessonDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCapitalLessonDrawing.swift; sourceTree = "<group>"; };
+		6330FE7D29ABA594005DCE7E /* PeopleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleButton.swift; sourceTree = "<group>"; };
+		6330FE7F29ABA614005DCE7E /* PeopleLessonDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleLessonDrawing.swift; sourceTree = "<group>"; };
 		6351A590299CFAEC00CE9F9C /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		6351A593299CFB2400CE9F9C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6351A595299CFCC300CE9F9C /* Leagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
@@ -300,9 +301,6 @@
 		63DC745F2997DD61008066B0 /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
 		63DC74612997DEBD008066B0 /* LessonsBackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsBackGround.swift; sourceTree = "<group>"; };
 		63DC74662997EBBB008066B0 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
-		63DC747229981AD0008066B0 /* Lesson7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson7.swift; sourceTree = "<group>"; };
-		63DC747429982156008066B0 /* Lesson8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson8.swift; sourceTree = "<group>"; };
-		63DC7476299823AD008066B0 /* Lesson9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson9.swift; sourceTree = "<group>"; };
 		63DC747829982A29008066B0 /* Unit1Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit1Func.swift; sourceTree = "<group>"; };
 		63DC747B299920D4008066B0 /* Unit2Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson1.swift; sourceTree = "<group>"; };
 		63DC747D29992712008066B0 /* Unit2Lesson2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit2Lesson2.swift; sourceTree = "<group>"; };
@@ -460,6 +458,8 @@
 		6330FE7C29ABA386005DCE7E /* People */ = {
 			isa = PBXGroup;
 			children = (
+				6330FE7D29ABA594005DCE7E /* PeopleButton.swift */,
+				6330FE7F29ABA614005DCE7E /* PeopleLessonDrawing.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -854,9 +854,6 @@
 		63DC74632997E7ED008066B0 /* Unit1 */ = {
 			isa = PBXGroup;
 			children = (
-				63DC747229981AD0008066B0 /* Lesson7.swift */,
-				63DC747429982156008066B0 /* Lesson8.swift */,
-				63DC7476299823AD008066B0 /* Lesson9.swift */,
 				63DC747829982A29008066B0 /* Unit1Func.swift */,
 				6351A5D7299EC69900CE9F9C /* Unit1InActive.swift */,
 				6330FE7329AB9FF0005DCE7E /* unit1Data.swift */,
@@ -1044,7 +1041,6 @@
 				63DC7436299404FC008066B0 /* MainConnector.swift in Sources */,
 				63262AA6299979C80088F4B7 /* Unit3Lesson12.swift in Sources */,
 				63262AC5299A8F330088F4B7 /* Unit4Lesson11.swift in Sources */,
-				63DC7477299823AD008066B0 /* Lesson9.swift in Sources */,
 				6330FE6A29AA723D005DCE7E /* EndPractice.swift in Sources */,
 				6351A5BB299D721B00CE9F9C /* FindCountryGamePractice.swift in Sources */,
 				63262AA4299978D50088F4B7 /* Unit3Lesson11.swift in Sources */,
@@ -1064,7 +1060,6 @@
 				6351A5DE299FD1DE00CE9F9C /* Unit4Inactive.swift in Sources */,
 				63DC74332993FB85008066B0 /* Home.swift in Sources */,
 				6351A596299CFCC300CE9F9C /* Leagues.swift in Sources */,
-				63DC747329981AD0008066B0 /* Lesson7.swift in Sources */,
 				6330FE6729A97760005DCE7E /* CorrectProgressView.swift in Sources */,
 				63DC748229992C82008066B0 /* Unit2Lesson4.swift in Sources */,
 				6351A5DC299FCEE600CE9F9C /* Unit3Inactive.swift in Sources */,
@@ -1075,6 +1070,7 @@
 				63262AA029996C760088F4B7 /* Unit3Lesson9.swift in Sources */,
 				63DC74302993E4B0008066B0 /* AllCountriesNames.swift in Sources */,
 				63B18344298A9E2200818ECB /* UserData.swift in Sources */,
+				6330FE7E29ABA594005DCE7E /* PeopleButton.swift in Sources */,
 				6351A5B5299D6B5500CE9F9C /* GuessNumberGame.swift in Sources */,
 				6351A5E929A3AD5800CE9F9C /* HeartsFunc.swift in Sources */,
 				63262A8B29995B8C0088F4B7 /* Unit2Lesson12.swift in Sources */,
@@ -1106,12 +1102,12 @@
 				63262ABB299A82140088F4B7 /* Unit4Lesson6.swift in Sources */,
 				6351A5B9299D70FE00CE9F9C /* FindCountryStart.swift in Sources */,
 				63DC747929982A29008066B0 /* Unit1Func.swift in Sources */,
-				63DC747529982156008066B0 /* Lesson8.swift in Sources */,
 				6330FE4F29A91D8A005DCE7E /* CircleSegment.swift in Sources */,
 				63262ABD299A848A0088F4B7 /* Unit4Lesson7.swift in Sources */,
 				63CB40EF299AD5F50011812D /* Unit4Func.swift in Sources */,
 				63DC744329956017008066B0 /* RatingGameCountryOfCapital.swift in Sources */,
 				6351A598299CFDD400CE9F9C /* LeagueFunc.swift in Sources */,
+				6330FE8029ABA614005DCE7E /* PeopleLessonDrawing.swift in Sources */,
 				63262AA829997CE80088F4B7 /* Unit3Lesson13.swift in Sources */,
 				63DC74672997EBBB008066B0 /* SubscriptionView.swift in Sources */,
 				6351A5C0299D754600CE9F9C /* NameCountriesGamePractice.swift in Sources */,

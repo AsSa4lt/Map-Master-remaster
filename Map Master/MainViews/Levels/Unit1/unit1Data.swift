@@ -89,3 +89,45 @@ public let level6: [[String]] = [
     ["Bahamas", "Nassau", "Vienna"] //10
 ]
 public let answers6 = [1, 0, 0, 1, 0, 1, 0, 0, 1, 0]
+
+public let level7: [[String]] = [
+    ["United States", "120 million", "330 million"], //1
+    ["Italy", "60 million", "20 million"], //2
+    ["Taiwan", "140 million", "24 million"], //3
+    ["Cuba", "11 million", "2 million"], //4
+    ["Lithuania", "2.7 million", "6.5 million"], //5
+    ["Sweden", "32 million", "10 million"], //6
+    ["Iraq", "40 million" ,"5 million"], //7
+    ["India", "700 million", "1400 million"], //8
+    ["Ethiopia", "220 million", "115 million"], //9
+    ["Germany", "84 million", "25 million"] //10
+]
+public let answers7 = [1, 0, 1, 0, 0, 1, 0, 1, 1, 0]
+
+public let level8: [[String]] = [
+    ["Brazil", "212 million", "90 million"], //1
+    ["Japan", "127 million", "420 million"], //2
+    ["Vietnam", "11 million", "97 million"], //3
+    ["Canada", "38 million", "94 million"], //4
+    ["Australia", "25 million", "56 million"], //5
+    ["Madagascar", "28 million", "2 million"], //6
+    ["Romania", "6 million" ,"20 million"], //7
+    ["Kazakhstan", "19 million", "134 million"], //8
+    ["Uganda", "7 million", "45 million"], //9
+    ["Poland", "67 million", "38 million"] //10
+]
+public let answers8 = [0, 0, 1, 0, 0, 0, 1, 0, 1, 1]
+
+public let level9: [[String]] = [
+    ["Saudi Arabia", "35 million", "7 million"], //1
+    ["Spain", "97 million", "46 million"], //2
+    ["Argentina", "23 million", "45 million"], //3
+    ["Netherlands", "17 million", "35 million"], //4
+    ["Czechia", "11 million", "23 million"], //5
+    ["Belarus", "3 million", "10 million"], //6
+    ["Serbia", "9 million" ,"28 million"], //7
+    ["Pakistan", "94 million", "220 million"], //8
+    ["Egypt", "102 million", "13 million"], //9
+    ["Turkey", "84 million", "236 million"] //10
+]
+public let answers9 = [0, 1, 1, 0, 0, 1, 0, 1, 0, 0]
