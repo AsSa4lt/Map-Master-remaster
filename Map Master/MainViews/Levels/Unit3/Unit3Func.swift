@@ -62,13 +62,13 @@ func Unit3(GlobalUserData: userData) -> some View{
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
             HStack{
-                    NavigationLink(destination: Unit3Lesson13(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: BiggerGPD(GlobalUserData: GlobalUserData, answers: unit3answers13, level: unit3level13, level_pop: unit3level13Pop, unit_bool_change: GlobalUserData.$unit3[12], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Thailand", active: GlobalUserData.unit3[12], text_level: "GPD 1")
                     }
-                    NavigationLink(destination: Unit3Lesson14(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: BiggerGPD(GlobalUserData: GlobalUserData, answers: unit3answers14, level: unit3level14, level_pop: unit3level14Pop, unit_bool_change: GlobalUserData.$unit3[13], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Jordan", active: GlobalUserData.unit3[13], text_level: "GPD 2")
                     }
-                    NavigationLink(destination: Unit3Lesson15(GlobalUserData: GlobalUserData)) {
+                    NavigationLink(destination: BiggerGPD(GlobalUserData: GlobalUserData, answers: unit3answers15, level: unit3level15, level_pop: unit3level15Pop, unit_bool_change: GlobalUserData.$unit3[14], unit_change: GlobalUserData.$unit3Change)) {
                         RatingPanelActive(image: "Western Sahara", active: GlobalUserData.unit3[14], text_level: "GPD 3")
                     }
             }.padding(.bottom).frame(width: UIScreen.main.bounds.width*0.93)
