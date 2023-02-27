@@ -1,4 +1,6 @@
 # Map-Master-remaster
+Use of the code is permitted only for non-commercial purposes
+
 https://apps.apple.com/us/app/world-quest/id1672855797
 
 WorldQuest: Explore the World Through Fun Games and Lessons
