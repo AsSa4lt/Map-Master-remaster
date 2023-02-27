@@ -65,7 +65,7 @@ struct HappyCountryball: View {
             }.offset(y: -offset_jump)
         }.onReceive(timer){ _ in
                 if wait == true{
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         wait = false
                     }
                 }else{

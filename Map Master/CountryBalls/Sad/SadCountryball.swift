@@ -65,7 +65,7 @@ struct SadCountryball: View {
         }.onReceive(timer){ _ in
             //while control_segment < 0{
             if wait == true{
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     wait = false
                 }
             }else{
